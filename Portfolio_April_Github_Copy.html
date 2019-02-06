@@ -1,0 +1,182 @@
+<html>
+  <head>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+    <link href='style.css' rel='stylesheet'>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: black;
+        /* background-color: #EBC886; beige */
+        overflow-x: hidden;
+        left: 0;
+        margin: 0;
+        position: relative; }
+      h1 {
+        font-family: 'VCR OSD Mono';
+        font-size: 48pt;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+
+        margin: auto;
+        text-align: center; }
+      .icon-menu {
+        float: left;
+        color: #fff;
+        cursor: pointer;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 22pt;
+        padding: 2%;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: inline-block;
+        text-align:left; }
+      @font-face {
+        font-family: 'VCR OSD Mono';
+        src: url('VCR_OSD_MONO_1.001.ttf'); }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+        /* Initial menu */
+      .menu {
+        background: #202024 url('Images/Gray_BG.png') repeat left top;
+        left: -25%;  /* start off behind the scenes */
+        height: 100%;
+        position: fixed;
+        width: 25%;
+	      -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; }
+
+      /* Basic styling */
+      .jumbotron { }
+      .jumbotron {
+        display:block;
+        margin:auto; }
+      .menu ul {
+        border-top: 1px solid #636366;
+        list-style: none;
+        margin: 0;
+        padding: 0; }
+      .menu li {
+        border-bottom: 1px solid #636366;
+        font-family: 'VCR OSD Mono';
+        color: white;
+        text-align: center;
+        line-height: 45px;
+        padding-bottom: 3px;
+        padding-left: 20px;
+        padding-top: 3px; }
+      .menu a {
+        color: #fff;
+        font-size: 15px;
+        text-decoration: none;
+        text-transform: uppercase; }
+      .icon-close {
+        cursor: pointer;
+        padding-left: 10px;
+        padding-top: 10px; }
+      .window {
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        width:51%;
+        position: absolute;
+        z-index: -1 }
+    </style>
+
+    <!-- Slide-out menu -->
+    <div class="menu">
+
+      <!-- Close (X) icon in the menu -->
+      <div>
+        <img class="icon-close" src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+      </div>
+
+      <!-- Menu links -->
+      <ul>
+        <li><a href="New_Design_Idea.html">Highlights</a></li>
+        <li><a href="Portfolio_Glitch_Art_2">Glitch Art</a></li>
+        <li><a href="Portfolio_Stickers.html">Illustrations</a></li>
+        <li><a href="#">Graphic Design</a></li>
+	       <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+
+
+    <!-- Menu icon -->
+    <div class="row">
+    <div class="col-1 icon-menu">
+      <i class=" fa fa-bars fa-2x"></i>
+    </div>
+
+    <!-- Header text -->
+    <h1 class="col-11"><a href="New_Design_Idea.html">SAM GKS</a></h1>
+    </div>
+    <!-- Portfolio highlights image carousel -->
+    <div class="row jumbotron w3-content w3-display-container">
+        <img class="mySlides" srcset="Images/Lady_Glitch-5-Web-2.png 65%,
+          Images/Lady_Glitch-5-Web 100%" sizes="(max-width: 320px) 280px,
+            (max-width: 480px) 440px,
+            800px" style="width:65%; margin:auto;">
+	      <img class="mySlides" src="Images/Lady_Glitch-3-1-Web.png" style="width:65%; margin:auto;">
+	      <img class="mySlides" src="Images/What_Happened-Web.png" style="width:65%; margin:auto;">
+        <img class="mySlides" src="Images/Lady_Glitch-1-Web.png" style="width:65%; margin:auto;">
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+    <br>
+
+    <!--Import for the slideout script -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Carousel and slideout scripts -->
+    <script>
+      //Carousel script
+      var slideIndex = 0;
+      carousel();
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        setTimeout(carousel, 4000); // Change image every X seconds, where 1 second = 1000
+      }
+
+      // Slideout menu script
+      // Push the body and the nav over
+      var main = function() {
+        $('.icon-menu').click(function() {
+          $('.menu').animate({
+            left: "0px"
+          }, 400);
+          $('body').animate({
+            left: "12.5%"
+          }, 400);
+        });
+
+        // Then push them back
+        $('.icon-close').click(function() {
+          $('.menu').animate({
+            left: "-25%"
+          }, 400);
+          $('body').animate({
+            left: "0px"
+          }, 400);
+        });
+      };
+
+      $(document).ready(main);
+    </script>
+  </body>
+</html>
