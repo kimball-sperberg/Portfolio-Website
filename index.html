@@ -116,9 +116,12 @@
     </script>
     <script src="https://code.jquery.com/jquery-latest.js"></script>
 
-    <script type="text/javascript">jssor_1_slider_init();</script>
+    <script type="text/javascript">
+      jssor_1_slider_init();
+    </script>
 
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js">
+    </script>
 
     <!--Toggle [X] and [square] images-->
     <script>
@@ -176,6 +179,15 @@
                 setTimeout( function() { window.location = URL }, 10 );
             }
         }
+    </script>
+
+    <script>
+      function ReaperScrollMobile () {
+          setTimeout( function() {myFunction(); }, 1000 );
+          setTimeout( function() {toggleSqX(); }, 1000 );
+          setTimeout( function() {$('.collapse').collapse('toggle'); }, 800 );
+
+      }
     </script>
     <!--<script>
       $(function() {
@@ -241,7 +253,7 @@
         <div class="col-12 col-lg-8">
           <h1 id="headerText">SAM KIMBALL</h1><h1 id="headerTextSecondary">WEB DESIGN & ART</h1>
 
-          <a href="#artistStatement"><img id="Reaper" src="Images/Reaper_Condensed.png"></a>
+          <a href="#artistStatement" onclick="ReaperScrollMobile()"><img id="Reaper" src="Images/Reaper_Condensed.png"></a>
         </div>
 
         <div class="col-2 d-none d-lg-block">
