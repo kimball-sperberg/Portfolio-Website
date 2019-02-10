@@ -37,7 +37,7 @@ body {
 }
 
 .mobileMenuIcons {
-  padding-top: 10vh;
+  margin-top: 10vh;
 }
 
 #mySideNav {
@@ -653,27 +653,27 @@ hr {
 
 }
 #firstIcon:hover {
-  content: url('https://i.imgur.com/0pvWqPD.png');
+  content: url('../Images/AboutMeIconGreenBG.png');
 }
 
 #secondIcon:hover {
-  content: url('https://i.imgur.com/RA93NrV.png');
+  content: url('../Images/PostersIconGreenBG.png');
 }
 
 #thirdIcon:hover {
-  content: url('https://i.imgur.com/w8EFIf2.png');
+  content: url('../Images/WebsitesIconGreenBG2.png');
 }
 
 #fourthIcon:hover {
-  content: url('https://i.imgur.com/haAQh39.png');
+  content: url('../Images/GlitchIconGreenBG.png');
 }
 
 #fifthIcon:hover {
-  content: url('https://i.imgur.com/QmiQY5b.png');
+  content: url('../Images/StickersIconGreenBG.png');
 }
 
 #sixthIcon:hover {
-  content: url('https://i.imgur.com/yYIwvjA.png');
+  content: url('../Images/ContactIconGreenBG.png');
 }
 
 .sidenav {
@@ -691,7 +691,7 @@ hr {
 .sidenav a {
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: black;
   display: block;
   transition: 0.3s;
 }
@@ -700,14 +700,19 @@ hr {
   /*color: #f1f1f1;*/
 }
 
-#sideNavCloseButton {
+.sideNavButton {
   padding-top: 2vh;
   padding-bottom: 2vh;
   padding-left: 4vh;
-  padding-right: 4vh;
+  font-size: 32pt;
 }
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+.span {
+  font-size: 32pt;
+  z-index: 2;
 }

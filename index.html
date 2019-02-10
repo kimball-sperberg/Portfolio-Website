@@ -235,7 +235,7 @@
 
     <!--Makes it so when you click/ tap on the reaper, page scrolls to About Me blurb and opens/closes the About Me window-->
     <script>
-      function ReaperScrollMobile () {
+      function ReaperClickScroll () {
           setTimeout( function() {myFunction(); }, 1000 );
           setTimeout( function() {toggleSqX(); }, 1000 );
           setTimeout( function() {$('.collapse').collapse('toggle'); }, 800 );
@@ -261,31 +261,32 @@
       </h2>
   </div>-->
 
+  <!--Slideout Side Navigation (Mobile Only)-->
   <div id="mySidenav" class="sidenav">
     <div class="row mobileMenu">
       <div class="d-lg-none col-12">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span id="sideNavCloseButton">&times;</span></a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span class="sideNavButton">&times;</span></a>
       </div>
     </div>
     <div class="row">
       <div class="col-6 text-center mobileMenuIcons">
-          <a href="#artistStatement" onclick="closeNav()"><img src="Images/AboutMeIcon.png" style="max-width: 100%;"></a>
+          <a href="#artistStatement" onclick="closeNav(); ReaperClickScroll();"><img src="Images/AboutMeIcon.png" style="max-width: 100%;"></a>
       </div>
       <div class="col-6 text-center mobileMenuIcons">
-          <a href="#artistStatement" onclick="closeNav()"><img src="Images/PostersIcon.png" style="max-width: 100%;"></a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-6 text-center mobileMenuIcons">
-          <a href="#artistStatement" onclick="closeNav()"><img src="Images/WebsitesIcon.png" style="max-width: 100%;"></a>
-      </div>
-      <div class="col-6 text-center mobileMenuIcons">
-          <a href="#artistStatement" onclick="closeNav()"><img src="Images/GlitchIcon.png" style="max-width: 100%;"></a>
+          <a href="#GigPosters" onclick="closeNav()"><img src="Images/PostersIcon.png" style="max-width: 100%;"></a>
       </div>
     </div>
     <div class="row">
       <div class="col-6 text-center mobileMenuIcons">
-          <a href="#artistStatement" onclick="closeNav()"><img src="Images/StickersIcon.png" style="max-width: 100%;"></a>
+          <a href="#Websites" onclick="closeNav()"><img src="Images/WebsitesIcon.png" style="max-width: 100%;"></a>
+      </div>
+      <div class="col-6 text-center mobileMenuIcons">
+          <a href="#glitchArt" onclick="closeNav()"><img src="Images/GlitchIcon.png" style="max-width: 100%;"></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 text-center mobileMenuIcons">
+          <a href="#Stickers" onclick="closeNav()"><img src="Images/StickersIcon.png" style="max-width: 100%;"></a>
       </div>
       <div class="col-6 text-center mobileMenuIcons">
           <a href="#artistStatement" onclick="closeNav()"><img src="Images/ContactIcon.png" style="max-width: 100%;"></a>
@@ -325,7 +326,7 @@
     <!--<div class="d-none d-lg-block"><img src="Images/PaintIcon.png" style="padding-left: 20%; max-width: 25%; padding-top: 10%;float: left;"></div>-->
     <div class="row mobileMenu">
       <div class="d-lg-none col-12">
-        <h3 onclick="openNav()">&#9776;</h3>
+        <span class="sideNavButton" onclick="openNav()">&#9776;</span>
       </div>
     </div>
 
@@ -336,7 +337,7 @@
           <div class="row">
 
             <div class="col-12 iconTop">
-              <a href="#artistStatement"><img src="Images/AboutMeIcon.png" id="firstIcon" style="max-width: 100%;"></a>
+              <a href="#artistStatement"><img src="Images/AboutMeIcon.png" id="firstIcon" onclick="ReaperClickScroll();" style="max-width: 100%;"></a>
             </div>
 
             <div class="col-12 iconLeftMiddle">
@@ -353,7 +354,7 @@
         <div class="col-12 col-lg-8">
           <h1 id="headerText">SAM KIMBALL</h1><h1 id="headerTextSecondary">WEB DESIGN & ART</h1>
 
-          <a href="#artistStatement" onclick="ReaperScrollMobile()"><img id="Reaper" src="Images/Reaper_Condensed.png"></a>
+          <a href="#artistStatement" onclick="ReaperClickScroll()"><img id="Reaper" src="Images/Reaper_Condensed.png"></a>
         </div>
 
         <div class="col-2 d-none d-lg-block">
@@ -391,6 +392,14 @@
     <img src="Images/ReaperGifContact.gif" style="display:none;">
     <img src="Images/ReaperGifWebsites.gif" style="display:none;">
     <img src="Images/ReaperGifGlitchArt.gif" style="display:none;">
+    <img src="Images/AboutMeIconGreenBG.png" style="display:none;">
+    <img src="Images/StickersIconGreenBG.png" style="display:none;">
+    <img src="Images/PostersIconGreenBG.png" style="display:none;">
+    <img src="Images/WebsitesIconGreenBG2.png" style="display:none;">
+    <img src="Images/GlitchIconGreenBG.png" style="display:none;">
+    <img src="Images/ContactIconGreenBG.png" style="display:none;">
+
+
 
 
   <!--Toggle Gifs on hover on icons-->
