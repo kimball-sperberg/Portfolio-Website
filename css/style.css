@@ -17,12 +17,31 @@ body {
 
 
 .landingContainer {
-  height: 100vh;
+  height: 95vh;
   padding-left: 9%;
   padding-right: 9%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.mobileMenu {
+  height: 5vh;
+  padding-left: 9%;
+  padding-right: 9%;
+  padding-top: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+}
+
+.mobileMenuIcons {
+  padding-top: 10vh;
+}
+
+#mySideNav {
+  height: 100vh;
 }
 
 #headerText {
@@ -655,4 +674,40 @@ hr {
 
 #sixthIcon:hover {
   content: url('https://i.imgur.com/yYIwvjA.png');
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #FFCAAA;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  /*color: #f1f1f1;*/
+}
+
+#sideNavCloseButton {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 4vh;
+  padding-right: 4vh;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
