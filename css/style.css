@@ -534,27 +534,49 @@ padding-right: 0 !important;
     }
   }
 
+#bootstrap-override .swiper-container {
+  padding-top: 2.5%;
+}
+
+@media (min-width:768px) {
   #bootstrap-override .swiper-container {
-    padding-top: 2.5%;
+      padding-top: 3%;
+    }
   }
 
-  @media (min-width:768px) {
-    #bootstrap-override .swiper-container {
-        padding-top: 3%;
-      }
+@media (min-width:992px) {
+  #bootstrap-override .swiper-container {
+      padding-top: 3.5%;
     }
+  }
 
-  @media (min-width:992px) {
-    #bootstrap-override .swiper-container {
-        padding-top: 3.5%;
-      }
+@media (min-width:1200px) {
+  #bootstrap-override .swiper-container {
+      padding-top: 4%;
     }
+  }
 
-  @media (min-width:1200px) {
-    #bootstrap-override .swiper-container {
-        padding-top: 4%;
-      }
+#bootstrap-override .videoWrapper {
+  margin-top: 2.5%;
+}
+
+@media (min-width:768px) {
+  #bootstrap-override .videoWrapper {
+      margin-top: 3%;
     }
+  }
+
+@media (min-width:992px) {
+  #bootstrap-override .videoWrapper {
+      margin-top: 3.5%;
+    }
+  }
+
+@media (min-width:1200px) {
+  #bootstrap-override .videoWrapper {
+      margin-top: 4%;
+    }
+  }
 
 #bootstrap-override .txt {
   padding-top: 1.25%;
@@ -664,10 +686,8 @@ hr {
   padding: 0px;
 }
 
-
 .negative-left-col {
   padding-right: 0px;
-
 }
 
 .negative-right-col {
@@ -776,4 +796,18 @@ hr {
 html, body {
   position: relative;
   width: 100%;
-  }
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

@@ -217,18 +217,14 @@
                 element.classList.toggle("col-12");
                 var element = document.getElementById("innerSwap16");
                 element.classList.toggle("negative-right-col");
-
-
-
             }
         }
-
     </script>
     <!--Delays images linking to their own sections to adjust for resize-->
     <script>
         function delay (URL) {
             if ($(window).width() < 992) {
-                setTimeout( function() { window.location = URL }, 10 );
+                setTimeout( function() { window.location = URL }, 5 );
             }
         }
     </script>
@@ -241,14 +237,6 @@
 
       }
     </script>
-    <!--<script>
-      $(function() {
-      $('img').on('click', function() {
-      $('.enlargeImageModalSource').attr('src', $(this).attr('src'));
-      $('#enlargeImageModal').modal('show');
-        });
-      });
-    </script>-->
 </head>
 <body id="bootstrap-override">
 
@@ -293,6 +281,7 @@
     </div>
   </div>
 
+  <!--Open and close Slideout Menu script-->
   <script>
     function openNav() {
       document.getElementById("mySidenav").style.width = "100vw";
@@ -319,10 +308,7 @@
        </div>
     </div>
 
-    <!--<h2 class="rightAlign">
-      <a href="#Design">About</a><a href="#Sites">Design</a><a href="#Glitch">Sites</a><a href="#Contact">Contact</a>
-    </h2> -->
-    <!--<div class="d-none d-lg-block"><img src="Images/PaintIcon.png" style="padding-left: 20%; max-width: 25%; padding-top: 10%;float: left;"></div>-->
+    <!--Mobile menu toggle-->
     <div class="row mobileMenu">
       <div class="d-lg-none col-12">
         <span class="sideNavButton" onclick="openNav()">MENU&#9776;</span>
@@ -371,32 +357,32 @@
               <a href="#Contact"><img src="Images/ContactIcon.png" id="sixthIcon" style="max-width: 100%;"></a>
             </div>
 
-          </div>
-        </div>
+          </div><!--end row-->
+        </div><!--end col-->
+      </div><!--end row-->
+      <!--Preload icon images for instant interaction capability-->
+      <img src="Images/Images/Reaper-Condensed-Posters.png" style="display:none;">
+      <img src="Images/ReaperGifConstruction4.gif" style="display:none;">
+      <img src="Images/Reaper_Condensed.gif" style="display:none;">
+      <img src="Images/ReaperGifAboutMe.gif" style="display:none;">
+      <img src="Images/ReaperGifPosters.gif" style="display:none;">
+      <img src="Images/ReaperGifStickers2.gif" style="display:none;">
+      <img src="Images/ReaperGifContact.gif" style="display:none;">
+      <img src="Images/ReaperGifWebsites.gif" style="display:none;">
+      <img src="Images/ReaperGifGlitchArt.gif" style="display:none;">
+      <img src="Images/AboutMeIconGreenBG.png" style="display:none;">
+      <img src="Images/StickersIconGreenBG.png" style="display:none;">
+      <img src="Images/PostersIconGreenBG.png" style="display:none;">
+      <img src="Images/WebsitesIconGreenBG2.png" style="display:none;">
+      <img src="Images/GlitchIconGreenBG.gif" style="display:none;">
+      <img src="Images/ContactIconGreenBG.png" style="display:none;">
 
-      </div>
-      <!--Remove the below div to get rid of the Down Arrow-->
+      <!--Down Arrow-->
       <!--<div class="row justify" style="width:100%;">
         <a href="#artistStatement"><img id="downArrow" src="Images/Down_Arrow_8bit.png"></a>
       </div>-->
-    </div>
+    </div><!--End landingContainer-->
   </section>
-
-    <img src="Images/Images/Reaper-Condensed-Posters.png" style="display:none;">
-    <img src="Images/ReaperGifConstruction4.gif" style="display:none;">
-    <img src="Images/Reaper_Condensed.gif" style="display:none;">
-    <img src="Images/ReaperGifAboutMe.gif" style="display:none;">
-    <img src="Images/ReaperGifPosters.gif" style="display:none;">
-    <img src="Images/ReaperGifStickers2.gif" style="display:none;">
-    <img src="Images/ReaperGifContact.gif" style="display:none;">
-    <img src="Images/ReaperGifWebsites.gif" style="display:none;">
-    <img src="Images/ReaperGifGlitchArt.gif" style="display:none;">
-    <img src="Images/AboutMeIconGreenBG.png" style="display:none;">
-    <img src="Images/StickersIconGreenBG.png" style="display:none;">
-    <img src="Images/PostersIconGreenBG.png" style="display:none;">
-    <img src="Images/WebsitesIconGreenBG2.png" style="display:none;">
-    <img src="Images/GlitchIconGreenBG.gif" style="display:none;">
-    <img src="Images/ContactIconGreenBG.png" style="display:none;">
 
 
 
@@ -489,7 +475,7 @@
 
        <div class="windowBottomContainer">
            <div class="windowTop" onclick="myFunction(); toggleSqX();" data-toggle="collapse" data-target="#collapseExample">
-             <div style="border: 4px solid #BEBEBE; box-shadow: -2px 0px 0px 0px white, 2px 0px 0px 0px grey; background-color: #00007A;">
+             <div style="border: 2px solid #BEBEBE; box-shadow: -2px 0px 0px 0px white, 2px 0px 0px 0px grey; background-color: #00007A;">
 
              <div style="border-right: 2px solid #00007A; border-top: 4px; margin-bottom: 6px;">
 
@@ -719,6 +705,9 @@
          <div id="swap16" class="col-6 container-fluid" onclick="delay('#innerSwap16')">
            <a href="javascript:delay('#innerSwap16')"><img id="innerSwap16" class="right-half-col" src="Images/What_Happened.png" style="width:100%;"></a>
          </div>
+       </div>
+       <div class="videoWrapper">
+         <iframe width="100%" height="auto" src="https://www.youtube.com/embed/x74brrZmvcg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
        </div>
        <br>
 
