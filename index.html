@@ -217,6 +217,43 @@
                 element.classList.toggle("col-12");
                 var element = document.getElementById("innerSwap16");
                 element.classList.toggle("negative-right-col");
+
+                var element = document.getElementById("swap17");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("innerSwap17");
+                element.classList.toggle("negative-left-col");
+
+                var element = document.getElementById("swap18");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("innerSwap18");
+                element.classList.toggle("negative-right-col");
+
+                var element = document.getElementById("swap19");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("innerSwap19");
+                element.classList.toggle("negative-left-col");
+
+                var element = document.getElementById("swap20");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("innerSwap20");
+                element.classList.toggle("negative-right-col");
+
+                var element = document.getElementById("swap21");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("innerSwap21");
+                element.classList.toggle("negative-right-col");
+
+                var element = document.getElementById("swap22");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("innerSwap22");
+                element.classList.toggle("negative-right-col");
+
+                var element = document.getElementById("swap23");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("innerSwap23");
+                element.classList.toggle("negative-right-col");
+
+
             }
         }
     </script>
@@ -370,7 +407,7 @@
       <img src="Images/ReaperGifContact.gif" style="display:none;">
       <img src="Images/ReaperGifWebsites.gif" style="display:none;">
       <img src="Images/ReaperGifGlitchArt.gif" style="display:none;">
-      <img src="Images/AboutMeIconGreenBG.png" style="display:none;">
+      <img src="Images/AboutMeIconGreenBG.gif" style="display:none;">
       <img src="Images/StickersIconGreenBG.png" style="display:none;">
       <img src="Images/PostersIconGreenBG.png" style="display:none;">
       <img src="Images/WebsitesIconGreenBG2.png" style="display:none;">
@@ -526,7 +563,6 @@
 
     </div>
   </section>
-
 
   <section id="gigPosters">
     <div class="container-fluid">
@@ -728,28 +764,31 @@
            <img src="Images/Stickers_Banner.jpg" style="width:100%;">
          </div>
        </div>
-       <div class="row img">
-         <div class="col-6 container-fluid">
-           <img class="left-half-col" src="Images/Stickers_Scuba.jpg" style="width:100%;">
+
+       <div class="row img" onclick="colToggle();">
+         <div id="swap17" class="col-6 container-fluid" onclick="delay('#innerSwap17')">
+           <a href="javascript:delay('#innerSwap17')"><img id="innerSwap17" class="left-half-col" src="Images/Stickers_Scuba.jpg" style="width:100%;"></a>
          </div>
-         <div class="col-6 container-fluid">
-           <img class="right-half-col" src="Images/Stickers_Trash.jpg" style="width:100%;">
-         </div>
-       </div>
-       <div class="row img">
-         <div class="col-6 container-fluid">
-           <img class="left-half-col" src="Images/Stickers_TV.jpg" style="width:100%;">
-         </div>
-         <div class="col-6 container-fluid">
-           <img class="right-half-col" src="Images/Stickers_Eye.jpg" style="width:100%;">
+         <div id="swap18" class="col-6 container-fluid" onclick="delay('#innerSwap18')">
+           <a href="javascript:delay('#innerSwap18')"><img id="innerSwap18" class="right-half-col" src="Images/Stickers_Trash.jpg" style="width:100%;"></a>
          </div>
        </div>
-       <div class="row img">
-         <div class="col-6 container-fluid">
-           <img class="left-half-col" src="Images/Stickers_Priest.jpg" style="width:100%;">
+
+       <div class="row img" onclick="colToggle();">
+         <div id="swap19" class="col-6 container-fluid" onclick="delay('#innerSwap19')">
+           <a href="javascript:delay('#innerSwap11')"><img id="innerSwap19" class="left-half-col" src="Images/Stickers_TV.jpg" style="width:100%;"></a>
          </div>
-         <div class="col-6 container-fluid">
-           <img class="right-half-col" src="Images/Stickers_Punk.jpg" style="width:100%;">
+         <div id="swap20" class="col-6 container-fluid" onclick="delay('#innerSwap20')">
+           <a href="javascript:delay('#innerSwap20')"><img id="innerSwap20" class="right-half-col" src="Images/Stickers_Eye.jpg" style="width:100%;"></a>
+         </div>
+       </div>
+
+       <div class="row img" onclick="colToggle();">
+         <div id="swap21" class="col-6 container-fluid" onclick="delay('#innerSwap21')">
+           <a href="javascript:delay('#innerSwap21')"><img id="innerSwap21" class="left-half-col" src="Images/Stickers_Priest.jpg" style="width:100%;"></a>
+         </div>
+         <div id="swap22" class="col-6 container-fluid" onclick="delay('#innerSwap22')">
+           <a href="javascript:delay('#innerSwap22')"><img id="innerSwap22" class="right-half-col" src="Images/Stickers_Punk.jpg" style="width:100%;"></a>
          </div>
        </div>
        <br>
