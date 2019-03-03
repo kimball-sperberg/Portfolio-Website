@@ -171,7 +171,7 @@
                 var element = document.getElementById("swap7");
                 element.classList.toggle("col-12");
                 var element = document.getElementById("innerSwap7");
-                element.classList.toggle("negative-right-col");
+                element.classList.toggle("negative-left-col");
 
                 var element = document.getElementById("swap8");
                 element.classList.toggle("col-12");
@@ -181,7 +181,7 @@
                 var element = document.getElementById("swap9");
                 element.classList.toggle("col-12");
                 var element = document.getElementById("innerSwap9");
-                element.classList.toggle("negative-right-col");
+                element.classList.toggle("negative-left-col");
 
                 var element = document.getElementById("swap10");
                 element.classList.toggle("col-12");
@@ -191,7 +191,7 @@
                 var element = document.getElementById("swap11");
                 element.classList.toggle("col-12");
                 var element = document.getElementById("innerSwap11");
-                element.classList.toggle("negative-right-col");
+                element.classList.toggle("negative-left-col");
 
                 var element = document.getElementById("swap12");
                 element.classList.toggle("col-12");
@@ -201,7 +201,7 @@
                 var element = document.getElementById("swap13");
                 element.classList.toggle("col-12");
                 var element = document.getElementById("innerSwap13");
-                element.classList.toggle("negative-right-col");
+                element.classList.toggle("negative-left-col");
 
                 var element = document.getElementById("swap14");
                 element.classList.toggle("col-12");
@@ -211,12 +211,13 @@
                 var element = document.getElementById("swap15");
                 element.classList.toggle("col-12");
                 var element = document.getElementById("innerSwap15");
-                element.classList.toggle("negative-right-col");
+                element.classList.toggle("negative-left-col");
 
                 var element = document.getElementById("swap16");
                 element.classList.toggle("col-12");
                 var element = document.getElementById("innerSwap16");
                 element.classList.toggle("negative-right-col");
+
 
 
             }
@@ -271,7 +272,7 @@
           <a href="#artistStatement" onclick="closeNav(); ReaperClickScroll();"><img src="Images/AboutMeIcon.png" style="max-width: 100%;"></a>
       </div>
       <div class="col-6 text-center mobileMenuIcons">
-          <a href="#GigPosters" onclick="closeNav()"><img src="Images/PostersIcon.png" style="max-width: 100%;"></a>
+          <a href="#gigPosters" onclick="closeNav()"><img src="Images/PostersIcon.png" style="max-width: 100%;"></a>
       </div>
     </div>
     <div class="row">
@@ -279,7 +280,7 @@
           <a href="#Websites" onclick="closeNav()"><img src="Images/WebsitesIcon.png" style="max-width: 100%;"></a>
       </div>
       <div class="col-6 text-center mobileMenuIcons">
-          <a href="#glitchArt" onclick="closeNav()"><img src="Images/GlitchIcon.png" style="max-width: 100%;"></a>
+          <a href="#GlitchArt" onclick="closeNav()"><img src="Images/GlitchIcon2.png" style="max-width: 100%;"></a>
       </div>
     </div>
     <div class="row">
@@ -695,28 +696,28 @@
 
        <div class="row img" onclick="colToggle();">
          <div id="swap11" class="col-6 container-fluid" onclick="delay('#innerSwap11')">
-           <a href="javascript:delay('#innerSwap11')"><img id="innerSwap11" a href="#innerSwap11" class="left-half-col" src="Images/RedSky_Glitch.png" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap11')"><img id="innerSwap11" class="left-half-col" src="Images/RedSky_Glitch.png" style="width:100%;"></a>
          </div>
          <div id="swap12" class="col-6 container-fluid" onclick="delay('#innerSwap12')">
            <a href="javascript:delay('#innerSwap12')"><img id="innerSwap12" class="right-half-col" src="Images/Glitch_Landscape-2.png" style="width:100%;"></a>
          </div>
        </div>
 
-       <div class="row img">
-         <div class="col-6 container-fluid">
-           <img class="left-half-col" src="Images/Flower_Glitch-3.png" style="width:100%;">
+       <div class="row img" onclick="colToggle();">
+         <div id="swap13" class="col-6 container-fluid" onclick="delay('#innerSwap13')">
+           <a href="javascript:delay('#innerSwap13')"><img id="innerSwap13" class="left-half-col" src="Images/Flower_Glitch-3.png" style="width:100%;"></a>
          </div>
-         <div class="col-6 container-fluid">
-           <img class="right-half-col" src="Images/Flower_Glitch.png" style="width:100%;">
+         <div id="swap14" class="col-6 container-fluid" onclick="delay('#innerSwap14')">
+           <a href="javascript:delay('#innerSwap14')"><img id="innerSwap14" class="right-half-col" src="Images/Flower_Glitch.png" style="width:100%;"></a>
          </div>
        </div>
 
-       <div class="row img">
-         <div class="col-6 container-fluid">
-           <img class="left-half-col" src="Images/Random_Glitch-1.png" style="width:100%;">
+       <div class="row img" onclick="colToggle();">
+         <div id="swap15" class="col-6 container-fluid" onclick="delay('#innerSwap15')">
+           <a href="javascript:delay('#innerSwap15')"><img id="innerSwap15" class="left-half-col" src="Images/Random_Glitch-1.png" style="width:100%;"></a>
          </div>
-         <div class="col-6 container-fluid">
-           <img class="right-half-col" src="Images/What_Happened.png" style="width:100%;">
+         <div id="swap16" class="col-6 container-fluid" onclick="delay('#innerSwap16')">
+           <a href="javascript:delay('#innerSwap16')"><img id="innerSwap16" class="right-half-col" src="Images/What_Happened.png" style="width:100%;"></a>
          </div>
        </div>
        <br>
