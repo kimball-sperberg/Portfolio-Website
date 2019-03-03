@@ -127,8 +127,8 @@
     <!--Toggle [X] and [square] images-->
     <script>
         function toggleSqX() {
-            var img1 = "https://i.imgur.com/Mdyr4HT.png",
-               img2 = "Images/XButton.png"; //https://i.imgur.com/QCSctxI.pn
+            var img1 = "https://i.imgur.com/nMXAJOr.png", //https://i.imgur.com/Mdyr4HT.png //Images/SquareButton2.png
+               img2 = "https://i.imgur.com/G2taMV5.png"; //https://i.imgur.com/QCSctxI.png //Images/XButton2.png
                // button: https://i.imgur.com/rXSjXBc.png
             var imgElement = document.getElementById('SqX');
 
@@ -490,27 +490,32 @@
      <div class="customContainer">
 
        <div class="windowBottomContainer">
-
            <div class="windowTop" onclick="myFunction(); toggleSqX();" data-toggle="collapse" data-target="#collapseExample">
+             <div style="border: 4px solid #BEBEBE; box-shadow: -2px 0px 0px 0px white, 2px 0px 0px 0px grey; background-color: #00007A;">
+
+             <div style="border-right: 2px solid #00007A; border-top: 4px; margin-bottom: 6px;">
+
              <!--Commented out below is a modal (2 lines) where different header text would display based on screen size (above or below "lg" size as determined by bootstrap)-->
              <!--<h1 class="windowTitle d-lg-none">Sam Kimball<img onclick="myFunction()" data-toggle="collapse" data-target="#collapseExample" src="Images/X_Button.png" class="imgX" ></h1>-->
              <!--<h1 class="windowTitle d-none d-lg-block">Sam Kimball<img onclick="myFunction()" data-toggle="collapse" data-target="#collapseExample" src="Images/X_Button.png" class="imgX" ></h1>-->
-             <h1 class="windowTitle">About Me<img src="https://i.imgur.com/Mdyr4HT.png" id="SqX" ></img></h1>
+             <h1 class="windowTitle">About Me<img src="https://i.imgur.com/nMXAJOr.png" id="SqX" style="margin-top: 3px; margin-bottom: 3px;"></img></h1> <!--https://i.imgur.com/Mdyr4HT.png-->
            </div>
+         </div>
+       </div>
 
             <div class="windowBottom row">
 
              <div id="Portrait" class="col-12 col-lg-4 text-center container-fluid">
-               <div class="container collapse" id="collapseExample">
+               <div class="container collapse errorMessageContent" id="collapseExample">
                  <img src="Images/profpic.jpg" style="width:100%;">
                </div>
              </div>
 
              <div class="col-12 col-lg-8 text-center container-fluid">
-               <div class="container collapse" id="collapseExample">
+               <div class="container collapse errorMessageContent" id="collapseExample">
                    <h2>Nice to meet you.</h2>
                    <div class="d-none d-md-block text-center container-fluid"> <!--d-none d-md-block = only appears on screen size lg or greater-->
-                     <p>I am a web developer, illustrator and digital artist.
+                     <p><br>I am a web developer, illustrator and digital artist.
                        Raised by live music and the internet, my style blends DIY and Y2K aesthetics with clever responsive design.
                      </p>
                    </div>
