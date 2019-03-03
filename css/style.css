@@ -557,7 +557,7 @@ padding-right: 0 !important;
   }
 
 #bootstrap-override .videoWrapper {
-  margin-top: 2.5%;
+  margin-top: 2.5%; !important;
 }
 
 @media (min-width:768px) {
