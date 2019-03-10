@@ -241,19 +241,12 @@
                 var element = document.getElementById("swap21");
                 element.classList.toggle("col-12");
                 var element = document.getElementById("innerSwap21");
-                element.classList.toggle("negative-right-col");
+                element.classList.toggle("negative-left-col");
 
                 var element = document.getElementById("swap22");
                 element.classList.toggle("col-12");
                 var element = document.getElementById("innerSwap22");
                 element.classList.toggle("negative-right-col");
-
-                var element = document.getElementById("swap23");
-                element.classList.toggle("col-12");
-                var element = document.getElementById("innerSwap23");
-                element.classList.toggle("negative-right-col");
-
-
             }
         }
     </script>
@@ -313,7 +306,7 @@
           <a href="#Stickers" onclick="closeNav()"><img src="Images/StickersIcon.png" style="max-width: 100%;"></a>
       </div>
       <div class="col-6 text-center mobileMenuIcons">
-          <a href="#artistStatement" onclick="closeNav()"><img src="Images/ContactIcon.png" style="max-width: 100%;"></a>
+          <a href="#Contact" onclick="closeNav()"><img src="Images/ContactIcon.png" style="max-width: 100%;"></a>
       </div>
     </div>
   </div>
@@ -328,7 +321,6 @@
       document.getElementById("mySidenav").style.width = "0";
     }
   </script>
-
 <!--Landing: Front page spread containing name, descriptor, navigation, etc-->
   <!--Takes up exactly the full length/width of the screen viewing-->
   <section id="Landing">
@@ -359,15 +351,15 @@
           <div class="row">
 
             <div class="col-12 iconTop">
-              <a href="#artistStatement"><img src="Images/AboutMeIcon.png" id="firstIcon" onclick="ReaperClickScroll();" style="max-width: 100%;"></a>
+              <a href="#artistStatement"><img src="Images/AboutMeIcon.png" id="firstIcon" title="About Me" onclick="ReaperClickScroll();" style="max-width: 100%;"></a>
             </div>
 
             <div class="col-12 iconLeftMiddle">
-              <a href="#gigPosters"><img src="Images/PostersIcon.png" id="secondIcon" style="max-width: 100%;"></a>
+              <a href="#gigPosters"><img src="Images/PostersIcon.png" id="secondIcon" title="Posters" style="max-width: 100%;"></a>
             </div>
 
             <div class="col-12 iconBottom">
-              <a href="#Websites"><img src="Images/WebsitesIcon.png" id="thirdIcon" style="max-width: 100%;"></a>
+              <a href="#Websites"><img src="Images/WebsitesIcon.png" id="thirdIcon" title="Websites" style="max-width: 100%;"></a>
             </div>
 
           </div>
@@ -383,15 +375,15 @@
           <div class="row">
 
             <div class="col-12 iconTop">
-              <a href="#GlitchArt"><img src="Images/GlitchIcon2.png" id="fourthIcon" style="max-width: 100%; "></a>
+              <a href="#GlitchArt"><img src="Images/GlitchIcon2.png" id="fourthIcon" title="Glitch Art" style="max-width: 100%; "></a>
             </div>
 
             <div class="col-12 iconRightMiddle">
-              <a href="#Stickers"><img src="Images/StickersIcon.png" id="fifthIcon" style="max-width: 100%;"></a>
+              <a href="#Stickers"><img src="Images/StickersIcon.png" id="fifthIcon" title="Stickers" style="max-width: 100%;"></a>
             </div>
 
             <div class="col-12 iconBottom">
-              <a href="#Contact"><img src="Images/ContactIcon.png" id="sixthIcon" style="max-width: 100%;"></a>
+              <a href="#Contact"><img src="Images/ContactIcon.png" id="sixthIcon" title="Contact Me" style="max-width: 100%;"></a>
             </div>
 
           </div><!--end row-->
@@ -407,12 +399,20 @@
       <img src="Images/ReaperGifContact.gif" style="display:none;">
       <img src="Images/ReaperGifWebsites.gif" style="display:none;">
       <img src="Images/ReaperGifGlitchArt.gif" style="display:none;">
-      <img src="Images/AboutMeIconGreenBG.gif" style="display:none;">
+      <img src="Images/AboutMeIconGreenBG2.gif" style="display:none;">
       <img src="Images/StickersIconGreenBG.png" style="display:none;">
       <img src="Images/PostersIconGreenBG.png" style="display:none;">
       <img src="Images/WebsitesIconGreenBG2.png" style="display:none;">
       <img src="Images/GlitchIconGreenBG.gif" style="display:none;">
       <img src="Images/ContactIconGreenBG.png" style="display:none;">
+      <img src="Images/InstaIconGreenBG.png" style="display:none;">
+      <img src="Images/EmailIconGreenBG2.png" style="display:none;">
+      <img src="Images/ResumeIconGreenBG2.png" style="display:none;">
+      <img src="Images/LinkedInIconGreenBG2.png" style="display:none;">
+      <img src="Images/PhoneIconGreenBG.png" style="display:none;">
+
+
+
 
       <!--Down Arrow-->
       <!--<div class="row justify" style="width:100%;">
@@ -519,7 +519,7 @@
              <!--Commented out below is a modal (2 lines) where different header text would display based on screen size (above or below "lg" size as determined by bootstrap)-->
              <!--<h1 class="windowTitle d-lg-none">Sam Kimball<img onclick="myFunction()" data-toggle="collapse" data-target="#collapseExample" src="Images/X_Button.png" class="imgX" ></h1>-->
              <!--<h1 class="windowTitle d-none d-lg-block">Sam Kimball<img onclick="myFunction()" data-toggle="collapse" data-target="#collapseExample" src="Images/X_Button.png" class="imgX" ></h1>-->
-             <h1 class="windowTitle">About Me<img src="https://i.imgur.com/nMXAJOr.png" id="SqX" style="margin-top: 3px; margin-bottom: 3px;"></img></h1> <!--https://i.imgur.com/Mdyr4HT.png-->
+             <h1 style="/*font-family: 'pixelated'; letter-spacing: 1px;*/" class="windowTitle">About Me<img src="https://i.imgur.com/nMXAJOr.png" id="SqX" style="margin-top: 3px; margin-bottom: 3px;"></img></h1> <!--https://i.imgur.com/Mdyr4HT.png-->
            </div>
          </div>
        </div>
@@ -553,7 +553,7 @@
 
          <div class="windowBottom windowButton row">
             <div class="col-12 text-center">
-              <button onclick="myFunction(); toggleSqX();" id="toggle" class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              <button style="/*font-family: 'pixelated'; font-size: letter-spacing: 1px;/*" onclick="myFunction(); toggleSqX();" id="toggle" class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                 Expand
               </button>
             </div>
@@ -700,46 +700,46 @@
 
        <div class="row img" onclick="colToggle();">
          <div id="swap7" class="col-6 container-fluid" onclick="delay('#innerSwap7')">
-           <a href="javascript:delay('#innerSwap7')"><img id="innerSwap7" a href="#innerSwap7" class="left-half-col" src="Images/Lady_Glitch-5.png" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap7')"><img id="innerSwap7" a href="#innerSwap7" class="left-half-col" src="Images/Lady_Glitch-5.png" title="Lady at Sea" style="width:100%;"></a>
          </div>
          <div id="swap8" class="col-6 container-fluid" onclick="delay('#innerSwap8')">
-           <a href="javascript:delay('#innerSwap3')"><img id="innerSwap8" class="right-half-col" src="Images/Cereal_Glitch.png" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap3')"><img id="innerSwap8" class="right-half-col" src="Images/Clouds_Glitch.png" title="Clouds" style="width:100%;"></a>
          </div>
        </div>
 
        <div class="row img" onclick="colToggle();">
          <div id="swap9" class="col-6 container-fluid" onclick="delay('#innerSwap9')">
-           <a href="javascript:delay('#innerSwap9')"><img id="innerSwap9" a href="#innerSwap9" class="left-half-col" src="Images/Glitch_Texture-2.png" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap9')"><img id="innerSwap9" a href="#innerSwap9" class="left-half-col" src="Images/Glitch_Texture-2.png" title="Warp Drive" style="width:100%;"></a>
          </div>
          <div id="swap10" class="col-6 container-fluid" onclick="delay('#innerSwap10')">
-           <a href="javascript:delay('#innerSwap10')"><img id="innerSwap10" class="right-half-col" src="Images/Glitch_Texture-1.png" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap10')"><img id="innerSwap10" class="right-half-col" src="Images/Glitch_Texture-1.png" title="Texture Chaos" style="width:100%;"></a>
          </div>
        </div>
 
        <div class="row img" onclick="colToggle();">
          <div id="swap11" class="col-6 container-fluid" onclick="delay('#innerSwap11')">
-           <a href="javascript:delay('#innerSwap11')"><img id="innerSwap11" class="left-half-col" src="Images/RedSky_Glitch.png" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap11')"><img id="innerSwap11" class="left-half-col" src="Images/RedSky_Glitch.png" title="Red Sky" style="width:100%;"></a>
          </div>
          <div id="swap12" class="col-6 container-fluid" onclick="delay('#innerSwap12')">
-           <a href="javascript:delay('#innerSwap12')"><img id="innerSwap12" class="right-half-col" src="Images/Glitch_Landscape-2.png" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap12')"><img id="innerSwap12" class="right-half-col" src="Images/Glitch_Landscape-2.png" title="Alien Landscape" style="width:100%;"></a>
          </div>
        </div>
 
        <div class="row img" onclick="colToggle();">
          <div id="swap13" class="col-6 container-fluid" onclick="delay('#innerSwap13')">
-           <a href="javascript:delay('#innerSwap13')"><img id="innerSwap13" class="left-half-col" src="Images/Flower_Glitch-3.png" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap13')"><img id="innerSwap13" class="left-half-col" src="Images/Flower_Glitch-3.png" title="Moonflowers" style="width:100%;"></a>
          </div>
          <div id="swap14" class="col-6 container-fluid" onclick="delay('#innerSwap14')">
-           <a href="javascript:delay('#innerSwap14')"><img id="innerSwap14" class="right-half-col" src="Images/Flower_Glitch.png" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap14')"><img id="innerSwap14" class="right-half-col" src="Images/Flower_Glitch.png" title="View from the Window" style="width:100%;"></a>
          </div>
        </div>
 
        <div class="row img" onclick="colToggle();">
          <div id="swap15" class="col-6 container-fluid" onclick="delay('#innerSwap15')">
-           <a href="javascript:delay('#innerSwap15')"><img id="innerSwap15" class="left-half-col" src="Images/Random_Glitch-1.png" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap15')"><img id="innerSwap15" class="left-half-col" src="Images/Random_Glitch-1.png" title="Pepsi Cola" style="width:100%;"></a>
          </div>
          <div id="swap16" class="col-6 container-fluid" onclick="delay('#innerSwap16')">
-           <a href="javascript:delay('#innerSwap16')"><img id="innerSwap16" class="right-half-col" src="Images/What_Happened.png" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap16')"><img id="innerSwap16" class="right-half-col" src="Images/What_Happened.png" title="What Happened?" style="width:100%;"></a>
          </div>
        </div>
        <div class="videoWrapper">
@@ -791,8 +791,24 @@
            <a href="javascript:delay('#innerSwap22')"><img id="innerSwap22" class="right-half-col" src="Images/Stickers_Punk.jpg" style="width:100%;"></a>
          </div>
        </div>
-       <br>
+  <br>
+  <section id="Contact">
+    <div class="container-fluid">
+      <div class="customContainer">
+        <div style="padding-top: 10vh; padding-bottom: 35vh;" class="sectionTitle text-center">
+          <h2 class="text-center">Contact Me<hr></h2>
+          <div class="contactContainer">
+            <a href="https://www.instagram.com/samkimball__"><div id="seventhIcon" class="text-left contact"><img src="Images/InstaIcon.png" align="middle" class="ContactSectionIcon"></img><h4 class="ContactSectionText">@samkimball__</h4></div></a>
+            <div id="eighthIcon" class="text-left contact"><img src="Images/EmailIcon3.png" align="middle" class="ContactSectionIcon"></img><h4 class="ContactSectionText">samkimball27@gmail</h4></div>
+            <div id="eleventhIcon" class="text-left contact"><img src="Images/PhoneIcon.png" align="middle" class="ContactSectionIcon"></img><h4 class="ContactSectionText">973-619-2826</h4></div>
+            <a href="https://www.linkedin.com/in/samkimball27"><div id="ninthIcon" class="text-left contact"><img src="Images/LinkedInIcon2.png" align="middle" class="ContactSectionIcon"></img><h4 class="ContactSectionText">My LinkedIn</h4></div></a>
+            <a href="Images/Resume6.pdf" download="Images/Resume6.pdf"><div id="tenthIcon" class="text-left contact"><img src="Images/ResumeIcon2.png" align="middle" class="ContactSectionIcon"></img><h4 class="ContactSectionText">My Resume</h4></div></a>
+          </div>
+        </div>
 
+      </div>
+    </div>
+  </section>
   <!--Change button text onclick-->
   <script type="text/javascript">
       function myFunction() {

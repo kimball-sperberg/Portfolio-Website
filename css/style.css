@@ -1,8 +1,10 @@
 
+@font-face {
+    font-family: "pixelated";
+    src:url("C:/Users/Roger/Documents/Websites/IIS Portfolio/PKMN-Mystery-Dungeon.ttf");
+}
 
 body {
-  /*font-family: 'Merriweather Sans', sans-serif;*/
-
   font-size: 12pt;
   background-color: #FFCAAA;
 }
@@ -188,7 +190,7 @@ body {
 
 h1 {
   color: white;
-  font-size: 180%;
+  font-size: 180%; /*200% if decide to use pixelated font*/
 }
 
 .windowTitle {
@@ -412,47 +414,47 @@ p {
 }
 
 .left-half-col {
-  padding-right: 2.5%;
+  padding-right: 2%; /*was 2.5%*/
 }
 
 @media (min-width:768px) {
   .left-half-col {
-      padding-right: 3%;
+      padding-right: 2%; /*was 3%*/
     }
   }
 
 @media (min-width:992px) {
   .left-half-col {
-      padding-right: 3.5%;
+      padding-right: 3.5%; /*was 3.5%*/
     }
   }
 
 @media (min-width:1200px) {
   .left-half-col {
-      padding-right: 4%;
+      padding-right: 2%; /*was 4%*/
     }
   }
 
 
 .right-half-col {
-  padding-left: 2.5%;
+  padding-left: 2%; /*was 2.5%*/
 }
 
 @media (min-width:768px) {
   .right-half-col {
-      padding-left: 3%;
+      padding-left: 2%; /*was 3%*/
     }
   }
 
 @media (min-width:992px) {
   .right-half-col {
-      padding-left: 3.5%;
+      padding-left: 2%; /*was 3.5%*/
     }
   }
 
 @media (min-width:1200px) {
   .right-half-col {
-      padding-left: 4%;
+      padding-left: 2%; /*was 4%*/
     }
   }
 
@@ -513,24 +515,24 @@ padding-right: 0 !important;
 }
 
 #bootstrap-override .img {
-  padding-top: 2.5%;
+  padding-top: 2%; /*was 2.5%*/
 }
 
 @media (min-width:768px) {
   #bootstrap-override .img {
-      padding-top: 3%;
+      padding-top: 2%; /*was 3%*/
     }
   }
 
 @media (min-width:992px) {
   #bootstrap-override .img {
-      padding-top: 3.5%;
+      padding-top: 2%; /*was 3.5%*/
     }
   }
 
 @media (min-width:1200px) {
   #bootstrap-override .img {
-      padding-top: 4%;
+      padding-top: 2%; /*was 4%*/
     }
   }
 
@@ -688,18 +690,19 @@ hr {
 
 .negative-left-col {
   padding-right: 0px;
+  padding-top: 1%;
 }
 
 .negative-right-col {
   padding-left: 0px;
   padding-top: 3%;
 }
-#firstIcon, #secondIcon, #thirdIcon, #fourthIcon, #fifthIcon, #sixthIcon {
+#firstIcon, #secondIcon, #thirdIcon, #fourthIcon, #fifthIcon, #sixthIcon, {
   min-height: 60px;
-
+  max-width: 100%;
 }
 #firstIcon:hover {
-  content: url('../Images/AboutMeIconGreenBG.gif');
+  content: url('../Images/AboutMeIconGreenBG2.gif');
 }
 
 #secondIcon:hover {
@@ -720,6 +723,67 @@ hr {
 
 #sixthIcon:hover {
   content: url('../Images/ContactIconGreenBG.png');
+}
+
+#seventhIcon:hover img {
+  content: url('../Images/InstaIconGreenBG.png');
+  cursor: pointer;
+  decoration: none;
+}
+
+#seventhIcon:hover {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #2F9F07;
+  color: #2F9F07;
+  cursor: pointer;
+}
+
+#eighthIcon:hover img {
+  content: url('../Images/EmailIconGreenBG2.png');
+    cursor: pointer;
+}
+
+#eighthIcon:hover {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #2F9F07;
+  color: #2F9F07;
+  cursor: pointer;
+}
+
+#ninthIcon:hover img {
+  content: url('../Images/LinkedInIconGreenBG2.png');
+  cursor: pointer;
+}
+
+#ninthIcon:hover {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #2F9F07;
+  color: #2F9F07;
+  cursor: pointer;
+}
+
+#tenthIcon:hover img {
+  content: url('../Images/ResumeIconGreenBG2.png');
+  cursor: pointer;
+}
+
+#tenthIcon:hover {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #2F9F07;
+  color: #2F9F07;
+  cursor: pointer;
+}
+
+#eleventhIcon:hover img {
+  content: url('../Images/PhoneIconGreenBG.png');
+  cursor: pointer;
+}
+
+#eleventhIcon:hover {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #2F9F07;
+  color: #2F9F07;
+  cursor: pointer;
 }
 
 .sidenav {
@@ -810,4 +874,47 @@ html, body {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+.ContactSectionIcon {
+  max-width: 50px;
+}
+
+.ContactSectionText {
+  font-size: 16pt;
+  margin-left: 5%;
+}
+
+h4 {
+  display: inline;
+}
+
+.contact {
+  padding: 2%;
+}
+
+.contactContainer {
+    margin-top: 10%;
+  }
+
+@media (min-width:992px) {
+  .contactContainer {
+    margin-left: 10%;
+    margin-right: 10%;
+    }
+  }
+
+@media (min-width:1200px) {
+  .contactContainer {
+    margin-left: 25%;
+    margin-right: 25%;
+    }
+  }
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
 }
