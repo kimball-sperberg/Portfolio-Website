@@ -254,7 +254,7 @@
     <script>
         function delay (URL) {
             if ($(window).width() < 992) {
-                setTimeout( function() { window.location = URL }, 5 );
+                setTimeout( function() { window.location = URL }, 10 );
             }
         }
     </script>
@@ -321,7 +321,7 @@
       document.getElementById("mySidenav").style.width = "0";
     }
   </script>
-<!--Landing: Front page spread containing name, descriptor, navigation, etc-->
+  <!--Landing: Front page spread containing name, descriptor, navigation, etc-->
   <!--Takes up exactly the full length/width of the screen viewing-->
   <section id="Landing">
     <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
@@ -351,15 +351,15 @@
           <div class="row">
 
             <div class="col-12 iconTop">
-              <a href="#artistStatement"><img src="Images/AboutMeIcon.png" id="firstIcon" title="About Me" onclick="ReaperClickScroll();" style="max-width: 100%;"></a>
+              <a href="#artistStatement"><img src="Images/AboutMeIcon.png" id="firstIcon" onclick="ReaperClickScroll();" style="max-width: 100%;"></a>
             </div>
 
             <div class="col-12 iconLeftMiddle">
-              <a href="#gigPosters"><img src="Images/PostersIcon.png" id="secondIcon" title="Posters" style="max-width: 100%;"></a>
+              <a href="#gigPosters"><img src="Images/PostersIcon.png" id="secondIcon" style="max-width: 100%;"></a>
             </div>
 
             <div class="col-12 iconBottom">
-              <a href="#Websites"><img src="Images/WebsitesIcon.png" id="thirdIcon" title="Websites" style="max-width: 100%;"></a>
+              <a href="#Websites"><img src="Images/WebsitesIcon.png" id="thirdIcon" style="max-width: 100%;"></a>
             </div>
 
           </div>
@@ -375,15 +375,15 @@
           <div class="row">
 
             <div class="col-12 iconTop">
-              <a href="#GlitchArt"><img src="Images/GlitchIcon2.png" id="fourthIcon" title="Glitch Art" style="max-width: 100%; "></a>
+              <a href="#GlitchArt"><img src="Images/GlitchIcon2.png" id="fourthIcon" style="max-width: 100%; "></a>
             </div>
 
             <div class="col-12 iconRightMiddle">
-              <a href="#Stickers"><img src="Images/StickersIcon.png" id="fifthIcon" title="Stickers" style="max-width: 100%;"></a>
+              <a href="#Stickers"><img src="Images/StickersIcon.png" id="fifthIcon" style="max-width: 100%;"></a>
             </div>
 
             <div class="col-12 iconBottom">
-              <a href="#Contact"><img src="Images/ContactIcon.png" id="sixthIcon" title="Contact Me" style="max-width: 100%;"></a>
+              <a href="#Contact"><img src="Images/ContactIcon.png" id="sixthIcon" style="max-width: 100%;"></a>
             </div>
 
           </div><!--end row-->
@@ -420,9 +420,6 @@
       </div>-->
     </div><!--End landingContainer-->
   </section>
-
-
-
 
   <!--Toggle Gifs on hover on icons-->
   <script>
@@ -537,12 +534,12 @@
                    <h2>Nice to meet you.</h2>
                    <div class="d-none d-md-block text-center container-fluid"> <!--d-none d-md-block = only appears on screen size lg or greater-->
                      <p><br>I am a web developer, illustrator and digital artist.
-                       Raised by live music and the internet, my style blends DIY and Y2K aesthetics with clever responsive design.
+                       Raised by live music and the internet, my style blends DIY and Y2K aesthetics with sleek, modern design.
                      </p>
                    </div>
                    <div class="d-md-none text-center">
                      <p>I am a web developer, illustrator and digital artist.
-                       Raised by live music and the internet, my style blends DIY and Y2K aesthetics with clever responsive design.
+                       Raised by live music and the internet, my style blends DIY and Y2K aesthetics with sleek, modern design.
                      </p>
                    </div>
                 </div>
@@ -590,15 +587,15 @@
          </div>
        </div>
 
-
        <div class="row img" onclick="colToggle();">
          <div id="swap5" class="col-6 container-fluid" onclick="delay('#innerSwap5')">
-           <a href="javascript:delay('#innerSwap5')"><img id="innerSwap5" class="left-half-col" src="Images/A_Boy_Named_John_Amp_House-final2.png" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap5')"><img id="innerSwap5" class="left-half-col" src="Images/A_Boy_Named_John_Amp_House-final3.png" style="width:100%;"></a>
          </div>
          <div id="swap6" class="col-6 container-fluid" onclick="delay('#innerSwap6')">
            <a href="javascript:delay('#innerSwap6')"><img id="innerSwap6" class="right-half-col" src="Images/ABNJ-Nevada-6.png" style="width:100%;"></a>
          </div>
        </div>
+
 
        <!--Carousel (Commented Out)
        <div id="carouselExampleIndicators" class="carousel slide img" data-ride="carousel">
@@ -635,7 +632,7 @@
        <!-- Swiper -->
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img style="width:100%;" src="Images/multicolor.png"></img></div>
+            <div class="swiper-slide"><img style="width:100%;" src="Images/multicolor2.jpg"></img></div>
             <div class="swiper-slide"><img style="width:100%;" src="Images/Glitch_Texture-1.png"></img></div>
             <div class="swiper-slide">Slide 3</div>
             <div class="swiper-slide">Slide 4</div>
@@ -682,7 +679,7 @@
        </div>
 
        <div class="img">
-           <img src="Images/multicolor.png" style="width:100%;">
+           <img src="Images/multicolor2.jpg" style="width:100%;">
        </div>
        <br>
 
@@ -742,6 +739,16 @@
            <a href="javascript:delay('#innerSwap16')"><img id="innerSwap16" class="right-half-col" src="Images/What_Happened.png" title="What Happened?" style="width:100%;"></a>
          </div>
        </div>
+
+       <div class="row img" onclick="colToggle();">
+         <div id="swap15" class="col-6 container-fluid" onclick="delay('#innerSwap15')">
+           <a href="javascript:delay('#innerSwap15')"><img id="innerSwap15" class="left-half-col" src="Images/OC_Wallpaper_1.png" title="Pepsi Cola" style="width:100%;"></a>
+         </div>
+         <div id="swap16" class="col-6 container-fluid" onclick="delay('#innerSwap16')">
+           <a href="javascript:delay('#innerSwap16')"><img id="innerSwap16" class="right-half-col" src="Images/OC_Wallpaper_5.png" title="What Happened?" style="width:100%;"></a>
+         </div>
+       </div>
+
        <div class="videoWrapper">
          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/x74brrZmvcg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
        </div>
@@ -791,6 +798,14 @@
            <a href="javascript:delay('#innerSwap22')"><img id="innerSwap22" class="right-half-col" src="Images/Stickers_Punk.jpg" style="width:100%;"></a>
          </div>
        </div>
+
+       <div class="row img" onclick="colToggle();">
+         <div class="col-12 container-fluid" onclick="delay('#innerSwap21')">
+           <a href="javascript:delay('#innerSwap21')"><img id="innerSwap21" src="Images/Seapunk.jpg" style="width:100%;"></a>
+         </div>
+       </div>
+
+
   <br>
   <section id="Contact">
     <div class="container-fluid">
@@ -799,8 +814,8 @@
           <h2 class="text-center">Contact Me<hr></h2>
           <div class="contactContainer">
             <a href="https://www.instagram.com/samkimball__"><div id="seventhIcon" class="text-left contact"><img src="Images/InstaIcon.png" align="middle" class="ContactSectionIcon"></img><h4 class="ContactSectionText">@samkimball__</h4></div></a>
-            <div id="eighthIcon" class="text-left contact"><img src="Images/EmailIcon3.png" align="middle" class="ContactSectionIcon"></img><h4 class="ContactSectionText">samkimball27@gmail</h4></div>
-            <div id="eleventhIcon" class="text-left contact"><img src="Images/PhoneIcon.png" align="middle" class="ContactSectionIcon"></img><h4 class="ContactSectionText">973-619-2826</h4></div>
+            <a href="mailto:samkimball27@gmail.com"><div id="eighthIcon" class="text-left contact"><img src="Images/EmailIcon3.png" align="middle" class="ContactSectionIcon"></img><h4 class="ContactSectionText">samkimball27@gmail</h4></div></a>
+            <a href="tel:+9736192826"><div id="eleventhIcon" class="text-left contact"><img src="Images/PhoneIcon.png" align="middle" class="ContactSectionIcon"></img><h4 class="ContactSectionText">973-619-2826</h4></div></a>
             <a href="https://www.linkedin.com/in/samkimball27"><div id="ninthIcon" class="text-left contact"><img src="Images/LinkedInIcon2.png" align="middle" class="ContactSectionIcon"></img><h4 class="ContactSectionText">My LinkedIn</h4></div></a>
             <a href="Images/Resume6.pdf" download="Images/Resume6.pdf"><div id="tenthIcon" class="text-left contact"><img src="Images/ResumeIcon2.png" align="middle" class="ContactSectionIcon"></img><h4 class="ContactSectionText">My Resume</h4></div></a>
           </div>
