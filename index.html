@@ -697,37 +697,37 @@
 
        <div class="row img" onclick="colToggle();">
          <div id="swap7" class="col-6 container-fluid" onclick="delay('#innerSwap7')">
-           <a href="javascript:delay('#innerSwap7')"><img id="innerSwap7" a href="#innerSwap7" class="left-half-col" src="Images/Lady_Glitch-5.png" title="Lady at Sea" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap7')"><img id="innerSwap7" a href="#innerSwap7" class="left-half-col" src="Images/Lady_Glitch-6.png" title="Lady at Sea" style="width:100%;"></a><!--<p>Anaog Glitch Art- Images captured from old VHS tapes, run through a broken machine and CRT TV</p>-->
          </div>
          <div id="swap8" class="col-6 container-fluid" onclick="delay('#innerSwap8')">
-           <a href="javascript:delay('#innerSwap3')"><img id="innerSwap8" class="right-half-col" src="Images/Clouds_Glitch.png" title="Clouds" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap3')"><img id="innerSwap8" class="right-half-col" src="Images/Glitch_Landscape-2.png" title="Frozen Beach" style="width:100%;"></a>
          </div>
        </div>
 
        <div class="row img" onclick="colToggle();">
          <div id="swap9" class="col-6 container-fluid" onclick="delay('#innerSwap9')">
-           <a href="javascript:delay('#innerSwap9')"><img id="innerSwap9" a href="#innerSwap9" class="left-half-col" src="Images/Glitch_Texture-2.png" title="Warp Drive" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap9')"><img id="innerSwap9" a href="#innerSwap9" class="left-half-col" src="Images/FrozenBeach.png" title="Clock Tower" style="width:100%;"></a>
          </div>
          <div id="swap10" class="col-6 container-fluid" onclick="delay('#innerSwap10')">
-           <a href="javascript:delay('#innerSwap10')"><img id="innerSwap10" class="right-half-col" src="Images/Glitch_Texture-1.png" title="Texture Chaos" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap10')"><img id="innerSwap10" class="right-half-col" src="Images/DistortedVisions.png" title="Texture Chaos" style="width:100%;"></a>
          </div>
        </div>
 
        <div class="row img" onclick="colToggle();">
          <div id="swap11" class="col-6 container-fluid" onclick="delay('#innerSwap11')">
-           <a href="javascript:delay('#innerSwap11')"><img id="innerSwap11" class="left-half-col" src="Images/RedSky_Glitch.png" title="Red Sky" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap11')"><img id="innerSwap11" class="left-half-col" src="Images/Glitch_Texture-2.png" title="Red Sky" style="width:100%;"></a>
          </div>
          <div id="swap12" class="col-6 container-fluid" onclick="delay('#innerSwap12')">
-           <a href="javascript:delay('#innerSwap12')"><img id="innerSwap12" class="right-half-col" src="Images/Glitch_Landscape-2.png" title="Alien Landscape" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap12')"><img id="innerSwap12" class="right-half-col" src="Images/ClockTower.png" title="Alien Landscape" style="width:100%;"></a>
          </div>
        </div>
 
        <div class="row img" onclick="colToggle();">
          <div id="swap13" class="col-6 container-fluid" onclick="delay('#innerSwap13')">
-           <a href="javascript:delay('#innerSwap13')"><img id="innerSwap13" class="left-half-col" src="Images/Flower_Glitch-3.png" title="Moonflowers" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap13')"><img id="innerSwap13" class="left-half-col" src="Images/Glitch_Texture-1.png" title="Moonflowers" style="width:100%;"></a>
          </div>
          <div id="swap14" class="col-6 container-fluid" onclick="delay('#innerSwap14')">
-           <a href="javascript:delay('#innerSwap14')"><img id="innerSwap14" class="right-half-col" src="Images/Flower_Glitch.png" title="View from the Window" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap14')"><img id="innerSwap14" class="right-half-col" src="Images/Flower_Glitch-4.png" title="View from the Window" style="width:100%;"></a>
          </div>
        </div>
 
@@ -805,8 +805,26 @@
          </div>
        </div>
 
+       <!-- Swiper -->
+        <!--<div class="swiper-container s2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img style="width:100%;" src="Images/multicolor2.jpg"></img></div>
+            <div class="swiper-slide"><img style="width:100%;" src="Images/Glitch_Texture-1.png"></img></div>
+            <div class="swiper-slide">Slide 3</div>
 
-  <br>
+          </div>-->
+          <!-- Add Pagination -->
+          <!--<div class="swiper-pagination2"></div>-->
+
+
+
+
+
+       <br>
+     </div><!--customContainer end-->
+   </div><!--container-fluid end-->
+  </section>
+
   <section id="Contact">
     <div class="container-fluid">
       <div class="customContainer">
@@ -820,10 +838,10 @@
             <a href="Images/Resume6.pdf" download="Images/Resume6.pdf"><div id="tenthIcon" class="text-left contact"><img src="Images/ResumeIcon2.png" align="middle" class="ContactSectionIcon"></img><h4 class="ContactSectionText">My Resume</h4></div></a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
+
   <!--Change button text onclick-->
   <script type="text/javascript">
       function myFunction() {
@@ -836,6 +854,24 @@
               change.innerHTML = "Close";
           }
       }
+  </script>
+
+  <!--Code to enable multiple Swipers -->
+  <script>
+    var mySwiper = new Swiper ('.s1', {
+      loop: true,
+      pagination: '.swiper-pagination',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      scrollbar: '.swiper-scrollbar'
+    });
+    var mySwiper2 = new Swiper ('.s2', {
+      loop: true,
+      pagination: '.swiper-pagination2',
+      nextButton: '.swiper-button-next2',
+      prevButton: '.swiper-button-prev2',
+      scrollbar: '.swiper-scrollbar2'
+    });
   </script>
 
   <script src="js/bootstrap.js"></script>
