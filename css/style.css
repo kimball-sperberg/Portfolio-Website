@@ -216,7 +216,9 @@ h1 {
 }
 
 #Portrait img {
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
 }
 
 .windowTop img{
@@ -857,10 +859,24 @@ hr {
   font-size: 18px;
   background: #fff;
 }
+
 html, body {
   position: relative;
   width: 100%;
 }
+
+#dialogueBubble {
+  margin-bottom: -5%;
+  max-width: 100%;
+  position: relative;
+  z-index: 99;
+}
+
+@media (min-width:768px) {
+  #dialogueBubble {
+      margin-bottom: -3.5%;
+    }
+  }
 
 .videoWrapper {
 	position: relative;
@@ -918,6 +934,30 @@ a {
 a:hover {
   text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Second Swiper Code*/
 .s1 {
@@ -1067,4 +1107,8 @@ html, body, .swiper-container {
 html, body, .swiper-container2 {
     max-height:100%;
     position:relative;
+}
+
+#aboutMeDescription {
+  margin-top: 15px;
 }

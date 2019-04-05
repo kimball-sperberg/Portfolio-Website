@@ -247,6 +247,26 @@
                 element.classList.toggle("col-12");
                 var element = document.getElementById("innerSwap22");
                 element.classList.toggle("negative-right-col");
+
+                var element = document.getElementById("swap23");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("innerSwap23");
+                element.classList.toggle("negative-left-col");
+
+                var element = document.getElementById("swap24");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("innerSwap24");
+                element.classList.toggle("negative-right-col");
+
+                var element = document.getElementById("swap25");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("innerSwap25");
+                element.classList.toggle("negative-left-col");
+
+                var element = document.getElementById("swap26");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("innerSwap26");
+                element.classList.toggle("negative-right-col");
             }
         }
     </script>
@@ -321,6 +341,7 @@
       document.getElementById("mySidenav").style.width = "0";
     }
   </script>
+
   <!--Landing: Front page spread containing name, descriptor, navigation, etc-->
   <!--Takes up exactly the full length/width of the screen viewing-->
   <section id="Landing">
@@ -421,7 +442,7 @@
     </div><!--End landingContainer-->
   </section>
 
-  <!--Toggle Gifs on hover on icons-->
+  <!--Toggle Gifs when you hover over icons-->
   <script>
     var on = "Images/ReaperGifConstruction4.gif";
     var off = "Images/OrangeWater.png";
@@ -501,7 +522,7 @@
       state = true;
     }
   </script>
-
+  <script src="js/myscripts.js"></script>
   <section id="artistStatement">
 
     <div class="container-fluid">
@@ -525,7 +546,7 @@
 
              <div id="Portrait" class="col-12 col-lg-4 text-center container-fluid">
                <div class="container collapse errorMessageContent" id="collapseExample">
-                 <img src="Images/profpic.jpg" style="width:100%;">
+                 <img src="Images/NO_DICE-3.jpg" style="width:100%;">
                </div>
              </div>
 
@@ -533,7 +554,7 @@
                <div class="container collapse errorMessageContent" id="collapseExample">
                    <h2>Nice to meet you.</h2>
                    <div class="d-none d-md-block text-center container-fluid"> <!--d-none d-md-block = only appears on screen size lg or greater-->
-                     <p><br>I am a web developer, illustrator and digital artist.
+                     <p id="aboutMeDescription">I am a web developer, illustrator and digital artist.
                        Raised by live music and the internet, my style blends DIY and Y2K aesthetics with sleek, modern design.
                      </p>
                    </div>
@@ -566,12 +587,13 @@
      <div class="customContainer">
 
        <div class="sectionTitle">
-         <h2 class="text-center">Posters<hr></h2>
+         <h2 class="text-center">Posters</h2><hr>
        </div>
-
+       <div id="dialogueContainer"><img src="Images/DialogueBubble6.png" id="dialogueBubble" class="float-right d-lg-none"></div>
+       <div style="clear:both;"></div> <!--This div exists to clear the above float-->
        <div class="row img" onclick="colToggle();">
          <div id="swap" class="col-6 container-fluid" onclick="delay('#innerSwap')">
-           <a href="javascript:delay('#innerSwap3')"><img id="innerSwap" a href="#innerSwap" class="left-half-col" src="Images/OwlBorder6.png" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap3')"><img id="innerSwap" a href="#innerSwap" class="left-half-col" src="Images/OwlBorder6-paint2.png" style="width:100%;"></a>
          </div>
          <div id="swap2" class="col-6 container-fluid" onclick="delay('#innerSwap2')">
            <a href="javascript:delay('#innerSwap3')"><img id="innerSwap2" class="right-half-col" src="Images/King-Krule_Poster-Web.png" style="width:100%;"></a>
@@ -715,7 +737,7 @@
 
        <div class="row img" onclick="colToggle();">
          <div id="swap11" class="col-6 container-fluid" onclick="delay('#innerSwap11')">
-           <a href="javascript:delay('#innerSwap11')"><img id="innerSwap11" class="left-half-col" src="Images/Glitch_Texture-2.png" title="Red Sky" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap11')"><img id="innerSwap11" class="left-half-col" src="Images/Glitch_Tower.png" title="Red Sky" style="width:100%;"></a>
          </div>
          <div id="swap12" class="col-6 container-fluid" onclick="delay('#innerSwap12')">
            <a href="javascript:delay('#innerSwap12')"><img id="innerSwap12" class="right-half-col" src="Images/ClockTower.png" title="Alien Landscape" style="width:100%;"></a>
@@ -724,34 +746,48 @@
 
        <div class="row img" onclick="colToggle();">
          <div id="swap13" class="col-6 container-fluid" onclick="delay('#innerSwap13')">
-           <a href="javascript:delay('#innerSwap13')"><img id="innerSwap13" class="left-half-col" src="Images/Glitch_Texture-1.png" title="Moonflowers" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap13')"><img id="innerSwap13" class="left-half-col" src="Images/LadyGlitch.jpg" title="Moonflowers" style="width:100%;"></a>
          </div>
          <div id="swap14" class="col-6 container-fluid" onclick="delay('#innerSwap14')">
-           <a href="javascript:delay('#innerSwap14')"><img id="innerSwap14" class="right-half-col" src="Images/Flower_Glitch-4.png" title="View from the Window" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap14')"><img id="innerSwap14" class="right-half-col" src="Images/RedSky_Glitch2.png" title="View from the Window" style="width:100%;"></a>
+         </div>
+       </div>
+
+       <div class="row img" onclick="colToggle();">
+         <div id="swap23" class="col-6 container-fluid" onclick="delay('#innerSwap23')">
+           <a href="javascript:delay('#innerSwap23')"><img id="innerSwap23" class="left-half-col" src="Images/Random_Glitch-1.png" title="Pepsi Cola" style="width:100%;"></a>
+         </div>
+         <div id="swap24" class="col-6 container-fluid" onclick="delay('#innerSwap24')">
+           <a href="javascript:delay('#innerSwap24')"><img id="innerSwap24" class="right-half-col" src="Images/Flower_Glitch-3.png" title="What Happened?" style="width:100%;"></a>
          </div>
        </div>
 
        <div class="row img" onclick="colToggle();">
          <div id="swap15" class="col-6 container-fluid" onclick="delay('#innerSwap15')">
-           <a href="javascript:delay('#innerSwap15')"><img id="innerSwap15" class="left-half-col" src="Images/Random_Glitch-1.png" title="Pepsi Cola" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap15')"><img id="innerSwap15" class="left-half-col" src="Images/Glitch_Texture-1.png" title="Pepsi Cola" style="width:100%;"></a>
          </div>
          <div id="swap16" class="col-6 container-fluid" onclick="delay('#innerSwap16')">
-           <a href="javascript:delay('#innerSwap16')"><img id="innerSwap16" class="right-half-col" src="Images/What_Happened.png" title="What Happened?" style="width:100%;"></a>
-         </div>
-       </div>
-
-       <div class="row img" onclick="colToggle();">
-         <div id="swap15" class="col-6 container-fluid" onclick="delay('#innerSwap15')">
-           <a href="javascript:delay('#innerSwap15')"><img id="innerSwap15" class="left-half-col" src="Images/OC_Wallpaper_1.png" title="Pepsi Cola" style="width:100%;"></a>
-         </div>
-         <div id="swap16" class="col-6 container-fluid" onclick="delay('#innerSwap16')">
-           <a href="javascript:delay('#innerSwap16')"><img id="innerSwap16" class="right-half-col" src="Images/OC_Wallpaper_5.png" title="What Happened?" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap16')"><img id="innerSwap16" class="right-half-col" src="Images/Glitch_Texture-2.png" title="What Happened?" style="width:100%;"></a>
          </div>
        </div>
 
        <div class="videoWrapper">
          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/x74brrZmvcg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
        </div>
+
+       <div class="sectionTitle">
+         <h2 class="text-center">Digital Art<hr></h2>
+       </div>
+
+       <div class="row img" onclick="colToggle();">
+         <div id="swap" class="col-6 container-fluid" onclick="delay('#innerSwap')">
+           <a href="javascript:delay('#innerSwap3')"><img id="innerSwap" a href="#innerSwap" class="left-half-col" src="Images/OC_Wallpaper_1.png" style="width:100%;"></a>
+         </div>
+         <div id="swap2" class="col-6 container-fluid" onclick="delay('#innerSwap2')">
+           <a href="javascript:delay('#innerSwap3')"><img id="innerSwap2" class="right-half-col" src="Images/OC_Wallpaper_6.png" style="width:100%;"></a>
+         </div>
+       </div>
+
        <br>
 
      </div>
@@ -879,3 +915,25 @@
 
 
 </html>
+
+Hello,
+
+I'm writing to you because you have such an impressive roster of artists
+on your catalog, including some of my favorites such as Vektroid and Angel Dust Dealers,
+and I would really like to help you get more recognition in the marketplace.
+
+I have a significant background in art such as web design, promotional
+posters and social media. It would be a privilage to be a part of your
+team using art to promote your brand and your artists. For example,
+I think I could help you stregnthen your website by adding responsive mobile
+functionality and making it better reflect the aesthetics of your brand.
+
+Please take a look at my website for examples of my work at ...
+My resume is attached for your review. I am passionate about your mission
+and your concept and I would love to get together to talk about ways
+I can contribute.
+
+Please contact me and perhaps we can set up a time to get together.
+
+Best regards,
+Sam Kimball
