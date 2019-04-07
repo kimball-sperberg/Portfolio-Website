@@ -1112,3 +1112,8 @@ html, body, .swiper-container2 {
 #aboutMeDescription {
   margin-top: 15px;
 }
+
+.col-12 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
