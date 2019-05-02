@@ -366,3 +366,13 @@ hr {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
 }
+
+.webSubtext {
+    padding-left: 30px;
+  }
+
+@media (min-width:768px) {
+  .webSubtext {
+      padding-left: 0px;
+    }
+  }

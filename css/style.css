@@ -6,14 +6,13 @@
 
 body {
   font-size: 12pt;
-  background-color: #FFCAAA;
+  background-color: lightgrey;/*#FFCAAA*/
 }
 
 #Landing {
   max-height: 100%;
   background-size: cover;
-
-  background-color: #FFCAAA;
+  background-color: lightgrey;
   z-index: -100;
 }
 
@@ -540,45 +539,49 @@ padding-right: 0 !important;
 
 #bootstrap-override .swiper-container {
   padding-top: 2.5%;
+  margin-top: -0.5%;
 }
 
 @media (min-width:768px) {
   #bootstrap-override .swiper-container {
       padding-top: 3%;
+      margin-top: -1%;
     }
   }
 
 @media (min-width:992px) {
   #bootstrap-override .swiper-container {
       padding-top: 3.5%;
+      margin-top: -1.5%;
     }
   }
 
 @media (min-width:1200px) {
   #bootstrap-override .swiper-container {
       padding-top: 4%;
+      margin-top: -2%;
     }
   }
 
 #bootstrap-override .videoWrapper {
-  margin-top: 2.5%; !important;
+  margin-top: 2%; !important;
 }
 
 @media (min-width:768px) {
   #bootstrap-override .videoWrapper {
-      margin-top: 3%;
+      margin-top: 2%;
     }
   }
 
 @media (min-width:992px) {
   #bootstrap-override .videoWrapper {
-      margin-top: 3.5%;
+      margin-top: 2%;
     }
   }
 
 @media (min-width:1200px) {
   #bootstrap-override .videoWrapper {
-      margin-top: 4%;
+      margin-top: 2%;
     }
   }
 
@@ -703,34 +706,49 @@ hr {
   min-height: 60px;
   max-width: 100%;
 }
+
 #firstIcon:hover {
-  content: url('../Images/AboutMeIconGreenBG2.gif');
+  content: url('../Images/AboutMeIconNoBG3.gif');
+  background-image: url('../Images/AboutMeIconNoBG3.gif');
+  background-size: cover;
 }
 
 #secondIcon:hover {
-  content: url('../Images/PostersIconGreenBG.png');
+  content: url('../Images/PostersIconNoBG3.gif');
+  background-image: url('../Images/PostersIconNoBG3.gif');
+  background-size: cover;
 }
 
 #thirdIcon:hover {
-  content: url('../Images/WebsitesIconGreenBG2.png');
+  content: url('../Images/WebsitesIconNoBG2.png');
+  background-image: url('../Images/WebsitesIconNoBG2.png');
+  background-size: cover;
 }
 
 #fourthIcon:hover {
-  content: url('../Images/GlitchIconGreenBG.gif');
+  content: url('../Images/GlitchIconNoBG.gif');
+  background-image: url('../Images/GlitchIconNoBG.gif');
+  background-size: cover;
 }
 
 #fifthIcon:hover {
-  content: url('../Images/StickersIconGreenBG.png');
+  content: url('../Images/StickersIconNoBG.png');
+  background-image: url('../Images/StickersIconNoBG.png');
+  background-size: cover;
 }
 
 #sixthIcon:hover {
-  content: url('../Images/ContactIconGreenBG.png');
+  content: url('../Images/ContactIconNoBG-red2.png');
+  background-image: url('../Images/ContactIconNoBG-red2.png');
+  background-size: cover;
 }
 
 #seventhIcon:hover img {
   content: url('../Images/InstaIconGreenBG.png');
   cursor: pointer;
   decoration: none;
+  background-image: url('../Images/InstaIconGreenBG.png');
+  background-size: cover;
 }
 
 #seventhIcon:hover {
@@ -741,8 +759,10 @@ hr {
 }
 
 #eighthIcon:hover img {
-  content: url('../Images/EmailIconGreenBG2.png');
-    cursor: pointer;
+  content: url('../Images/EmailIconGreenBG3.png');
+  cursor: pointer;
+  background-image: url('../Images/EmailIconGreenBG3.png');
+  background-size: cover;
 }
 
 #eighthIcon:hover {
@@ -755,6 +775,8 @@ hr {
 #ninthIcon:hover img {
   content: url('../Images/LinkedInIconGreenBG2.png');
   cursor: pointer;
+  background-image: url('../Images/LinkedInIconGreenBG2.png');
+  background-size: cover;
 }
 
 #ninthIcon:hover {
@@ -767,6 +789,8 @@ hr {
 #tenthIcon:hover img {
   content: url('../Images/ResumeIconGreenBG2.png');
   cursor: pointer;
+  background-image: url('../Images/ResumeIconGreenBG2.png');
+  background-size: cover;
 }
 
 #tenthIcon:hover {
@@ -779,6 +803,8 @@ hr {
 #eleventhIcon:hover img {
   content: url('../Images/PhoneIconGreenBG.png');
   cursor: pointer;
+  background-image: url('../Images/PhoneIconGreenBG.png');
+  background-size: cover;
 }
 
 #eleventhIcon:hover {
@@ -795,7 +821,7 @@ hr {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #FFCAAA;
+  background-color: lightgrey;
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -1117,3 +1143,15 @@ html, body, .swiper-container2 {
   padding-left: 0px !important;
   padding-right: 0px !important;
 }
+
+@media (min-width:768px) {
+  .webSubtext {
+      padding-left: 30px;
+    }
+  }
+
+@media (min-width:768px) {
+  .webSubtext2 {
+      padding-right: 30px;
+    }
+  }
