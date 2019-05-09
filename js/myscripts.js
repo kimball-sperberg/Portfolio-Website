@@ -48,6 +48,21 @@ function ReaperClickScroll () {
     setTimeout( function() {$('.collapse').collapse('toggle'); }, 800 );
 }
 
+var $showSidemenu = $('#sidemenu');
+var $showButton = $('#showButton');
+
+$(document).ready(function(){
+	$("#sidemenu").hover(function(){
+		$(this).toggleClass("show");
+	});
+});
+
+$(document).ready(function(){
+	$("#showButton").hover(function(){
+		$('#sidemenu').toggleClass("show");
+	});
+});
+
 
 //Toggle [open] and [minimize] images
 function toggleSqX() {
