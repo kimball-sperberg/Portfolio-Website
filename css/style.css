@@ -1158,65 +1158,16 @@ html, body, .swiper-container2 {
 
 
 
-  #paintSlideout {
-    position: fixed;
-    bottom: 40px;
-    left: 40px;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    outline: 2px solid black;
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    border-bottom: 2px solid gray;
-    border-right: 2px solid gray;
-  }
-  #paintSlideout_inner {
-    position: fixed;
-    bottom: 40px;
-    left: 0px;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    outline: 2px solid black;
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    border-bottom: 2px solid gray;
-    border-right: 2px solid gray;
-    opacity: 1;
-  }
-  #paintSlideout:hover {
-    opacity: 1;
-  }
-  #paintSlideout:hover #paintSlideout_inner:hover {
-    left: 93px; /*138px*/
-    opacity: 1;
-  }
-  #paintSlideout_inner:hover {
-    left: 93px; /*138px*/
-    opacity: 1;
-  }
+
   #blocker {
     position: fixed;
     width: 40px;
     height: 56px;
-    left: -2px;
+    left: 0px;
     bottom: 36px;
     background-color: lightgrey;
   }
-  #blocker2 {
-    position: fixed;
-    width: 30px;
-    height: 30px;
-    left: 40px;
-    bottom: 36px;
-    background-color: blue;
-  }
-  #blocker3 {
-    transform: translateY(800px);
-  }
+
 /*
   #sidemenu {
   transition: 1s;
@@ -1260,21 +1211,22 @@ html, body, .swiper-container2 {
   position: fixed;
   bottom: 40px;
   left: 40px;
-      -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+  /*-webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;*/
 }
 #sidemenu {
     position: fixed;
     bottom: 40px;
-    left: 0px;
-        -webkit-transition-duration: 0.3s;
+    left: -90px;
+    -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
     transition-duration: 0.3s;
+      opacity: 1;
 }
 #sidemenu.show {
-  left: 93px; /*138px*/
+  left: 86px; /*138px*/
   opacity: 1;
 }
