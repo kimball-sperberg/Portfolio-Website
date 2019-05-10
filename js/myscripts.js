@@ -48,6 +48,8 @@ function ReaperClickScroll () {
     setTimeout( function() {$('.collapse').collapse('toggle'); }, 800 );
 }
 
+
+//Toggle BG color themes menu on hover (desktop only)
 var $showSidemenu = $('#sidemenu');
 var $showButton = $('#showButton');
 
@@ -63,6 +65,13 @@ $(document).ready(function(){
 	});
 });
 
+
+//Change BG color on click
+function chBackcolor(color) {
+   document.body.style.background = color;
+   document.getElementById('Landing').style.backgroundColor = color;
+   document.getElementById('blocker').style.backgroundColor = color;
+}
 
 //Toggle [open] and [minimize] images
 function toggleSqX() {

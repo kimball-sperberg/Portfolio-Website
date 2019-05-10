@@ -6,13 +6,13 @@
 
 body {
   font-size: 12pt;
-  background-color: lightgrey;/*#FFCAAA*/
+  background-color: #FFCAAA;
 }
 
 #Landing {
   max-height: 100%;
   background-size: cover;
-  background-color: lightgrey;
+  background-color: #FFCAAA;
   z-index: -100;
 }
 
@@ -1159,53 +1159,14 @@ html, body, .swiper-container2 {
 
 
 
-  #blocker {
-    position: fixed;
-    width: 40px;
-    height: 56px;
-    left: 0px;
-    bottom: 36px;
-    background-color: lightgrey;
-  }
-
-/*
-  #sidemenu {
-  transition: 1s;
-    position: fixed;
-    bottom: 40px;
-    left: 0px;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    outline: 2px solid black;
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    border-bottom: 2px solid gray;
-    border-right: 2px solid gray;
-    opacity: 1;
-}
-#sidemenu.show {
-  left: 93px;
-  opacity: 1;
-}
-
-#sidemenushowbutton {
+#blocker {
   position: fixed;
-  bottom: 40px;
-  left: 40px;
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  outline: 2px solid black;
-  border-top: 2px solid white;
-  border-left: 2px solid white;
-  border-bottom: 2px solid gray;
-  border-right: 2px solid gray;
+  width: 40px;
+  height: 56px;
+  left: 0px;
+  bottom: 36px;
+  background-color: #FFCAAA;
 }
-*/
-
 
 #showButton {
   position: fixed;
@@ -1220,13 +1181,37 @@ html, body, .swiper-container2 {
     position: fixed;
     bottom: 40px;
     left: -90px;
+    width: 176px;
+    height: 46px;
+    background-color: #BDBEBD;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
     -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
     transition-duration: 0.3s;
-      opacity: 1;
+    opacity: 1;
 }
 #sidemenu.show {
   left: 86px; /*138px*/
   opacity: 1;
 }
+
+.beigeSwatch {
+  display:inline;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.swatch2 {
+  display:inline;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.swatchContainer {
+    display:inline;
+    padding-left: 5px;
+  }
