@@ -68,10 +68,24 @@ $(document).ready(function(){
 
 //Change BG color on click
 function chBackcolor(color) {
-   document.body.style.background = color;
-   document.getElementById('Landing').style.backgroundColor = color;
-   document.getElementById('blocker').style.backgroundColor = color;
+ document.body.style.background = color;
+ document.getElementById('Landing').style.backgroundColor = color;
+ document.getElementById('showButton').style.backgroundColor = color;
+ document.getElementById('blocker').style.backgroundColor = color;
+ document.getElementById('iconsContainer').style.backgroundColor = color;
 }
+
+
+//Lock scrolling while mobile menu is open
+function lockScroll() {
+      if ($('body').hasClass('lock-scroll')) {
+          $('body').removeClass('lock-scroll');
+      }
+      else {
+          $('body').addClass('lock-scroll');
+      }
+}
+
 
 //Toggle [open] and [minimize] images
 function toggleSqX() {

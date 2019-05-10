@@ -96,37 +96,54 @@
   </div>-->
 
   <!--Slideout Side Navigation (Mobile Only)-->
-  <div id="mySidenav" class="sidenav">
-    <div class="row mobileMenu">
+  <div id="mySidenav" class="sidenav" style="z-index:99;">
+    <div class="row mobileMenu" style="margin-bottom: 13vh;">
       <div class="d-lg-none col-12">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span class="sideNavButton">CLOSE &#10005;</span></a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav(); lockScroll();"><span class="sideNavButton">CLOSE &#10005;</span></a>
       </div>
     </div>
-    <div class="row">
-      <div class="col-6 text-center mobileMenuIcons">
-          <a href="#artistStatement" onclick="closeNav(); ReaperClickScroll();"><img src="Images/AboutMeIcon.png" style="max-width: 100%;"></a>
+
+    <div id="iconsContainer">
+      <div class="row">
+        <div class="col-6 text-center mobileMenuIcons">
+            <a href="#artistStatement" onclick="lockScroll(); closeNav(); ReaperClickScroll();"><img src="Images/AboutMeIconWhite.png" class="icon-left" style="max-width: 100%; z-index:100;"></a>
+        </div>
+        <div class="col-6 text-center mobileMenuIcons">
+            <a href="#gigPosters" onclick="closeNav()"><img src="Images/PostersIconWhite.png" class="icon-right" style="max-width: 100%;"></a>
+        </div>
       </div>
-      <div class="col-6 text-center mobileMenuIcons">
-          <a href="#gigPosters" onclick="closeNav()"><img src="Images/PostersIcon.png" style="max-width: 100%;"></a>
+
+      <div class="row">
+        <div class="col-6 text-center mobileMenuIcons">
+            <a href="#Stickers" onclick="closeNav()"><img src="Images/StickersIconWhite.png" class="icon-left" style="max-width: 100%;"></a>
+        </div>
+        <div class="col-6 text-center mobileMenuIcons">
+            <a href="#GlitchArt" onclick="closeNav()"><img src="Images/GlitchIconWhite.png" class="icon-right" style="max-width: 100%;"></a>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-6 text-center mobileMenuIcons">
-          <a href="#Stickers" onclick="closeNav()"><img src="Images/StickersIcon.png" style="max-width: 100%;"></a>
+
+      <div class="row">
+        <div class="col-6 text-center mobileMenuIcons" style="margin-bottom: 45px;">
+            <a href="#Websites" onclick="closeNav()"><img src="Images/WebsitesIconWhite.png" class="icon-left" style="max-width: 100%;"></a>
+        </div>
+        <div class="col-6 text-center mobileMenuIcons">
+            <a href="#Contact" onclick="closeNav()"><img src="Images/ContactIconWhite.png" class="icon-right" style="max-width: 100%;"></a>
+        </div>
       </div>
-      <div class="col-6 text-center mobileMenuIcons">
-          <a href="#GlitchArt" onclick="closeNav()"><img src="Images/GlitchIcon2.png" style="max-width: 100%;"></a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-6 text-center mobileMenuIcons">
-          <a href="#Websites" onclick="closeNav()"><img src="Images/WebsitesIcon.png" style="max-width: 100%;"></a>
-      </div>
-      <div class="col-6 text-center mobileMenuIcons">
-          <a href="#Contact" onclick="closeNav()"><img src="Images/ContactIcon-red2.png" style="max-width: 100%;"></a>
-      </div>
-    </div>
-  </div>
+
+    </div><!--end iconsContainer-->
+
+    <!--Mobile Swatches-->
+    <div title="Themes">
+      <div class="swatchContainer d-lg-none"><!--
+      --><img src="Images/blankSwatch4.png" class="swatch2" style="background-color: #dbb9b8;" onclick="chBackcolor('#dbb9b8');"><!--
+      --><img src="Images/blankSwatch4.png" class="swatch2" style="background-color: #99b078;" onclick="chBackcolor('#99b078');"><!--
+      --><img src="Images/blankSwatch4.png" class="swatch2" style="background-color: lightgrey;" onclick="chBackcolor('lightgrey');"><!--
+      --><img src="Images/blankSwatch4.png" class="swatch2" style="background-color: teal;" onclick="chBackcolor('teal');"><!--
+      --><img src="Images/blankSwatch4.png" class="swatch2" style="background-color: #FFCAAA;" onclick="chBackcolor('#FFCAAA');"></div><!--
+  --></div>
+
+  </div><!--end Sidenav-->
 
   <!--Open and close Slideout Menu script-->
   <script>
@@ -155,28 +172,12 @@
        </div>
     </div>
 
-    <div id="sidemenu">
-      <!--<div class="swatchContainer">-->
-      <div class="swatchContainer"><!--
-      --><img src="Images/blankSwatch.png" class="swatch2" style="background-color: #A83E7C;" onclick="chBackcolor('#A83E7C');"><!--
-      --><img src="Images/blankSwatch.png" class="swatch2" style="background-color: lightpink;" onclick="chBackcolor('lightpink');"><!--
-      --><img src="Images/blankSwatch.png" class="swatch2" style="background-color: lightgrey;" onclick="chBackcolor('lightgrey');"><!--
-      --><img src="Images/blankSwatch.png" class="swatch2" style="background-color: teal;" onclick="chBackcolor('teal');"></div><!--
-      --><div class="swatch2" onclick="chBackcolor('#FFCAAA');"><img src="Images/blankSwatch.png" style="background-color: #FFCAAA; border-right:2px solid white;"></div><!--
- --></div>
-    <div id="showButton" onclick="showMenu()">
-      <img src="Images/ThemesIcon4.png">
-    </div>
 
-
-
-
-    <div id="blocker"></div>
 
     <!--Mobile menu toggle-->
     <div class="row mobileMenu">
       <div class="d-lg-none col-12">
-        <span class="sideNavButton" onclick="openNav()">MENU&#9776;</span>
+        <span class="sideNavButton" onclick="openNav(); lockScroll();">MENU&#9776;</span>
       </div>
     </div>
 
@@ -337,6 +338,7 @@
       state = true;
     }
   </script>
+
   <section id="artistStatement">
 
     <div class="container-fluid">
@@ -701,6 +703,21 @@
       </div>
     </div>
   </section>
+
+  <!--Background color picker (Desktop only)-->
+  <div id="sidemenu" class="d-none d-lg-block" title="Themes">
+    <div class="swatchContainer"><!--
+    --><img src="Images/blankSwatch3.png" class="swatch2" style="background-color: #dbb9b8;" onclick="chBackcolor('#dbb9b8');"><!--
+    --><img src="Images/blankSwatch3.png" class="swatch2" style="background-color: #99b078;" onclick="chBackcolor('#99b078');"><!--
+    --><img src="Images/blankSwatch3.png" class="swatch2" style="background-color: lightgrey;" onclick="chBackcolor('lightgrey');"><!--
+    --><img src="Images/blankSwatch3.png" class="swatch2" style="background-color: teal;" onclick="chBackcolor('teal');"></div><!--
+    --><div class="swatch2" onclick="chBackcolor('#FFCAAA');"><img src="Images/blankSwatch3.png" style="background-color: #FFCAAA;"></div><!--
+--></div>
+  <div class="d-none d-lg-block" onclick="showMenu()"  title="Themes">
+    <img id="showButton" src="Images/ThemesIcon4.png">
+  </div>
+
+  <div id="blocker" class="d-none d-lg-block"></div>
 
   <!--Change button text onclick-->
   <script type="text/javascript">
