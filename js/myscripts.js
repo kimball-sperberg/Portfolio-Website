@@ -73,6 +73,7 @@ function chBackcolor(color) {
  document.getElementById('showButton').style.backgroundColor = color;
  document.getElementById('blocker').style.backgroundColor = color;
  document.getElementById('iconsContainer').style.backgroundColor = color;
+ document.getElementById('mobileThemes').style.backgroundColor = color;
 }
 
 
