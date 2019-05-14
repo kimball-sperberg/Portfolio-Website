@@ -97,13 +97,18 @@
 
   <!--Slideout Side Navigation (Mobile Only)-->
   <div id="mySidenav" class="sidenav" style="z-index:99;">
-    <div class="row mobileMenu" style="margin-bottom: 13vh;">
-      <div class="noPadding" style="text-align:right;"><img id="mobileThemes" src="Images/ThemesIcon5.png"></div>
-
-      <div class="d-lg-none col-12">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav(); lockScroll();"><span class="sideNavButton">CLOSE &#10005;</span></a>
+    <div class="row" style="margin-bottom: 4vh;">
+      <!--<div class="noPadding" style="text-align:right;">
+        <img id="mobileThemes" src="Images/ThemesIcon5.png">
+      </div>-->
+        <div class="windowTop" onclick="closeNav(); lockScroll();" data-toggle="collapse" data-target="#collapseExample">
+          <div style="border: 2px solid #BEBEBE; box-shadow: -2px 0px 0px 0px white, 2px 0px 0px 0px grey; background-color: #00007A;">
+            <div style="border-right: 2px solid #00007A; border-top: 4px; margin-bottom: 6px;">
+              <h1 class="windowTitle">Navigation<img src="Images/XButton2.png" id="SqX" style="margin-top: 3px; margin-bottom: 3px;"></img></h1>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
 
     <div id="iconsContainer">
       <div class="row">
@@ -139,19 +144,18 @@
     <div title="Themes" style="margin-top:35px;">
       <div class="row d-lg-none"><!--
       --><div style="margin-left: 16px; margin-right: 16px; text-align: center;"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #dbb9b8;" onclick="chBackcolor('#dbb9b8');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #99b078;" onclick="chBackcolor('#99b078');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: lightgrey;" onclick="chBackcolor('lightgrey');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: teal;" onclick="chBackcolor('teal');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #FFCAAA;" onclick="chBackcolor('#FFCAAA');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #dbb9b8;" onclick="chBackcolor('#dbb9b8');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #99b078;" onclick="chBackcolor('#99b078');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: lightgrey;" onclick="chBackcolor('lightgrey');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: teal;" onclick="chBackcolor('teal');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #FFCAAA;" onclick="chBackcolor('#FFCAAA');"><!--
-   --></div>
-
-</div>
+        --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #dbb9b8;" onclick="chBackcolor('#dbb9b8');"><!--
+        --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #99b078;" onclick="chBackcolor('#99b078');"><!--
+        --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: lightgrey;" onclick="chBackcolor('lightgrey');"><!--
+        --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: teal;" onclick="chBackcolor('teal');"><!--
+        --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #FFCAAA;" onclick="chBackcolor('#FFCAAA');"><!--
+        --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #dbb9b8;" onclick="chBackcolor('#dbb9b8');"><!--
+        --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #99b078;" onclick="chBackcolor('#99b078');"><!--
+        --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: lightgrey;" onclick="chBackcolor('lightgrey');"><!--
+        --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: teal;" onclick="chBackcolor('teal');"><!--
+        --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #FFCAAA;" onclick="chBackcolor('#FFCAAA');"><!--
+      --></div>
+      </div><!-- end row d-lg-none-->
     </div>
 
   </div><!--end Sidenav-->
@@ -214,7 +218,7 @@
         </div>
 
         <div class="col-12 col-lg-8">
-          <h1 id="headerText">SAM KIMBALL</h1><h1 id="headerTextSecondary">WEB DESIGN & ART</h1>
+          <h1 id="headerText">SAM KIMBALL</h1><h1 id="headerTextSecondary">ART & WEB DESIGN</h1>
 
           <a href="#artistStatement" onclick="ReaperClickScroll()"><img id="Reaper" src="Images/Reaper_Condensed-noBG2.png"></a>
         </div>
@@ -302,7 +306,7 @@
     }
     thirdIcon.onmouseover = function(){
       var on = "Images/Reaper_Condensed.png";
-      var off = "Images/ReaperGifWebsites2.gif";
+      var off = "Images/ReaperGifStickers3.gif";
       if(state){
         img.src = off;
         state = false;
@@ -326,7 +330,7 @@
     }
     fifthIcon.onmouseover = function(){
       var on = "Images/Reaper-Condensed-Posters.png";
-      var off = "Images/ReaperGifStickers3.gif";
+      var off = "Images/ReaperGifWebsites2.gif";
       if(state){
         img.src = off;
         state = false;
@@ -483,67 +487,71 @@
    </div><!--End customContainer-->
   </section>
 
-  <section id="Websites">
+  <section id="Stickers">
    <div class="container-fluid">
      <div class="customContainer">
 
        <div class="sectionTitle">
-         <h2 class="text-center">Websites<hr></h2>
+         <h2 class="text-center">Stickers<hr></h2>
        </div>
 
        <div class="row img">
-         <div class="col-12 col-lg-6">
-           <img style="max-width:100%;"src="Images/SivacLayout3.png">
-         </div>
-         <div class="col-12 col-lg-6">
-           <img style="max-width:100%;"src="Images/SivacPhone6.png">
-         </div>
-         <div class="col-12 col-lg-4">
-           <div class="webSubtext">
-             <h3>Sivac Records</h3>
-             <p>Sivac Records is the independant record label of guitarist and composer John Ehlis. <!--The Sivac Records website was an interesting project to work on because it challenged me to-->
-           </div>
+         <div class="col-12 container-fluid">
+           <img src="Images/Stickers_Banner.jpg" style="width:100%;">
          </div>
        </div>
-       <br><hr>
-       <div class="row img">
-         <div class="col-12 col-lg-6">
-           <img style="max-width:100%;"src="Images/MalumClient_v2.png">
+
+       <div class="row img" onclick="colToggle();">
+         <div id="swap17" class="col-6 container-fluid" onclick="delay('#innerSwap17')">
+           <a href="javascript:delay('#innerSwap17')"><img id="innerSwap17" class="left-half-col" src="Images/Stickers_Scuba.jpg" style="width:100%;"></a>
          </div>
-         <div class="col-12 col-lg-6">
-           <img style="max-width:100%;"src="Images/MalumPhone6.png">
+         <div id="swap18" class="col-6 container-fluid" onclick="delay('#innerSwap18')">
+           <a href="javascript:delay('#innerSwap18')"><img id="innerSwap18" class="right-half-col" src="Images/Stickers_Trash.jpg" style="width:100%;"></a>
          </div>
        </div>
-       <div class="webSubtext2">
-         <p>MalumArte is a “fun” stand alone app that takes its inspiration from the frustration involved in the use of computer drawing software. Secretly evil, the program turns on the user after a few moments of regular functionality, revealing its true purpose: to become entertainingly dysfunctional. <!--The Sivac Records website was an interesting project to work on because it challenged me to-->
+
+       <div class="row img" onclick="colToggle();">
+         <div id="swap19" class="col-6 container-fluid" onclick="delay('#innerSwap19')">
+           <a href="javascript:delay('#innerSwap11')"><img id="innerSwap19" class="left-half-col" src="Images/Stickers_TV.jpg" style="width:100%;"></a>
+         </div>
+         <div id="swap20" class="col-6 container-fluid" onclick="delay('#innerSwap20')">
+           <a href="javascript:delay('#innerSwap20')"><img id="innerSwap20" class="right-half-col" src="Images/Stickers_Eye.jpg" style="width:100%;"></a>
+         </div>
        </div>
 
+       <div class="row img" onclick="colToggle();">
+         <div id="swap21" class="col-6 container-fluid" onclick="delay('#innerSwap21')">
+           <a href="javascript:delay('#innerSwap21')"><img id="innerSwap21" class="left-half-col" src="Images/Stickers_Priest.jpg" style="width:100%;"></a>
+         </div>
+         <div id="swap22" class="col-6 container-fluid" onclick="delay('#innerSwap22')">
+           <a href="javascript:delay('#innerSwap22')"><img id="innerSwap22" class="right-half-col" src="Images/Stickers_Punk.jpg" style="width:100%;"></a>
+         </div>
+       </div>
 
-       <!--<div class="row img">-->
-         <!--<div class="col-12 col-lg-6">
-           <img style="max-width:100%;"src="Images/MalumPt1-1.png">
+       <div class="row img" onclick="colToggle();">
+         <div class="col-12 container-fluid" onclick="delay('#innerSwap21')">
+           <a href="javascript:delay('#innerSwap21')"><img id="innerSwap21" src="Images/Seapunk.jpg" style="width:100%;"></a>
          </div>
-         <div class="col-12 col-lg-6">
-           <p>edwubh eybwxhj vgws vgg sxbyuwhxb sxd edwubh eybwxhj vgws vgg sxbyuwhxb sxd edwubh eybwxhj vgws vgg sxbyuwhxb sxd</p>
-         </div>
-         <div class="col-12 col-lg-6">
-           <img style="max-width:100%;"src="Images/MalumPt2-2.png">
-         </div>
-         <div class="col-12 col-lg-6">
-           <img style="max-width:100%;"src="Images/MalumPt3.png">
-         </div>-->
+       </div>
 
-         <!--<div class="col-12 col-lg-4"> Already commented out
-           <img style="max-width:100%;"src="Images/MalumLogo.png">
-         </div>
-         <div class="col-12 col-lg-4">
-           <img style="max-width:100%;"src="Images/MalumMSPaint.png">
-         </div> down to here -->
-       <!--</div>-->
+       <!-- Swiper -->
+        <!--<div class="swiper-container s2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img style="width:100%;" src="Images/multicolor2.jpg"></img></div>
+            <div class="swiper-slide"><img style="width:100%;" src="Images/Glitch_Texture-1.png"></img></div>
+            <div class="swiper-slide">Slide 3</div>
+
+          </div>-->
+          <!-- Add Pagination -->
+          <!--<div class="swiper-pagination2"></div>-->
+
+
+
+
+
        <br>
-
-     </div>
-   </div>
+     </div><!--customContainer end-->
+   </div><!--container-fluid end-->
   </section>
 
   <section id="GlitchArt">
@@ -631,71 +639,64 @@
    </div>
   </section>
 
-  <section id="Stickers">
+  <section id="Websites">
    <div class="container-fluid">
      <div class="customContainer">
 
        <div class="sectionTitle">
-         <h2 class="text-center">Stickers<hr></h2>
+         <h2 class="text-center">Websites<hr></h2>
        </div>
 
        <div class="row img">
-         <div class="col-12 container-fluid">
-           <img src="Images/Stickers_Banner.jpg" style="width:100%;">
+         <div class="col-12 col-lg-6">
+           <img style="max-width:100%;"src="Images/SivacLayout3.png">
+         </div>
+         <div class="col-12 col-lg-6">
+           <img style="max-width:100%;"src="Images/SivacPhone6.png">
+         </div>
+         <div class="webSubtext2">
+           <p>Sivac Records is the independant record label of guitarist and composer John Ehlis. <!--The Sivac Records website was an interesting project to work on because it challenged me to-->
          </div>
        </div>
-
-       <div class="row img" onclick="colToggle();">
-         <div id="swap17" class="col-6 container-fluid" onclick="delay('#innerSwap17')">
-           <a href="javascript:delay('#innerSwap17')"><img id="innerSwap17" class="left-half-col" src="Images/Stickers_Scuba.jpg" style="width:100%;"></a>
+       <br><hr>
+       <div class="row img">
+         <div class="col-12 col-lg-6">
+           <img style="max-width:100%;"src="Images/MalumClient_v2.png">
          </div>
-         <div id="swap18" class="col-6 container-fluid" onclick="delay('#innerSwap18')">
-           <a href="javascript:delay('#innerSwap18')"><img id="innerSwap18" class="right-half-col" src="Images/Stickers_Trash.jpg" style="width:100%;"></a>
-         </div>
-       </div>
-
-       <div class="row img" onclick="colToggle();">
-         <div id="swap19" class="col-6 container-fluid" onclick="delay('#innerSwap19')">
-           <a href="javascript:delay('#innerSwap11')"><img id="innerSwap19" class="left-half-col" src="Images/Stickers_TV.jpg" style="width:100%;"></a>
-         </div>
-         <div id="swap20" class="col-6 container-fluid" onclick="delay('#innerSwap20')">
-           <a href="javascript:delay('#innerSwap20')"><img id="innerSwap20" class="right-half-col" src="Images/Stickers_Eye.jpg" style="width:100%;"></a>
+         <div class="col-12 col-lg-6">
+           <img style="max-width:100%;"src="Images/MalumPhone6.png">
          </div>
        </div>
-
-       <div class="row img" onclick="colToggle();">
-         <div id="swap21" class="col-6 container-fluid" onclick="delay('#innerSwap21')">
-           <a href="javascript:delay('#innerSwap21')"><img id="innerSwap21" class="left-half-col" src="Images/Stickers_Priest.jpg" style="width:100%;"></a>
-         </div>
-         <div id="swap22" class="col-6 container-fluid" onclick="delay('#innerSwap22')">
-           <a href="javascript:delay('#innerSwap22')"><img id="innerSwap22" class="right-half-col" src="Images/Stickers_Punk.jpg" style="width:100%;"></a>
-         </div>
+       <div class="webSubtext2">
+         <p>MalumArte is a “fun” stand alone app that takes its inspiration from the frustration involved in the use of computer drawing software. Secretly evil, the program turns on the user after a few moments of regular functionality, revealing its true purpose: to become entertainingly dysfunctional. <!--The Sivac Records website was an interesting project to work on because it challenged me to-->
        </div>
 
-       <div class="row img" onclick="colToggle();">
-         <div class="col-12 container-fluid" onclick="delay('#innerSwap21')">
-           <a href="javascript:delay('#innerSwap21')"><img id="innerSwap21" src="Images/Seapunk.jpg" style="width:100%;"></a>
+
+       <!--<div class="row img">-->
+         <!--<div class="col-12 col-lg-6">
+           <img style="max-width:100%;"src="Images/MalumPt1-1.png">
          </div>
-       </div>
+         <div class="col-12 col-lg-6">
+           <p>edwubh eybwxhj vgws vgg sxbyuwhxb sxd edwubh eybwxhj vgws vgg sxbyuwhxb sxd edwubh eybwxhj vgws vgg sxbyuwhxb sxd</p>
+         </div>
+         <div class="col-12 col-lg-6">
+           <img style="max-width:100%;"src="Images/MalumPt2-2.png">
+         </div>
+         <div class="col-12 col-lg-6">
+           <img style="max-width:100%;"src="Images/MalumPt3.png">
+         </div>-->
 
-       <!-- Swiper -->
-        <!--<div class="swiper-container s2">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><img style="width:100%;" src="Images/multicolor2.jpg"></img></div>
-            <div class="swiper-slide"><img style="width:100%;" src="Images/Glitch_Texture-1.png"></img></div>
-            <div class="swiper-slide">Slide 3</div>
-
-          </div>-->
-          <!-- Add Pagination -->
-          <!--<div class="swiper-pagination2"></div>-->
-
-
-
-
-
+         <!--<div class="col-12 col-lg-4"> Already commented out
+           <img style="max-width:100%;"src="Images/MalumLogo.png">
+         </div>
+         <div class="col-12 col-lg-4">
+           <img style="max-width:100%;"src="Images/MalumMSPaint.png">
+         </div> down to here -->
+       <!--</div>-->
        <br>
-     </div><!--customContainer end-->
-   </div><!--container-fluid end-->
+
+     </div>
+   </div>
   </section>
 
   <section id="Contact">
