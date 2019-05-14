@@ -237,6 +237,18 @@ h1 {
   justify-content: center;
 }
 
+.mobileMidNavBar {
+  border: 2px solid #BEBEBE;
+  box-shadow: -2px 0px 0px 0px white, 2px 0px 0px 0px grey;
+  background-color: #00007A;
+}
+#innerNavBar {
+  border-right: 2px solid #00007A;
+  border-top: 4px;
+  margin-bottom: 6px;
+  background-color: #00007A;
+}
+
 #artistStatement {
   padding-bottom: 10%;
   padding-top: 3%;
@@ -279,6 +291,10 @@ h1 {
   margin: 0;
 }
 
+.closeButton {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
 .windowBottomContainer {
   border-left: 2px solid #828282; /*#828282;*/
   border-top: 2px solid #828282;
@@ -1241,6 +1257,10 @@ html, body, .swiper-container2 {
     display:inline;
     padding-left: 5px;
   }
+
+.swatchMobile {
+
+}
 
 .noPadding {
   padding-left: 0px !important;

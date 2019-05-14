@@ -72,7 +72,10 @@ function chBackcolor(color) {
  document.getElementById('Landing').style.backgroundColor = color;
  document.getElementById('showButton').style.backgroundColor = color;
  document.getElementById('blocker').style.backgroundColor = color;
- document.getElementById('iconsContainer').style.backgroundColor = color;
+ document.getElementById('abcabc').style.backgroundColor = color;
+ document.getElementById('bcbc').style.borderRight = color;
+ document.getElementById('mobileMidNavBar').style.backgroundColor = color;
+ document.getElementById('innerNavBar').style.backgroundColor = color;
  document.getElementById('mobileThemes').style.backgroundColor = color;
 }
 
@@ -91,7 +94,7 @@ function lockScroll() {
 //Toggle [open] and [minimize] images
 function toggleSqX() {
     var img1 = "https://i.imgur.com/nMXAJOr.png", //https://i.imgur.com/Mdyr4HT.png //Images/SquareButton2.png
-       img2 = "Images/Minimize_Button2.png"; //X button: https://i.imgur.com/G2taMV5.png"; //https://i.imgur.com/QCSctxI.png //Images/XButton2.png
+       img2 = "Images/XButton2.png"; //X button: https://i.imgur.com/G2taMV5.png"; //https://i.imgur.com/QCSctxI.png //Images/XButton2.png
        // button: https://i.imgur.com/rXSjXBc.png
     var imgElement = document.getElementById('SqX');
 

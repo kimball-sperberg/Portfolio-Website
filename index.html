@@ -96,19 +96,25 @@
   </div>-->
 
   <!--Slideout Side Navigation (Mobile Only)-->
-  <div id="mySidenav" class="sidenav" style="z-index:99;">
-    <div class="row" style="margin-bottom: 4vh;">
-      <!--<div class="noPadding" style="text-align:right;">
-        <img id="mobileThemes" src="Images/ThemesIcon5.png">
-      </div>-->
-        <div class="windowTop" onclick="closeNav(); lockScroll();" data-toggle="collapse" data-target="#collapseExample">
-          <div style="border: 2px solid #BEBEBE; box-shadow: -2px 0px 0px 0px white, 2px 0px 0px 0px grey; background-color: #00007A;">
-            <div style="border-right: 2px solid #00007A; border-top: 4px; margin-bottom: 6px;">
-              <h1 class="windowTitle">Navigation<img src="Images/XButton2.png" id="SqX" style="margin-top: 3px; margin-bottom: 3px;"></img></h1>
+  <div id="mySidenav" class="sidenav" style="z-index:99; overflow:hidden;">
+    <div class="windowBottomContainer">
+
+          <div class="windowTop" onclick="closeNav(); lockScroll();" style="margin-bottom: 4vh;">
+            <div id="abcabc" style="border: 2px solid #BEBEBE; box-shadow: -2px 0px 0px 0px white, 2px 0px 0px 0px grey; background-color: #00007A;">
+              <div id="bcbc" style="border-right: 2px solid #00007A; border-top: 4px; margin-bottom: 6px;">
+                <h1 class="windowTitle closeButton">Menu<img src="Images/XButton2.png" style="padding: 2px;"></img></h1> <!--https://i.imgur.com/Mdyr4HT.png-->
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+
+
+        <!--<div id="mobileOuter" class="windowTop" onclick="closeNav(); lockScroll();">
+          <div id="mobileMidNavBar">
+            <div id="innerNavBar">
+              <h1 class="windowTitle closeButton">Menu<img src="Images/XButton2.png" style="padding:2px;"></img></h1>
+            </div>
+          </div>
+        </div>-->
 
     <div id="iconsContainer">
       <div class="row">
@@ -141,10 +147,10 @@
     </div><!--end iconsContainer-->
 
     <!--Mobile Swatches-->
-    <div title="Themes" style="margin-top:35px;">
+    <div title="Themes" style="margin-top:35px; margin-bottom:35px;">
       <div class="row d-lg-none"><!--
       --><div style="margin-left: 16px; margin-right: 16px; text-align: center;"><!--
-        --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #dbb9b8;" onclick="chBackcolor('#dbb9b8');"><!--
+      --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #dbb9b8;" onclick="chBackcolor('#dbb9b8');"><!--
         --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #99b078;" onclick="chBackcolor('#99b078');"><!--
         --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: lightgrey;" onclick="chBackcolor('lightgrey');"><!--
         --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: teal;" onclick="chBackcolor('teal');"><!--
@@ -158,6 +164,7 @@
       </div><!-- end row d-lg-none-->
     </div>
 
+    </div><!--end windowBottomContainer-->
   </div><!--end Sidenav-->
 
   <!--Open and close Slideout Menu script-->
@@ -366,7 +373,7 @@
                  <!--Commented out below is a modal (2 lines) where different header text would display based on screen size (above or below "lg" size as determined by bootstrap)-->
                  <!--<h1 class="windowTitle d-lg-none">Sam Kimball<img onclick="myFunction()" data-toggle="collapse" data-target="#collapseExample" src="Images/X_Button.png" class="imgX" ></h1>-->
                  <!--<h1 class="windowTitle d-none d-lg-block">Sam Kimball<img onclick="myFunction()" data-toggle="collapse" data-target="#collapseExample" src="Images/X_Button.png" class="imgX" ></h1>-->
-                 <h1 style="/*font-family: 'pixelated'; letter-spacing: 1px;*/" class="windowTitle">About Me<img src="https://i.imgur.com/nMXAJOr.png" id="SqX" style="margin-top: 3px; margin-bottom: 3px;"></img></h1> <!--https://i.imgur.com/Mdyr4HT.png-->
+                 <h1 style="/*font-family: 'pixelated'; letter-spacing: 1px;*/" class="windowTitle closeButton">About Me<img src="https://i.imgur.com/nMXAJOr.png" id="SqX"></img></h1> <!--https://i.imgur.com/Mdyr4HT.png-->
                </div>
              </div>
            </div>
