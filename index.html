@@ -103,7 +103,7 @@
           <div class="windowTop" onclick="closeNav(); lockScroll();" style="margin-bottom: 4vh; border-left: 0px !important; border-right: 0px !important;">
             <div id="abcabc" style="border: 2px solid #BEBEBE; box-shadow: -2px 0px 0px 0px white, 2px 0px 0px 0px grey; background-color: #00007A;">
               <div id="bcbc" style="border-right: 2px solid #00007A; border-top: 4px; margin-bottom: 6px;">
-                <h1 class="windowTitle closeButton">Menu<img src="Images/XButton2.png" style="padding: 2px;"></img></h1> <!--https://i.imgur.com/Mdyr4HT.png-->
+                <h1 class="windowTitle closeButton">Menu<img src="Images/XButton2.png" id="menuX" style="padding: 2px;"></img></h1> <!--https://i.imgur.com/Mdyr4HT.png-->
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@
             </div>
           </div>
         </div>-->
-
+<div id="slideoutBottom" style="height:0px;">
     <div id="iconsContainer">
       <div class="row">
         <div class="col-6 text-center mobileMenuIcons">
@@ -165,6 +165,8 @@
       </div><!-- end row d-lg-none-->
     </div>
 
+  </div><!--end slideoutBottom-->
+
     </div><!-- end windowContainer-->
     </div><!--end windowBottomContainer-->
   </div><!--end Sidenav-->
@@ -173,15 +175,20 @@
   <script>
     function openNav() {
       document.getElementById("mySidenav").style.width = "100vw";
+      document.getElementById("menuX").style.width = "42px";
+    }
+    function openNav2() {
+      document.getElementById("slideoutBottom").style.height = "100%";
     }
 
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("menuX").style.width = "0px";
     }
   </script>
 
   <!--Landing: Front page spread containing name, descriptor, navigation, etc-->
-  <!--Takes up exactly the full length/width of the screen viewing-->
+  <!--Takes up exactly the full height & width of the screen-->
   <section id="Landing">
     <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
        <div class="modal-dialog modal-lg" role="document">
@@ -201,9 +208,13 @@
     <!--Mobile menu toggle-->
     <div class="row mobileMenu">
       <div class="d-lg-none col-12">
-        <span class="sideNavButton" onclick="openNav(); lockScroll();">MENU&#9776;</span>
+        <button style="font-family: 'pixelated'; letter-spacing: 1px; padding-left: 12px !important; padding-right: 12px !important; padding-top: 0px !important; padding-bottom: 0px !important;" onclick="openNav(); openNav2(); lockScroll();" class="btn sideNavButton" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          MENU &#9776;
+        </button>
       </div>
     </div>
+
+
 
     <div class="landingContainer">
       <div class="row text-center">

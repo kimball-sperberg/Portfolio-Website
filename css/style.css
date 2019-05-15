@@ -45,7 +45,7 @@ body {
   margin-left: 24px;
   margin-right: 24px;
   margin-top: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
   /*border-top: 2px solid black;
   border-left: 2px solid black;
   border-right: 2px solid #dddddd;
@@ -262,6 +262,13 @@ h1 {
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 10px;
+}
+
+#menuX {
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
 }
 
 .windowTop img{
@@ -874,7 +881,7 @@ hr {
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 0;
+  right: 0;
   background-color: #d3d3d3;
   overflow-x: hidden;
   transition: 0.5s;
