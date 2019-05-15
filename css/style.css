@@ -291,6 +291,12 @@ h1 {
   margin: 0;
 }
 
+.windowContainer {
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  border-bottom: 2px solid #828282;
+}
+
 .closeButton {
   margin-top: 3px;
   margin-bottom: 3px;
