@@ -260,3 +260,8 @@ function colToggle2() {
 
   }
 }
+
+window.addEventListener("resize", function(e) {
+    var mapElement = document.getElementById("map");
+    mapElement.style.height = mapElement.offsetWidth * 1.72;
+});
