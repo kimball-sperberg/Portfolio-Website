@@ -325,7 +325,7 @@ h1 {
   border-top: 2px solid #828282;
   border-right: 2px solid black;
   border-bottom: 2px solid black;
-    background-color: #d3d3d3;
+  background-color: #d3d3d3;
 }
 
 .windowButton {
@@ -1293,8 +1293,6 @@ html, body, .swiper-container2 {
   padding-right: 0px !important;
 }
 
-#wrapper {
-  display: inline-block;
-  margin: auto;
-  text-align: center;
+#paletteIcon1, #paletteIcon2, #paletteIcon3, #paletteIcon4 {
+  background-color: #dbb9b8;
 }

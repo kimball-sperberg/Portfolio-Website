@@ -73,9 +73,10 @@ function chBackcolor(color) {
  document.getElementById('showButton').style.backgroundColor = color;
  document.getElementById('blocker').style.backgroundColor = color;
  document.getElementById('menuIcon').style.backgroundColor = color;
- document.getElementById('mobileMidNavBar').style.backgroundColor = color;
- document.getElementById('innerNavBar').style.backgroundColor = color;
- document.getElementById('mobileThemes').style.backgroundColor = color;
+ document.getElementById('paletteIcon1').style.backgroundColor = color;
+ document.getElementById('paletteIcon2').style.backgroundColor = color;
+ document.getElementById('paletteIcon3').style.backgroundColor = color;
+ document.getElementById('paletteIcon4').style.backgroundColor = color;
 }
 
 
