@@ -911,13 +911,14 @@ hr {
 }
 
 #sideNavButton {
-  padding-top: 2vh;
-  padding-bottom: 2vh;
-  padding-left: 4vh;
   font-size: 16pt;
   float: right;
   display: flex;
   margin-right: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 0px;
+  padding-bottom: 1px;
 }
 
 @media screen and (max-height: 450px) {
