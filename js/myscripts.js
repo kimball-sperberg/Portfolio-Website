@@ -49,7 +49,7 @@ function ReaperClickScroll () {
 }
 
 
-//Toggle BG color themes menu on hover (desktop only)
+//Toggle BG color themes menu on hover
 var $showSidemenu = $('#sidemenu');
 var $showButton = $('#showButton');
 
@@ -72,8 +72,7 @@ function chBackcolor(color) {
  document.getElementById('Landing').style.backgroundColor = color;
  document.getElementById('showButton').style.backgroundColor = color;
  document.getElementById('blocker').style.backgroundColor = color;
- document.getElementById('abcabc').style.backgroundColor = color;
- document.getElementById('bcbc').style.borderRight = color;
+ document.getElementById('menuIcon').style.backgroundColor = color;
  document.getElementById('mobileMidNavBar').style.backgroundColor = color;
  document.getElementById('innerNavBar').style.backgroundColor = color;
  document.getElementById('mobileThemes').style.backgroundColor = color;
@@ -236,14 +235,28 @@ function colToggle() {
         var element = document.getElementById("innerSwap24");
         element.classList.toggle("negative-right-col");
 
-        var element = document.getElementById("swap25");
-        element.classList.toggle("col-12");
-        var element = document.getElementById("innerSwap25");
-        element.classList.toggle("negative-left-col");
+
 
         var element = document.getElementById("swap26");
         element.classList.toggle("col-12");
         var element = document.getElementById("innerSwap26");
         element.classList.toggle("negative-right-col");
-    }
+
+}
+}
+
+function colToggle2() {
+    if ($(window).width() < 992) {
+
+      var element = document.getElementById("swap25");
+      element.classList.toggle("col-12");
+      var element = document.getElementById("innerSwap25");
+      element.classList.toggle("negative-left-col");
+
+      var element = document.getElementById("swap28");
+      element.classList.toggle("col-12");
+      var element = document.getElementById("innerSwap28");
+      element.classList.toggle("negative-right-col");
+
+  }
 }

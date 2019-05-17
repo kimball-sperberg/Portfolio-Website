@@ -103,7 +103,7 @@
           <div class="windowTop" onclick="closeNav(); lockScroll();" style="margin-bottom: 4vh; border-left: 0px !important; border-right: 0px !important;">
             <div id="abcabc" style="border: 2px solid #BEBEBE; box-shadow: -2px 0px 0px 0px white, 2px 0px 0px 0px grey; background-color: #00007A;">
               <div id="bcbc" style="border-right: 2px solid #00007A; border-top: 4px;">
-                <h1 class="windowTitle closeButton">Menu<img src="Images/XButton2.png" id="menuX" style="padding: 2px;"></img></h1> <!--https://i.imgur.com/Mdyr4HT.png-->
+                <div class="menuIconContainer"><img src="Images/MenuIcon2.png" id="menuIcon"></div><h1 class="windowTitle closeButton">Menu<img src="Images/XButton2.png" id="menuX" style="padding: 2px;"></img></h1> <!--https://i.imgur.com/Mdyr4HT.png-->
               </div>
             </div>
           </div>
@@ -123,32 +123,33 @@
             <a href="#artistStatement" onclick="lockScroll(); closeNav(); ReaperClickScroll();"><img src="Images/AboutMeIconWhite.png" class="icon-left" style="max-width: 100%; z-index:100;"></a>
         </div>
         <div class="col-6 text-center mobileMenuIcons">
-            <a href="#gigPosters" onclick="closeNav()"><img src="Images/PostersIconWhite.png" class="icon-right" style="max-width: 100%;"></a>
+            <a href="#gigPosters" onclick="lockScroll(); closeNav()"><img src="Images/PostersIconWhite.png" class="icon-right" style="max-width: 100%;"></a>
         </div>
       </div>
 
       <div class="row">
         <div class="col-6 text-center mobileMenuIcons">
-            <a href="#Stickers" onclick="closeNav()"><img src="Images/StickersIconWhite.png" class="icon-left" style="max-width: 100%;"></a>
+            <a href="#Stickers" onclick="lockScroll(); closeNav()"><img src="Images/StickersIconWhite.png" class="icon-left" style="max-width: 100%;"></a>
         </div>
         <div class="col-6 text-center mobileMenuIcons">
-            <a href="#GlitchArt" onclick="closeNav()"><img src="Images/GlitchIconWhite.png" class="icon-right" style="max-width: 100%;"></a>
+            <a href="#GlitchArt" onclick="lockScroll(); closeNav()"><img src="Images/GlitchIconWhite.png" class="icon-right" style="max-width: 100%;"></a>
         </div>
       </div>
 
       <div class="row">
         <div class="col-6 text-center mobileMenuIcons" style="margin-bottom: 45px;">
-            <a href="#Websites" onclick="closeNav()"><img src="Images/WebsitesIconWhite.png" class="icon-left" style="max-width: 100%;"></a>
+            <a href="#Websites" onclick="lockScroll(); closeNav()"><img src="Images/WebsitesIconWhite.png" class="icon-left" style="max-width: 100%;"></a>
         </div>
         <div class="col-6 text-center mobileMenuIcons">
-            <a href="#Contact" onclick="closeNav()"><img src="Images/ContactIconWhite.png" class="icon-right" style="max-width: 100%;"></a>
+            <a href="#Contact" onclick="lockScroll(); closeNav()"><img src="Images/ContactIconWhite3.png" class="icon-right" style="max-width: 100%;"></a>
         </div>
       </div>
 
     </div><!--end iconsContainer-->
 
     <!--Mobile Swatches-->
-    <div title="Themes" style="margin-top:24px; margin-bottom:24px;">
+    <div title="Themes" style="margin-bottom:24px;">
+      <div class="swatchesHeader"><h5 style="text-align: center;/*! margin: ; */margin-bottom: 12px;margin-top: 12px;font-family: pixelated;">Background Color</h5></div>
       <div class="row d-lg-none"><!--
       --><div style="margin-left: 16px; margin-right: 16px; text-align: center;"><!--
       --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #dbb9b8;" onclick="chBackcolor('#dbb9b8');"><!--
@@ -275,6 +276,7 @@
       <img src="Images/StickersIconNoBG.png" style="display:none;">
       <img src="Images/PostersIconNoBG3.gif" style="display:none;">
       <img src="Images/WebsitesIconNoBG2.png" style="display:none;">
+      <img src="Images/WebsitesIconNoBG2.gif" style="display:none;">
       <img src="Images/GlitchIconNoBG.gif" style="display:none;">
       <img src="Images/ContactIconNoBG-red2.png" style="display:none;">
       <img src="Images/InstaIconGreenBG.png" style="display:none;">
@@ -459,7 +461,7 @@
 
        <div class="row img" onclick="colToggle();">
          <div id="swap5" class="col-6 container-fluid" onclick="delay('#innerSwap5')">
-           <a href="javascript:delay('#innerSwap5')"><img id="innerSwap5" class="left-half-col" src="Images/A_Boy_Named_John_Amp_House-final3.png" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap5')"><img id="innerSwap5" class="left-half-col" src="Images/A_Boy_Named_John_Amp_House-final4.png" style="width:100%;"></a>
          </div>
          <div id="swap6" class="col-6 container-fluid" onclick="delay('#innerSwap6')">
            <a href="javascript:delay('#innerSwap6')"><img id="innerSwap6" class="right-half-col" src="Images/ABNJ-Nevada-6.png" style="width:100%;"></a>
@@ -541,7 +543,7 @@
 
        <div class="row img" onclick="colToggle();">
          <div id="swap21" class="col-6 container-fluid" onclick="delay('#innerSwap21')">
-           <a href="javascript:delay('#innerSwap21')"><img id="innerSwap21" class="left-half-col" src="Images/Stickers_Priest.jpg" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap21')"><img id="innerSwap21" class="left-half-col" src="Images/SquidPriests2.png" style="width:100%;"></a>
          </div>
          <div id="swap22" class="col-6 container-fluid" onclick="delay('#innerSwap22')">
            <a href="javascript:delay('#innerSwap22')"><img id="innerSwap22" class="right-half-col" src="Images/Stickers_Punk.jpg" style="width:100%;"></a>
@@ -587,7 +589,7 @@
            <a href="javascript:delay('#innerSwap7')"><img id="innerSwap7" a href="#innerSwap7" class="left-half-col" src="Images/Lady_Glitch-6.png" title="Lady at Sea" style="width:100%;"></a><!--<p>Anaog Glitch Art- Images captured from old VHS tapes, run through a broken machine and CRT TV</p>-->
          </div>
          <div id="swap8" class="col-6 container-fluid" onclick="delay('#innerSwap8')">
-           <a href="javascript:delay('#innerSwap3')"><img id="innerSwap8" class="right-half-col" src="Images/Glitch_Landscape-2.png" title="Frozen Beach" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap3')"><img id="innerSwap8" class="right-half-col" src="Images/DistortedVisions2.png" title="Frozen Beach" style="width:100%;"></a>
          </div>
        </div>
 
@@ -596,61 +598,48 @@
            <a href="javascript:delay('#innerSwap9')"><img id="innerSwap9" a href="#innerSwap9" class="left-half-col" src="Images/FrozenBeach.png" title="Clock Tower" style="width:100%;"></a>
          </div>
          <div id="swap10" class="col-6 container-fluid" onclick="delay('#innerSwap10')">
-           <a href="javascript:delay('#innerSwap10')"><img id="innerSwap10" class="right-half-col" src="Images/DistortedVisions.png" title="Texture Chaos" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap10')"><img id="innerSwap10" class="right-half-col" src="Images/Glitch_Landscape-2.png" title="Texture Chaos" style="width:100%;"></a>
          </div>
        </div>
 
        <div class="row img" onclick="colToggle();">
          <div id="swap11" class="col-6 container-fluid" onclick="delay('#innerSwap11')">
-           <a href="javascript:delay('#innerSwap11')"><img id="innerSwap11" class="left-half-col" src="Images/Glitch_Tower.png" title="Red Sky" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap11')"><img id="innerSwap11" class="left-half-col" src="Images/Random_Glitch-1.png" title="Red Sky" style="width:100%;"></a>
          </div>
          <div id="swap12" class="col-6 container-fluid" onclick="delay('#innerSwap12')">
-           <a href="javascript:delay('#innerSwap12')"><img id="innerSwap12" class="right-half-col" src="Images/ClockTower.png" title="Alien Landscape" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap12')"><img id="innerSwap12" class="right-half-col" src="Images/RedSky_Glitch4.png" title="Alien Landscape" style="width:100%;"></a>
          </div>
        </div>
 
        <div class="row img" onclick="colToggle();">
          <div id="swap13" class="col-6 container-fluid" onclick="delay('#innerSwap13')">
-           <a href="javascript:delay('#innerSwap13')"><img id="innerSwap13" class="left-half-col" src="Images/LadyGlitch.jpg" title="Moonflowers" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap13')"><img id="innerSwap13" class="left-half-col" src="Images/GlitchTower2.png" title="Moonflowers" style="width:100%;"></a>
          </div>
          <div id="swap14" class="col-6 container-fluid" onclick="delay('#innerSwap14')">
-           <a href="javascript:delay('#innerSwap14')"><img id="innerSwap14" class="right-half-col" src="Images/RedSky_Glitch2.png" title="View from the Window" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap14')"><img id="innerSwap14" class="right-half-col" src="Images/GlitchCave.png" title="View from the Window" style="width:100%;"></a>
          </div>
        </div>
 
        <div class="row img" onclick="colToggle();">
          <div id="swap23" class="col-6 container-fluid" onclick="delay('#innerSwap23')">
-           <a href="javascript:delay('#innerSwap23')"><img id="innerSwap23" class="left-half-col" src="Images/Random_Glitch-1.png" title="Pepsi Cola" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap23')"><img id="innerSwap23" class="left-half-col" src="Images/Glitch_Texture-1.png" title="Pepsi Cola" style="width:100%;"></a>
          </div>
          <div id="swap24" class="col-6 container-fluid" onclick="delay('#innerSwap24')">
-           <a href="javascript:delay('#innerSwap24')"><img id="innerSwap24" class="right-half-col" src="Images/Flower_Glitch-3.png" title="What Happened?" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap24')"><img id="innerSwap24" class="right-half-col" src="Images/Glitch_Texture-2.png" title="What Happened?" style="width:100%;"></a>
          </div>
        </div>
 
        <div class="row img" onclick="colToggle();">
          <div id="swap15" class="col-6 container-fluid" onclick="delay('#innerSwap15')">
-           <a href="javascript:delay('#innerSwap15')"><img id="innerSwap15" class="left-half-col" src="Images/Glitch_Texture-1.png" title="Pepsi Cola" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap15')"><img id="innerSwap15" class="left-half-col" src="Images/OC_Wallpaper_1.png" title="Pepsi Cola" style="width:100%;"></a>
          </div>
          <div id="swap16" class="col-6 container-fluid" onclick="delay('#innerSwap16')">
-           <a href="javascript:delay('#innerSwap16')"><img id="innerSwap16" class="right-half-col" src="Images/Glitch_Texture-2.png" title="What Happened?" style="width:100%;"></a>
+           <a href="javascript:delay('#innerSwap16')"><img id="innerSwap16" class="right-half-col" src="Images/Japanese_FutureFunk_Apartment2.png" title="What Happened?" style="width:100%;"></a>
          </div>
        </div>
 
        <div class="videoWrapper">
          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/x74brrZmvcg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-       </div>
-
-       <div class="sectionTitle">
-         <h2 class="text-center">Digital Art<hr></h2>
-       </div>
-
-       <div class="row img" onclick="colToggle();">
-         <div id="swap" class="col-6 container-fluid" onclick="delay('#innerSwap')">
-           <a href="javascript:delay('#innerSwap3')"><img id="innerSwap" a href="#innerSwap" class="left-half-col" src="Images/OC_Wallpaper_1.png" style="width:100%;"></a>
-         </div>
-         <div id="swap2" class="col-6 container-fluid" onclick="delay('#innerSwap2')">
-           <a href="javascript:delay('#innerSwap3')"><img id="innerSwap2" class="right-half-col" src="Images/OC_Wallpaper_6.png" style="width:100%;"></a>
-         </div>
        </div>
 
        <br>
