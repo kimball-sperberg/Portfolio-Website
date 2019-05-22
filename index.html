@@ -87,20 +87,12 @@
 </head>
 <body id="bootstrap-override">
 
-
-<!--Hidden Menu: Appears on scroll-->
-  <!--<div id="scrollMenu">
-      <h2 id="bootstrap-override" class="rightAlign menuText">
-        <a href="Sivac1.html">Menu</a>
-      </h2>
-  </div>-->
-
   <!--Slideout Side Navigation (Mobile Only)-->
   <div id="mySidenav" class="sidenav" style="z-index:99;">
     <div class="windowBottomContainer">
       <div class="windowContainer">
 
-          <div class="windowTop" onclick="closeNav(); lockScroll();" style="margin-bottom: 5vw; border-left: 0px !important; border-right: 0px !important;">
+          <div class="windowTop" onclick="closeNav(); lockScroll();" style="border-left: 0px !important; border-right: 0px !important;">
             <div id="abcabc">
               <div id="bcbc">
                 <div class="menuIconContainer"><!--
@@ -113,7 +105,7 @@
             </div>
           </div>
 
-<div id="slideoutBottom" style="height:0px;">
+  <div id="slideoutBottom" class="container collapse" id="collapseExample2"style="margin-top: 5vw;">
     <div id="iconsContainer">
       <div class="row">
         <div class="col-6 text-center mobileMenuIcons">
@@ -145,7 +137,7 @@
     </div><!--end iconsContainer-->
 
 
-    <!--Mobile Swatches-->
+  <!--Mobile Swatches-->
   <div class="row d-lg-none"><!--
     --><div style=" margin-top: 6vw; margin-bottom: 6vw; text-align: center;"><!--
     --><img src="Images/themesSwatch1.png" id="paletteIcon1"class="swatchMobile"><!--
@@ -159,7 +151,7 @@
       --><img src="Images/themesSwatch3.png" id="paletteIcon3"class="swatchMobile"><!--
       --><img src="Images/themesSwatch4.png" id="paletteIcon4"class="swatchMobile"><!--
     --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #FFCAAA;" onclick="chBackcolor('#FFCAAA');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: red;" onclick="chBackcolor('red');"><!--
+    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #d9a5e3;" onclick="chBackcolor('#d9a5e3');"><!--
     --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: yellow;" onclick="chBackcolor('yellow');"><!--
     --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: green;" onclick="chBackcolor('green');"><!--
     --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: lightblue;" onclick="chBackcolor('lightblue');"><!--
@@ -173,22 +165,6 @@
     </div><!--end windowBottomContainer-->
     <br>
   </div><!--end Sidenav-->
-
-  <!--Open and close Slideout Menu script-->
-  <script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "100vw";
-      document.getElementById("menuX").style.height = "36px";
-    }
-    function openNav2() {
-      document.getElementById("slideoutBottom").style.height = "100%";
-    }
-
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("menuX").style.height = "0px";
-    }
-  </script>
 
   <!--Landing: Front page spread containing name, descriptor, navigation, etc-->
   <!--Takes up exactly the full height & width of the screen-->
@@ -285,15 +261,9 @@
       <img src="Images/EmailIconGreenBG3.png" style="display:none;">
       <img src="Images/ResumeIconGreenBG2.png" style="display:none;">
       <img src="Images/LinkedInIconGreenBG2.png" style="display:none;">
-      <img src="Images/PhoneIconGreenBG.png" style="display:none;">
+      <img src="Images/Images/XButton2.png" style="display:none;">
 
 
-
-
-      <!--Down Arrow-->
-      <!--<div class="row justify" style="width:100%;">
-        <a href="#artistStatement"><img id="downArrow" src="Images/Down_Arrow_8bit.png"></a>
-      </div>-->
     </div><!--End landingContainer-->
   </section>
 
@@ -429,10 +399,10 @@
              </div>
            </div>
 
-        </div><!--windowBottom container end-->
-      </div><!--customContainer end-->
-    </div><!--Containerfluid end-->
-  </section>
+          </div><!--windowBottom container end-->
+        </div><!--customContainer end-->
+      </div><!--Containerfluid end-->
+    </section>
 
   <section id="gigPosters">
     <div class="container-fluid">

@@ -49,6 +49,26 @@ function ReaperClickScroll () {
 }
 
 
+//Open and close Mobile Slideout Menu
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100vw";
+  document.getElementById("menuX").style.height = "36px";
+  setTimeout( function() {$('.collapse').collapse('toggle'); }, 400 );
+}
+function openNav2() {
+  document.getElementById("slideoutBottom").style.height = "100%";
+}
+
+function closeNav() {
+  $('.collapse').collapse('toggle');
+  setTimeout( function() {document.getElementById("mySidenav").style.width = "0"; }, 400 );
+  setTimeout( function() {document.getElementById("menuX").style.height = "0px"; }, 400 );
+
+  //document.getElementById("mySidenav").style.width = "0";
+  //document.getElementById("menuX").style.height = "0px";
+}
+
+
 //Toggle BG color themes menu on hover
 var $showSidemenu = $('#sidemenu');
 var $showButton = $('#showButton');
