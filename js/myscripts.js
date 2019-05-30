@@ -39,7 +39,7 @@ $(document).ready(function(){
     } // End if
   });
 });
-
+var s = 1;
 
 //Makes it so when you click/ tap on the reaper, page scrolls to About Me blurb and opens/closes the About Me window
 function ReaperClickScroll () {
@@ -53,7 +53,9 @@ function ReaperClickScroll () {
 function openNav() {
   document.getElementById("mySidenav").style.width = "100vw";
   document.getElementById("menuX").style.height = "36px";
-  setTimeout( function() {$('.collapse').collapse('toggle'); }, 400 );
+  if (!$("#slideoutBottom").hasClass("show")) {
+    setTimeout( function() {$('.collapse').collapse('toggle'); }, 400 );
+  }
 }
 function openNav2() {
   document.getElementById("slideoutBottom").style.height = "100%";
