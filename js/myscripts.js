@@ -55,6 +55,8 @@ function openNav() {
   document.getElementById("menuX").style.height = "36px";
   if (!$("#slideoutBottom").hasClass("show")) {
     setTimeout( function() {$('.collapse').collapse('toggle'); }, 400 );
+    myFunction();
+    toggleSqX();
   }
 }
 function openNav2() {
@@ -65,9 +67,10 @@ function closeNav() {
   $('.collapse').collapse('toggle');
   setTimeout( function() {document.getElementById("mySidenav").style.width = "0"; }, 400 );
   setTimeout( function() {document.getElementById("menuX").style.height = "0px"; }, 400 );
-
-  //document.getElementById("mySidenav").style.width = "0";
-  //document.getElementById("menuX").style.height = "0px";
+  if (!$("#slideoutBottom").hasClass("show")) {
+    myFunction();
+    toggleSqX();
+  }
 }
 
 
