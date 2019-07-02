@@ -124,6 +124,8 @@ function toggleSqX() {
     var imgElement = document.getElementById('SqX');
 
     imgElement.src = (imgElement.src === img1)? img2 : img1;
+
+    //document.getElementById("aboutMeWindow").style.margin = "100vw";
 }
 
 

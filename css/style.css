@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: "pixelated";
-    src:url("C:/Users/Owner/Documents/Websites/IIS Portfolio/PKMN-Mystery-Dungeon.ttf");
+    src:url("C:/Users/Owner/Documents/Websites/IIS Portfolio/px_sans_nouveaux.ttf");
 }
 
 body {
@@ -64,7 +64,10 @@ body {
   border-bottom: 2px solid #dddddd;
   box-shadow: -2px 0px 0px 0px darkgrey, 0px -2px 0px 0px darkgrey, 2px 0px 0px 0px white, 0px 2px 0px 0px white;*/
   /*box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);*/
-  background-image: url('../Images/pixelBeach.jpg');
+
+  /*background-image: url('../Images/pixelBeach.jpg');*/
+  background: rgb(205,115,133);
+  background: linear-gradient(180deg, rgba(205,115,133,1) 0%, rgba(228,149,151,1) 50%, rgba(212,161,145,1) 100%);
   background-size: cover;
   /*url("../Images/msPaintBG-1.png"), url("../Images/msPaintBG-2.png"), url("../Images/vaporBG3.png");
   background-position: bottom right, bottom left;
@@ -756,6 +759,7 @@ hr {
   border-bottom: 2px solid gray;
   border-right: 2px solid gray;
   margin: 16px;
+  background-color: #F0F0F0;
 }
 
 .btn:focus {
@@ -1311,4 +1315,14 @@ html, body, .swiper-container2 {
 #bcbc {
   border-right: 3px solid #00007A;
   border-top: 4px;
+}
+
+.swiper-pagination-bullet {
+  background: #fff !important;
+  opacity: 0.6 !important;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    background: #007aff !important;
 }
