@@ -91,21 +91,25 @@
     <div class="windowBottomContainer">
       <div class="windowContainer">
 
-          <div class="windowTop" onclick="closeNav(); lockScroll();" style="border-left: 0px !important; border-right: 0px !important;">
-            <div id="abcabc">
-              <div id="bcbc">
-                <div class="menuIconContainer"><!--
-                --><img src="Images/MenuIcon2.png" id="menuIcon"><!--
-             --></div><!--
-             --><h1 class="windowTitle closeButton">Menu<!--
-             --><img src="Images/XButton2.png" id="menuX" style="padding: 3px;"></img><!--
-             --></h1> <!--https://i.imgur.com/Mdyr4HT.png-->
-              </div>
+        <div class="windowTop" onclick="closeNav(); lockScroll();" style="border-left: 0px !important; border-right: 0px !important;">
+          <div id="abcabc">
+            <div id="bcbc">
+              <div class="menuIconContainer"><!--
+              --><img src="Images/MenuIcon2.png" id="menuIcon"><!--
+           --></div><!--
+           --><h1 class="windowTitle closeButton">Menu<!--
+           --><img src="Images/XButton2.png" id="menuX" style="padding: 3px;"></img><!--
+           --></h1> <!--https://i.imgur.com/Mdyr4HT.png-->
             </div>
           </div>
+        </div>
 
-  <div id="slideoutBottom" class="container collapse" id="collapseExample2"style="margin-top: 5vw;">
-    <div id="iconsContainer">
+  <div id="slideoutBottom" class="container collapse" id="collapseExample2">
+    <!--<div class="text-center">
+      <p class="mobileMenuText">Navigation</p>
+    </div>-->
+
+    <div id="iconsContainer" style="margin-top: 5vw;">
       <div class="row">
         <div class="col-6 text-center mobileMenuIcons">
             <a href="#artistStatement" onclick="lockScroll(); closeNav(); ReaperClickScroll();"><img src="Images/AboutMeIconWhite.png" class="icon-left" style="max-width: 100%; z-index:100;"></a>
@@ -135,28 +139,31 @@
 
     </div><!--end iconsContainer-->
 
+    <div class="text-center">
+      <p class="mobileMenuText">Toggle Background Color</p>
+    </div>
 
-  <!--Mobile Swatches-->
-  <div class="row d-lg-none"><!--
-  --><div style=" margin-top: 6vw; margin-bottom: 6vw; text-align: center;"><!--
-    --><img src="Images/themesSwatch1.png" id="paletteIcon1"class="swatchMobile"><!--
-    --><img src="Images/themesSwatch2.png" id="paletteIcon2"class="swatchMobile"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #dbb9b8;" onclick="chBackcolor('#dbb9b8');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #c1eaec;" onclick="chBackcolor('#c1eaec');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: teal;" onclick="chBackcolor('teal');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #1a6dad;" onclick="chBackcolor('#1a6dad');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #5726A3;" onclick="chBackcolor('#5726A3');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: green;" onclick="chBackcolor('green');"><!--
-    --><img src="Images/themesSwatch3.png" id="paletteIcon3"class="swatchMobile"><!--
-    --><img src="Images/themesSwatch4.png" id="paletteIcon4"class="swatchMobile"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #FFCAAA;" onclick="chBackcolor('#FFCAAA');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #d9a5e3;" onclick="chBackcolor('#d9a5e3');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: yellow;" onclick="chBackcolor('yellow');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: green;" onclick="chBackcolor('green');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: lightblue;" onclick="chBackcolor('lightblue');"><!--
-    --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: lightgrey;" onclick="chBackcolor('lightgrey');"><!--
-  --></div>
-  </div>
+    <!--Mobile Swatches-->
+    <div class="row d-lg-none"><!--
+    --><div class="text-center" id="mobileSwatchesContainer"><!--
+      --><img src="Images/themesSwatch1.png" id="paletteIcon1"class="swatchMobile"><!--
+      --><img src="Images/themesSwatch2.png" id="paletteIcon2"class="swatchMobile"><!--
+      --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #dbb9b8;" onclick="chBackcolor('#dbb9b8');"><!--
+      --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #c1eaec;" onclick="chBackcolor('#c1eaec');"><!--
+      --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: teal;" onclick="chBackcolor('teal');"><!--
+      --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #1a6dad;" onclick="chBackcolor('#1a6dad');"><!--
+      --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #5726A3;" onclick="chBackcolor('#5726A3');"><!--
+      --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: green;" onclick="chBackcolor('green');"><!--
+      --><img src="Images/themesSwatch3.png" id="paletteIcon3"class="swatchMobile"><!--
+      --><img src="Images/themesSwatch4.png" id="paletteIcon4"class="swatchMobile"><!--
+      --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #FFCAAA;" onclick="chBackcolor('#FFCAAA');"><!--
+      --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: #d9a5e3;" onclick="chBackcolor('#d9a5e3');"><!--
+      --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: yellow;" onclick="chBackcolor('yellow');"><!--
+      --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: green;" onclick="chBackcolor('green');"><!--
+      --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: lightblue;" onclick="chBackcolor('lightblue');"><!--
+      --><img src="Images/blankSwatch4.png" class="swatchMobile" style="background-color: lightgrey;" onclick="chBackcolor('lightgrey');"><!--
+    --></div>
+    </div>
 
   </div><!--end slideoutBottom-->
 
@@ -368,7 +375,7 @@
 
              <div id="Portrait" class="col-12 col-lg-4 text-center container-fluid">
                <div class="container errorMessageContent">
-                 <img src="Images/profpic_july.png" style="width:100%;">
+                 <img src="Images/profpic_july-2.png" style="width:100%;">
                </div>
              </div>
 
@@ -376,12 +383,12 @@
                <div class="container errorMessageContent">
                  <h2>Nice to meet you.</h2>
                  <div class="d-none d-md-block text-center container-fluid"> <!--d-none d-md-block = only appears on screen size lg or greater-->
-                   <p id="aboutMeDescription">I am a web developer, illustrator and digital artist.
+                   <p id="aboutMeDescription">I am a web developer, illustrator, digital artist and UI/UX designer.
                      Raised by live music and the internet, my style blends DIY and Y2K aesthetics with sleek, modern design.
                    </p>
                  </div>
                  <div class="d-md-none text-center">
-                   <p>I am a web developer, illustrator and digital artist.
+                   <p>I am a web developer, illustrator, digital artist and UI/UX designer.
                      Raised by live music and the internet, my style blends DIY and Y2K aesthetics with sleek, modern design.
                    </p>
                  </div>

@@ -42,6 +42,18 @@ body {
   margin-top: 2vh;
 }
 
+.mobileMenuText {
+  font-family: pixelated;
+  font-size: 90% !important;
+  margin-top: 2vw;
+  margin-bottom: 0px;
+}
+
+#mobileSwatchesContainer {
+  margin-top: 3vw;
+  margin-bottom: 6vw;
+}
+
 #menuIcon {
   float: left;
 }
