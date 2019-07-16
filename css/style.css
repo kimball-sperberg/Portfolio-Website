@@ -4,6 +4,11 @@
     src:url("C:/Users/Owner/Documents/Websites/IIS Portfolio/Fonts/px_sans_nouveaux.ttf");
 }
 
+@font-face {
+    font-family: "pixelated";
+    src:url("Fonts/px_sans_nouveaux.ttf");
+}
+
 body {
   font-size: 12pt;
   background-color: #dbb9b8;
