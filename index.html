@@ -140,7 +140,7 @@
     </div><!--end iconsContainer-->
 
     <div class="text-center">
-      <p class="mobileMenuText">Toggle Background Color</p>
+      <p class="mobileMenuText">Background Colors</p>
     </div>
 
     <!--Mobile Swatches-->
@@ -375,19 +375,26 @@
 
              <div id="Portrait" class="col-12 col-lg-4 text-center container-fluid">
                <div class="container errorMessageContent">
-                 <img src="Images/profpic_july-2.png" style="width:100%;">
+                 <div class="d-md-none portraitMarginsMobile">
+                   <img id="profilePhoto" src="Images/profpic_july-2.png">
+                 </div>
+                 <div class="d-none d-md-block portraitMarginsDesktop">
+                   <img id="profilePhoto" src="Images/profpic_july-2.png">
+                 </div>
                </div>
              </div>
 
              <div class="col-12 col-lg-8 text-center container-fluid">
                <div class="container errorMessageContent">
-                 <h2>Nice to meet you.</h2>
+                 <div class="d-none d-md-block minorPaddingTop"></div>
+                 <div style="padding-right: 15px;"><h2 id="aboutMeHeader" class="d-none d-md-block">Nice to meet you.</h2></div>
+                 <h2 class="d-md-none" id="aboutMeHeaderMobile">Nice to meet you.</h2>
                  <div class="d-none d-md-block text-center container-fluid"> <!--d-none d-md-block = only appears on screen size lg or greater-->
-                   <p id="aboutMeDescription">I am a web developer, illustrator, digital artist and UI/UX designer.
+                   <div style="padding-right: 15px;"><p id="aboutMeDescription">I am a web developer, illustrator, digital artist and UI/UX designer.
                      Raised by live music and the internet, my style blends DIY and Y2K aesthetics with sleek, modern design.
-                   </p>
+                   </p></div>
                  </div>
-                 <div class="d-md-none text-center">
+                 <div class="d-md-none text-center horizontalPadding15px">
                    <p>I am a web developer, illustrator, digital artist and UI/UX designer.
                      Raised by live music and the internet, my style blends DIY and Y2K aesthetics with sleek, modern design.
                    </p>
@@ -475,7 +482,7 @@
        <div class="txt">
          <p class="text-center">Gig posters combine my passions for design, illustration and printmaking.
            Each poster has its own distinct identity, shaped by the sound and aesthetics of the bands and venue.
-           Since Summer of 2018 I've experimented with different printmaking techniques and been commissioned by a number of bands, including a series of posters for <a href="aboynamedjohn.com">A Boy Named John</a>'s US tour.
+           Since Summer of 2018 I've experimented with different printmaking techniques and been commissioned by a number of bands including <a style="color: blue;" href="aboynamedjohn.com">A Boy Named John</a> and <a style="color: blue;" href="bobbymahoneymusic.com">Bobby Mahoney and the Seventh Son</a>.
          </p>
        </div>
 

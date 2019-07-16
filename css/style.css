@@ -3,6 +3,7 @@
 @font-face {
     font-family: "pixelated";
     src:url("/Fonts/px_sans_nouveaux.ttf");
+    src:url("c/Users/Owner/Documents/Websites/IIS Portfolio/Fonts/px_sans_nouveaux.ttf");
 }
 
 body {
@@ -285,12 +286,6 @@ h1 {
 
 #gigPosters {
   z-index: 2;
-}
-
-#Portrait img {
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
 }
 
 #menuX {
@@ -743,7 +738,7 @@ only screen and (min-device-pixel-ratio: 1.5){
 
 @media (min-width:1200px) {
   #bootstrap-override p {
-      font-size: 195%;
+      font-size: 185%;
     }
   }
 
@@ -766,18 +761,18 @@ hr {
 
 .btn {
   border-radius: 0px;
-  outline: 2px solid black;
-  border-top: 2px solid white;
-  border-left: 2px solid white;
-  border-bottom: 2px solid gray;
-  border-right: 2px solid gray;
+  outline: 3px solid black;
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  border-bottom: 3px solid gray;
+  border-right: 3px solid gray;
   margin: 16px;
   background-color: #F0F0F0;
 }
 
 .btn:focus {
   box-shadow: 0 0 0 0rem;
-  outline: 2px solid black;
+  outline: 3px solid black;
 }
 
 #swap .col-12 {
@@ -965,7 +960,12 @@ hr {
 }
 
 .errorMessageContent {
-  margin-top: 15px;
+  padding: 0px;
+}
+
+.horizontalPadding15px {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .swiper-container {
@@ -1229,6 +1229,44 @@ html, body, .swiper-container2 {
 
 #aboutMeDescription {
   margin-top: 15px;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 30px;
+}
+
+#aboutMeHeader {
+  font-size: 250%;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 30px;
+}
+
+#bootstrap-override #aboutMeHeaderMobile {
+  margin-top: 15px;
+}
+
+#profilePhoto {
+  width:100%;
+  outline: 3px solid gray;
+  border: 3px solid black;
+  padding: 0px;
+  margin: 0px;
+}
+
+.portraitMarginsDesktop {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.portraitMarginsMobile {
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.minorPaddingTop {
+  padding-top: 1.5vw;
 }
 
 .col-12 {
