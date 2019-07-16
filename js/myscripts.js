@@ -94,7 +94,7 @@ $(document).ready(function(){
 //Change BG color on click
 function chBackcolor(color) {
  document.body.style.background = color;
- document.getElementById('Landing').style.backgroundColor = color;
+ document.getElementById('bootstrap-override').style.backgroundColor = color;
  document.getElementById('showButton').style.backgroundColor = color;
  document.getElementById('blocker').style.backgroundColor = color;
  document.getElementById('menuIcon').style.backgroundColor = color;
@@ -104,6 +104,11 @@ function chBackcolor(color) {
  document.getElementById('paletteIcon4').style.backgroundColor = color;
 }
 
+function chBackgroundImg() {
+
+    $('#bootstrap-override').css('background-image', 'url(/Images/FloralBG.png)');
+
+}
 
 //Lock scrolling while mobile menu is open
 function lockScroll() {
