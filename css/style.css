@@ -1408,7 +1408,7 @@ html, body, .swiper-container2 {
   background-image: url("../Images/hourglass.png");
   background-size: contain;*/
 }
-#hourglass {
+.hourglass {
   position: absolute;
   height: 276px;
   width: 168px;
@@ -1419,10 +1419,9 @@ html, body, .swiper-container2 {
   background-position: center;
   left: 50%;
   margin-left: -84px;
-  top: 42%;
+  top: 40%;
   margin-top: -138px;
 }
-
 .progress {
  position: absolute;
  z-index: 9999;
@@ -1430,11 +1429,41 @@ html, body, .swiper-container2 {
  width: 252px;
  left: 50%;
  margin-left: -126px;
- top: 62%;
+ top: 66%;
  margin-top: -12px;
  border-radius: 0px!important;
  background: #a8c6f6;
 }
+
+@media (min-width:768px) {
+  .hourglass {
+   position: absolute;
+   height: 276px;
+   width: 168px;
+   background-image: url("../Images/GlowingHourglass.png");
+   background-size: contain;
+   background-repeat: no-repeat;
+   position: absolute;
+   background-position: center;
+   left: 50%;
+   margin-left: -84px;
+   top: 44%;
+   margin-top: -138px;
+  }
+  .progress {
+   position: absolute;
+   z-index: 9999;
+   height: 24px;
+   width: 252px;
+   left: 50%;
+   margin-left: -126px;
+   top: 62%;
+   margin-top: -12px;
+   border-radius: 0px!important;
+   background: #a8c6f6;
+  }
+}
+
 progress {
   color: blue;
 }

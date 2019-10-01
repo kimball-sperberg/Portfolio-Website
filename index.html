@@ -47,7 +47,6 @@
             if(document.getElementById("bar1").style.width=="100%")
             {
               $(".progress").fadeOut("slow");
-              $(".loader-wrapper").fadeOut("slow");
             }
           });
         }
@@ -140,11 +139,12 @@
     <!-- Loading square for squar.red network -->
     <div class="loader-wrapper">
       <!--<span class="loader"><span class="loader-inner"></span></span>-->
-      <div id="hourglass"></div>
-        <div class='progress' id="progress_div">
-              <div class='bar' id='bar1'></div>
-              <div class='percent' id='percent1'></div>
-            </div>
+      <div class="hourglass"></div>
+      <div class='progress' id="progress_div">
+        <div class='bar' id='bar1'></div>
+        <div class='percent' id='percent1'></div>
+      </div>
+      <div class="loadBreaks"></div>
 
             <input type="hidden" id="progress_width" value="0">
 
