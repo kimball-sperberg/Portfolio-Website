@@ -12,6 +12,58 @@
     <link href="https://fonts.googleapis.com/css?family=Share:400,400i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--Hide loader when done loading-->
+    <script>
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+
+    <!--Progress bar while page is loading-->
+    <script>
+      document.onreadystatechange = function(e)
+      {
+        if(document.readyState=="interactive")
+        {
+          var all = document.getElementsByTagName("*");
+          for (var i=0, max=all.length; i < max; i++)
+          {
+            set_ele(all[i]);
+          }
+        }
+      }
+
+      function check_element(ele)
+      {
+        var all = document.getElementsByTagName("*");
+        var totalele=all.length;
+        var per_inc=100/all.length;
+
+        if($(ele).on())
+        {
+          var prog_width=per_inc+Number(document.getElementById("progress_width").value);
+          document.getElementById("progress_width").value=prog_width;
+          $("#bar1").animate({width:prog_width+"%"},10,function(){
+            if(document.getElementById("bar1").style.width=="100%")
+            {
+              $(".progress").fadeOut("slow");
+              $(".loader-wrapper").fadeOut("slow");
+            }
+          });
+        }
+
+        else
+        {
+          set_ele(ele);
+        }
+      }
+
+      function set_ele(set_element)
+      {
+        check_element(set_element);
+      }
+    </script>
+
     <!-- Swiper's css -->
     <link rel="stylesheet" href="dist/css/swiper.min.css">
     <script src="js/jssor.slider-27.4.0.min.js" type="text/javascript"></script>
@@ -85,6 +137,20 @@
     <script src="js/myscripts.js"></script>
 </head>
 <body id="bootstrap-override">
+  <body>
+    <!-- Loading square for squar.red network -->
+    <div class="loader-wrapper">
+      <!--<img src="Images/hourglass.png" class="text-center"></img>-->
+      <!--<span class="loader"><span class="loader-inner"></span></span>-->
+      <div id="hourglass"></div>
+        <div class='progress' id="progress_div">
+              <div class='bar' id='bar1'></div>
+              <div class='percent' id='percent1'></div>
+            </div>
+
+            <input type="hidden" id="progress_width" value="0">
+
+    </div>
 
   <!--Slideout Side Navigation (Mobile Only)-->
   <div id="mySidenav" class="sidenav" style="z-index:99;">
@@ -721,6 +787,9 @@
 
   <div id="blocker" class="d-none d-lg-block"></div>
 
+
+
+
   <!--Change button text onclick-->
   <script type="text/javascript">
       function myFunction() {
@@ -758,26 +827,3 @@
 
 
 </html>
-<!--
-Hello,
-
-I'm writing to you because you have such an impressive roster of artists
-on your catalog, including some of my favorites such as Vektroid and Angel Dust Dealers,
-and I would really like to help you get more recognition in the marketplace.
-
-I have a significant background in art such as web design, promotional
-posters and social media. It would be a privilage to be a part of your
-team using art to promote your brand and your artists. For example,
-I think I could help you stregnthen your website by adding responsive mobile
-functionality and making it better reflect the aesthetics of your brand.
-
-Please take a look at my website for examples of my work at ...
-My resume is attached for your review. I am passionate about your mission
-and your concept and I would love to get together to talk about ways
-I can contribute.
-
-Please contact me and perhaps we can set up a time to get together.
-
-Best regards,
-Sam Kimball
--->

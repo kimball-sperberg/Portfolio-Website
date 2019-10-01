@@ -1376,3 +1376,147 @@ html, body, .swiper-container2 {
     opacity: 1 !important;
     background: #007aff !important;
 }
+
+
+
+
+
+
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  background-color: #aeafb3;
+  z-index: 9999;
+}
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+.loader {
+  /*display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+  width: 250px;
+  height: 250px;
+  background-image: url("../Images/hourglass.png");
+  background-size: contain;*/
+}
+#hourglass {
+  position: absolute;
+  height: 276px;
+  width: 168px;
+  background-image: url("../Images/GlowingHourglass.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-position: center;
+  left: 50%;
+  margin-left: -84px;
+  top: 42%;
+  margin-top: -138px;
+}
+
+.progress {
+ position: absolute;
+ z-index: 9999;
+ height: 24px;
+ width: 252px;
+ left: 50%;
+ margin-left: -126px;
+ top: 62%;
+ margin-top: -12px;
+ border-radius: 0px!important;
+ background: #a8c6f6;
+}
+progress {
+  color: blue;
+}
+
+progress::-webkit-progress-value {
+  background: blue;
+}
+
+progress::-moz-progress-bar {
+  background: blue;
+}
+
+progress::-webkit-progress-value {
+  background: red;
+}
+
+progress::-webkit-progress-bar {
+  background: blue;
+}
+.bar {
+  background-color: blue;
+  width:0%;
+  margin: 6px;
+  height:12px;
+  color: blue;
+}
+/*.percent
+{
+  position:absolute;
+  display:inline-block;
+  top:3px;
+  left:48%;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;*/
+}
+
+/*@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}*/
