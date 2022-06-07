@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="./highlight/styles/agate.min.css">
+    <script src="./highlight/highlight.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        //Open and close Mobile Slideout Menu
+        function animateMenuTop() {
+            document.getElementById("slideOutMenu").style.width = "100vw";
+            document.getElementById("closeButton").style.height = "36px";
+            if (!$("#slideoutBottom").hasClass("show")) {
+                setTimeout( function() {$('.collapse').collapse('toggle'); }, 400 );
+                // toggleOpenCloseImg();
+            }
+        }
+        function animateMenuBottom() {
+            document.getElementById("slideoutBottom").style.height = "100%";
+        }
+        function closeNav() {
+            $('.collapse').collapse('toggle');
+            setTimeout( function() {document.getElementById("slideOutMenu").style.width = "0"; }, 400 );
+            setTimeout( function() {document.getElementById("closeButton").style.height = "0px"; }, 400 );
+            // if (!$("#slideoutBottom").hasClass("show")) {
+            //     toggleOpenCloseImg();
+            // }
+        }
+
+
+        //Change Background color onClick
+        function changeBGTheme(color) {
+            document.body.style.background = color;
+            document.getElementById('bootstrap-override').style.backgroundColor = color;
+            //document.getElementById('menuIcon').style.backgroundColor = color;
+            document.getElementById('iconsContainer').style.backgroundColor = color;
+            document.getElementById('paletteIcon1').style.backgroundColor = color;
+            document.getElementById('paletteIcon2').style.backgroundColor = color;
+            document.getElementById('paletteIcon3').style.backgroundColor = color;
+            document.getElementById('paletteIcon4').style.backgroundColor = color;
+        }
+
+        //Toggle [open] and [minimize] Thumbnails
+        // function toggleOpenCloseImg() {
+        //     var img1 = "https://i.imgur.com/nMXAJOr.png",
+        //        img2 = "Images/XButton.png";
+        //     var imgElement = document.getElementById('closeButton');
+        //     imgElement.src = (imgElement.src === img1)? img2 : img1;
+        // }
+
+        //Smooth scroll on all links
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+        var s = 1;
+
+        //Code Display Buttons
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: "pixelated";
+            src:url("./Fonts/px_sans_nouveaux.ttf");
+        }
+        h1 {
+            color: white;
+            font-size: 180%;
+        }
+        /*This line counteracts bootstrap's code which gives rows a margin of -15 on either side */
+        .row {
+            margin-right: 0px !important;
+            margin-left: 0px !important;
+        }
+        .mobileMenu {
+            height: 0vh;
+            padding-left: 9%;
+            padding-right: 9%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: right;
+        }
+        .mobileMenuIcons {
+            margin-top: 2vh;
+        }
+        .mobileMenuText {
+            font-family: pixelated;
+            font-size: 90% !important;
+            margin-top: 2vw;
+            margin-bottom: 0px;
+        }
+        #mobileSwatchesContainer {
+            margin-top: 3vw;
+            margin-bottom: 6vw;
+        }
+        #iconsContainer {
+            margin: 0 auto;
+            width: 88vw;
+            margin-top: 5vw;
+            margin-bottom: 0px;
+            background: rgb(205,115,133);
+            outline: 3px solid black;
+            outline-offset: -6px;
+            box-shadow: inset 0px 0px 0px 3px darkgray;
+        }
+        .icon-left {
+            padding-left: 15px;
+        }
+        .icon-right {
+            padding-right: 15px;
+        }
+        .windowTitle {
+            padding-left: 10px;
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }
+        #slideOutMenu {
+            height: 100vh;
+        }
+        .lock-scroll {
+            position: fixed;
+        }
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+        .sidenav a {
+            text-decoration: none;
+            font-size: 25px;
+            color: black;
+            display: block;
+            transition: 0.3s;
+        }
+        #sideNavButton {
+            font-size: 16pt;
+            float: right;
+            display: flex;
+            margin-right: 0px;
+            padding-left: 12px;
+            padding-right: 12px;
+            padding-top: 0px;
+            padding-bottom: 1px;
+        }
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+        #closeButton {
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: ease;
+            transition-delay: 0s;
+            padding: 3px;
+        }
+        .titleBar {
+            width: 100%;
+            padding: 0px;
+            border-left: 3px solid white;
+            border-top: 3px solid white;
+            border-right: 3px solid black;
+            background-color: #00007A;
+            margin: 0;
+            cursor: pointer;
+            border-left: 0px !important;
+            border-right: 0px !important;
+        }
+        .titleBar img{
+            text-align: right;
+            float: right;
+            height: 36px;
+        }
+        .windowContainerOuter {
+            width: 100%;
+            padding: 0px;
+            border-left: 3px solid white;
+            border-right: 3px solid #828282;
+            background-color: #BEBEBE;
+            margin: 0;
+            border-left: 3px solid #828282;
+            border-top: 3px solid #828282;
+            border-right: 3px solid black;
+            border-bottom: 3px solid black;
+            background-color: #d3d3d3;
+        }
+        .windowContainerInner {
+            border-left: 3px solid white;
+            border-right: 3px solid #828282;
+            border-bottom: 3px solid #828282;
+        }
+
+        .windowButton {
+            border-bottom: 3px solid #828282;
+        }
+        .btn {
+            border-radius: 0px;
+            outline: 3px solid black;
+            border-top: 3px solid white;
+            border-left: 3px solid white;
+            border-bottom: 3px solid gray;
+            border-right: 3px solid gray;
+            margin: 16px;
+            background-color: #F0F0F0;
+        }
+        .btn:focus {
+            box-shadow: 0 0 0 0rem;
+            outline: 3px solid black;
+        }
+        .titleBarContainerOuter {
+            border-left: 3px solid #BEBEBE;
+            border-right: 3px solid #BEBEBE;
+            border-bottom: 3px solid #BEBEBE;
+            border-top: 3px solid #BEBEBE;
+            box-shadow: -3px 0px 0px 0px white, 3px 0px 0px 0px grey;
+            background-color: #00007A;
+        }
+        .titleBarContainerInner {
+            border-right: 3px solid #00007A;
+            border-top: 4px;
+        }
+        .swatchMobile {
+            width: 11vw;
+            height: 11vw;
+            content:url("Images/blankSwatch.png");
+        }
+        #paletteIcon1, #paletteIcon2, #paletteIcon3, #paletteIcon4 {
+            background-color: #dbb9b8;
+            width: 11vw;
+            height: 11vw;
+        }
+        #artistStatement, #gigPosters, #Stickers, #GlitchArt, #Websites, #Contact {
+            margin-top: 80px;
+            margin-left: 20px;
+            height: 20vh;
+        }
+        body {
+            background-color: #DBB9B8;
+        }
+        /*Code Display*/
+        .tablinks {
+            outline: 3px solid black;
+            border-top: 3px solid white;
+            border-left: 3px solid white;
+            border-bottom: 3px solid gray;
+            border-right: 3px solid gray;
+            margin: 3vw;
+            background-color: #F0F0F0;
+            min-width: 20vw;
+            border-radius: 0 !important;
+        }
+        .button {
+            margin-left: 3vw;
+            margin-right: 3vw;
+        }
+        .tabcontent {
+            font-size: 24pt;
+            display: none;
+            border-top: none;
+        }
+        pre > code {
+          margin-left: 3%;
+          margin-right: 3%;
+          font-size: 12px;
+        }
+        #Javascript {
+          display: block;
+        }
+        @media (min-width:992px) {
+          #Javascript {
+            display: none;
+          }
+        }
+    </style>
+</head>
+<body id="bootstrap-override">
+    <!--Slideout Side Navigation (Mobile Only)-->
+    <div id="slideOutMenu" class="sidenav" style="z-index:99;">
+        <div class="windowContainerOuter">
+            <div class="windowContainerInner">
+
+                <div class="titleBar" onclick="closeNav();">
+                    <div class="titleBarContainerOuter">
+                        <div class="titleBarContainerInner"><!--
+                        --><h1 class="windowTitle">Menu<!--
+                         --><img src="Images/XButton.png" id="closeButton"></img><!--
+                         --></h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="slideoutBottom" class="container collapse">
+
+                    <div id="iconsContainer">
+                        <div class="row" onclick="closeNav();">
+                            <div class="col-6 text-center mobileMenuIcons">
+                                <a href="#artistStatement"><img src="Images/AboutMeIconWhite.png" class="icon-left" style="max-width: 100%;"></a>
+                            </div>
+                            <div class="col-6 text-center mobileMenuIcons">
+                                <a href="#gigPosters" ><img src="Images/PostersIconWhite.png" class="icon-right" style="max-width: 100%;"></a>
+                            </div>
+                        </div>
+                        <div class="row" onclick="closeNav();">
+                            <div class="col-6 text-center mobileMenuIcons">
+                                <a href="#Stickers"><img src="Images/StickersIconWhite3.png" class="icon-left" style="max-width: 100%;"></a>
+                            </div>
+                            <div class="col-6 text-center mobileMenuIcons">
+                                <a href="#GlitchArt"><img src="Images/GlitchIconWhite.png" class="icon-right" style="max-width: 100%;"></a>
+                            </div>
+                        </div>
+                        <div class="row" onclick="closeNav();">
+                            <div class="col-6 text-center mobileMenuIcons" style="margin-bottom: 2.75vh;">
+                                <a href="#Websites"><img src="Images/WebsitesIconWhite.png" class="icon-left" style="max-width: 100%;"></a>
+                            </div>
+                            <div class="col-6 text-center mobileMenuIcons">
+                                <a href="#Contact"><img src="Images/ContactIconWhite3.png" class="icon-right" style="max-width: 100%;"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <p class="mobileMenuText">Background Colors</p>
+                    </div>
+
+                    <!--Mobile Swatches-->
+                    <div class="row d-lg-none"><!--
+                      --><div class="text-center" id="mobileSwatchesContainer"><!--
+                      --><img src="Images/themesSwatch1.png" id="paletteIcon1"><!--
+                      --><img src="Images/themesSwatch2.png" id="paletteIcon2"><!--
+                          --><img class="swatchMobile" style="background-color: #F94144;" onclick="changeBGTheme('#F94144');"><!--
+                          --><img class="swatchMobile" style="background-color: #F3722C;" onclick="changeBGTheme('#F3722C');"><!--
+                          --><img class="swatchMobile" style="background-color: #F8961E;" onclick="changeBGTheme('#F8961E');"><!--
+                          --><img class="swatchMobile" style="background-color: #F9844A;" onclick="changeBGTheme('#F9844A');"><!--
+                        --><img class="swatchMobile" style="background-color: #FFCAAA;" onclick="changeBGTheme('#FFCAAA');"><!--
+                        --><img class="swatchMobile" style="background-color: #FDECCE;" onclick="changeBGTheme('#FDECCE');"><!--
+                          --><img src="Images/themesSwatch3.png" id="paletteIcon3"><!--
+                          --><img src="Images/themesSwatch4.png" id="paletteIcon4"><!--
+                        --><img class="swatchMobile" style="background-color: #DBB9B8;" onclick="changeBGTheme('#DBB9B8');"><!--
+                          --><img class="swatchMobile" style="background-color: #90BE6D;" onclick="changeBGTheme('#90BE6D');"><!--
+                          --><img class="swatchMobile" style="background-color: #43AA8B;" onclick="changeBGTheme('#4D908E');"><!--
+                          --><img class="swatchMobile" style="background-color: #577590;" onclick="changeBGTheme('#577590');"><!--
+                          --><img class="swatchMobile" style="background-color: #277DA1;" onclick="changeBGTheme('#277DA1');"><!--
+                          --><img class="swatchMobile" style="background-color: teal;" onclick="changeBGTheme('teal');"><!--
+                      --></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Mobile menu toggle-->
+    <div class="row mobileMenu">
+        <div class="d-lg-none col-12">
+            <button id="sideNavButton" onclick="animateMenuTop(); animateMenuBottom(); lockScroll();" class="btn" type="button">
+                MENU &#9776;
+            </button>
+        </div>
+    </div>
+    <!--Body Content-->
+    <h2 class="text-center d-none d-lg-block">This UI is mobile-only. To view, Inspect Element and click the Device Toggle to switch to Mobile View (CTRL+Shift+M)<hr></h2>
+    <div class="d-lg-none">
+        <section id="artistStatement">
+            <h4>About Me Section</h4>
+        </section>
+        <section id="gigPosters">
+            <h4>Posters Section</h4>
+        </section>
+        <section id="Stickers">
+            <h4>Stickers Section</h4>
+        </section>
+        <section id="GlitchArt">
+            <h4>Glitch Art Section</h4>
+        </section>
+        <section id="Websites">
+            <h4>Websites Section</h4>
+        </section>
+        <section id="Contact">
+            <h4>Contact Section</h4>
+        </section>
+    </div>
+
+    <div class="text-center tab d-lg-none">
+        <button class="btn-md tablinks" onclick="openTab(event, 'HTML')">HTML</button>
+        <button class="btn-md tablinks" onclick="openTab(event, 'CSS')">CSS</button>
+        <button class="btn-md tablinks" onclick="openTab(event, 'Javascript')">Javascript</button>
+    </div>
+
+<!--Code Display-->
+<div id="HTML" class="tabcontent language-html">
+      <pre>
+        <code>
+  &lt;!doctype html>
+  &lt;html lang="en">
+  &lt;head>
+      &lt;meta charset="utf-8">
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      &lt;link rel="stylesheet" href="css/bootstrap.min.css">
+      &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">&lt;/script>
+      &lt;script src="https://code.jquery.com/jquery-latest.js">&lt;/script>
+      &lt;link rel="stylesheet" href="./highlight/styles/agate.min.css">
+      &lt;script src="./highlight/highlight.min.js">&lt;/script>
+      &lt;script src="//code.jquery.com/jquery-1.11.1.min.js">&lt;/script>
+  &lt;/head>
+  &lt;body id="bootstrap-override">
+      <!--Slideout Side Navigation (Mobile Only)-->
+      &lt;div id="slideOutMenu" class="sidenav" style="z-index:99;">
+          &lt;div class="windowContainerOuter">
+              &lt;div class="windowContainerInner">
+
+                  &lt;div class="titleBar" onclick="closeNav();">
+                      &lt;div class="titleBarContainerOuter">
+                          &lt;div class="titleBarContainerInner"><!--
+                          -->&lt;h1 class="windowTitle">Menu<!--
+                           -->&lt;img src="Images/XButton.png" id="closeButton">&lt;/img><!--
+                           -->&lt;/h1>
+                          &lt;/div>
+                      &lt;/div>
+                  &lt;/div>
+
+                  &lt;div id="slideoutBottom" class="container collapse">
+
+                      &lt;div id="iconsContainer">
+                          &lt;div class="row" onclick="closeNav();">
+                              &lt;div class="col-6 text-center mobileMenuIcons">
+                                  &lt;a href="#artistStatement">&lt;img src="Images/AboutMeIconWhite.png" class="icon-left" style="max-width: 100%;">&lt;/a>
+                              &lt;/div>
+                              &lt;div class="col-6 text-center mobileMenuIcons">
+                                  &lt;a href="#gigPosters" >&lt;img src="Images/PostersIconWhite.png" class="icon-right" style="max-width: 100%;">&lt;/a>
+                              &lt;/div>
+                          &lt;/div>
+                          &lt;div class="row" onclick="closeNav();">
+                              &lt;div class="col-6 text-center mobileMenuIcons">
+                                  &lt;a href="#Stickers">&lt;img src="Images/StickersIconWhite3.png" class="icon-left" style="max-width: 100%;">&lt;/a>
+                              &lt;/div>
+                              &lt;div class="col-6 text-center mobileMenuIcons">
+                                  &lt;a href="#GlitchArt">&lt;img src="Images/GlitchIconWhite.png" class="icon-right" style="max-width: 100%;">&lt;/a>
+                              &lt;/div>
+                          &lt;/div>
+                          &lt;div class="row" onclick="closeNav();">
+                              &lt;div class="col-6 text-center mobileMenuIcons" style="margin-bottom: 2.75vh;">
+                                  &lt;a href="#Websites">&lt;img src="Images/WebsitesIconWhite.png" class="icon-left" style="max-width: 100%;">&lt;/a>
+                              &lt;/div>
+                              &lt;div class="col-6 text-center mobileMenuIcons">
+                                  &lt;a href="#Contact">&lt;img src="Images/ContactIconWhite3.png" class="icon-right" style="max-width: 100%;">&lt;/a>
+                              &lt;/div>
+                          &lt;/div>
+                      &lt;/div>
+
+                      &lt;div class="text-center">
+                          &lt;p class="mobileMenuText">Background Colors&lt;/p>
+                      &lt;/div>
+
+                      <!--Mobile Swatches-->
+                      &lt;div class="row d-lg-none">
+                        &lt;div class="text-center" id="mobileSwatchesContainer">
+                            &lt;img src="Images/themesSwatch1.png" id="paletteIcon1">
+                            &lt;img src="Images/themesSwatch2.png" id="paletteIcon2">
+                            &lt;img class="swatchMobile" style="background-color: #dbb9b8;" onclick="changeBGTheme('#dbb9b8');">
+                            &lt;img class="swatchMobile" style="background-color: teal;" onclick="changeBGTheme('teal');">
+                            &lt;img class="swatchMobile" style="background-color: #FFCAAA;" onclick="changeBGTheme('#FFCAAA');">
+                            &lt;img class="swatchMobile" style="background-color: #8a86fe;" onclick="changeBGTheme('#8a86fe');">
+                            &lt;img class="swatchMobile" style="background-color: #ffcfe7;" onclick="changeBGTheme('#ffcfe7');">
+                            &lt;img class="swatchMobile" style="background-color: #3e526b;" onclick="changeBGTheme('#3e526b');">
+                            &lt;img src="Images/themesSwatch3.png" id="paletteIcon3">
+                            &lt;img src="Images/themesSwatch4.png" id="paletteIcon4">
+                            &lt;img class="swatchMobile" style="background-color: #e194be;" onclick="changeBGTheme('#e194be');">
+                            &lt;img class="swatchMobile" style="background-color: #fdecce;" onclick="changeBGTheme('#fdecce');">
+                            &lt;img class="swatchMobile" style="background-color: #add8e6;" onclick="changeBGTheme('#add8e6');">
+                            &lt;img class="swatchMobile" style="background-color: #d5a191;" onclick="changeBGTheme('#d5a191');">
+                            &lt;img class="swatchMobile" style="background-color: #5726A3;" onclick="changeBGTheme('#5726A3');">
+                            &lt;img class="swatchMobile" style="background-color: #5726A3;" onclick="changeBGTheme('#green');">
+                        -->&lt;/div>
+                      &lt;/div>
+                  &lt;/div>
+              &lt;/div>
+          &lt;/div>
+      &lt;/div>
+
+      <!--Mobile menu toggle-->
+      &lt;div class="row mobileMenu">
+          &lt;div class="d-lg-none col-12">
+              &lt;button id="sideNavButton" onclick="animateMenuTop(); animateMenuBottom(); lockScroll();" class="btn" type="button">
+                  MENU &#9776;
+              &lt;/button>
+          &lt;/div>
+      &lt;/div>
+      <!--Body Content-->
+      &lt;h2 class="text-center d-none d-lg-block">This UI is mobile-only. To view, Inspect Element and click the Device Toggle to switch to Mobile View (CTRL+Shift+M)<hr></h2>
+      &lt;div class="d-lg-none">
+          &lt;section id="artistStatement">
+              &lt;h4>About Me Section&lt;/h4>
+          &lt;/section>
+          &lt;section id="gigPosters">
+              &lt;h4>Posters Section&lt;/h4>
+          &lt;/section>
+          &lt;section id="Stickers">
+              &lt;h4>Stickers Section&lt;/h4>
+          &lt;/section>
+          &lt;section id="GlitchArt">
+              &lt;h4>Glitch Art Section&lt;/h4>
+          &lt;/section>
+          &lt;section id="Websites">
+              &lt;h4>Websites Section&lt;/h4>
+          &lt;/section>
+          &lt;section id="Contact">
+              &lt;h4>Contact Section&lt;/h4>
+          &lt;/section>
+      &lt;/div>
+  &lt;/body>
+  &lt;/html>
+            </code>
+          </pre>
+        </div>
+        <div id="CSS" class="tabcontent language-css">
+          <pre>
+            <code>
+  @font-face {
+      font-family: "pixelated";
+      src:url("./Fonts/px_sans_nouveaux.ttf");
+  }
+  h1 {
+      color: white;
+      font-size: 180%;
+  }
+  .mobileMenu {
+      height: 0vh;
+      padding-left: 9%;
+      padding-right: 9%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: right;
+  }
+  .mobileMenuIcons {
+      margin-top: 2vh;
+  }
+  .mobileMenuText {
+      font-family: pixelated;
+      font-size: 90% !important;
+      margin-top: 2vw;
+      margin-bottom: 0px;
+  }
+  #mobileSwatchesContainer {
+      margin-top: 3vw;
+      margin-bottom: 6vw;
+  }
+  #iconsContainer {
+      margin: 0 auto;
+      width: 88vw;
+      margin-top: 5vw;
+      margin-bottom: 0px;
+      background: rgb(205,115,133);
+      outline: 3px solid black;
+      outline-offset: -6px;
+      box-shadow: inset 0px 0px 0px 3px darkgray;
+  }
+  .icon-left {
+      padding-left: 15px;
+  }
+  .icon-right {
+      padding-right: 15px;
+  }
+  .windowTitle {
+      padding-left: 10px;
+      /* margin-bottom: 0rem; */
+      margin-top: 3px;
+      margin-bottom: 3px;
+  }
+  #slideOutMenu {
+      height: 100vh;
+  }
+  .lock-scroll {
+      position: fixed;
+  }
+  .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      overflow-x: hidden;
+      transition: 0.5s;
+  }
+  .sidenav a {
+      text-decoration: none;
+      font-size: 25px;
+      color: black;
+      display: block;
+      transition: 0.3s;
+  }
+  .sidenav a:hover {
+      /*color: #f1f1f1;*/
+  }
+  #sideNavButton {
+      font-size: 16pt;
+      float: right;
+      display: flex;
+      margin-right: 0px;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-top: 0px;
+      padding-bottom: 1px;
+  }
+  @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+  }
+  #closeButton {
+      transition-property: all;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
+      padding: 3px;
+  }
+  .titleBar {
+      width: 100%;
+      padding: 0px;
+      border-left: 3px solid white; /*#828282;*/
+      border-top: 3px solid white;
+      border-right: 3px solid black;
+      background-color: #00007A;
+      margin: 0;
+      cursor: pointer;
+      border-left: 0px !important;
+      border-right: 0px !important;
+  }
+  .titleBar img{
+      text-align: right;
+      float: right;
+      height: 36px;
+  }
+  .windowContainerOuter {
+      width: 100%;
+      padding: 0px;
+      border-left: 3px solid white;
+      border-right: 3px solid #828282;
+      background-color: #BEBEBE;
+      margin: 0;
+      border-left: 3px solid #828282; /*#828282;*/
+      border-top: 3px solid #828282;
+      border-right: 3px solid black;
+      border-bottom: 3px solid black;
+      background-color: #d3d3d3;
+  }
+  .windowContainerInner {
+      border-left: 3px solid white;
+      border-right: 3px solid #828282;
+      border-bottom: 3px solid #828282;
+  }
+  .windowButton {
+      border-bottom: 3px solid #828282;
+  }
+  .btn {
+      border-radius: 0px;
+      outline: 3px solid black;
+      border-top: 3px solid white;
+      border-left: 3px solid white;
+      border-bottom: 3px solid gray;
+      border-right: 3px solid gray;
+      margin: 16px;
+      background-color: #F0F0F0;
+  }
+  .btn:focus {
+      box-shadow: 0 0 0 0rem;
+      outline: 3px solid black;
+  }
+  .titleBarContainerOuter {
+      border-left: 3px solid #BEBEBE;
+      border-right: 3px solid #BEBEBE;
+      border-bottom: 3px solid #BEBEBE;
+      border-top: 3px solid #BEBEBE;
+      box-shadow: -3px 0px 0px 0px white, 3px 0px 0px 0px grey;
+      background-color: #00007A;
+  }
+  .titleBarContainerInner {
+      border-right: 3px solid #00007A;
+      border-top: 4px;
+  }
+  /*This line counteracts bootstrap's code which gives rows a margin of -15 on either side */
+  .row {
+      margin-right: 0px !important;
+      margin-left: 0px !important;
+  }
+  .swatchMobile {
+      width: 11vw;
+      height: 11vw;
+      content:url("Images/blankSwatch.png");
+  }
+  #paletteIcon1, #paletteIcon2, #paletteIcon3, #paletteIcon4 {
+      background-color: #dbb9b8;
+      width: 11vw;
+      height: 11vw;
+  }
+  #artistStatement, #gigPosters, #Stickers, #GlitchArt, #Websites, #Contact {
+    margin-top: 80px;
+    margin-left: 20px;
+    height: 50vh;
+              </code>
+           </pre>
+     </div>
+     <div id="Javascript" class="tabcontent language-javascript">
+       <pre>
+         <code>
+   //Open and close Mobile Slideout Menu
+   function animateMenuTop() {
+       document.getElementById("slideOutMenu").style.width = "100vw";
+       document.getElementById("closeButton").style.height = "36px";
+       if (!$("#slideoutBottom").hasClass("show")) {
+           setTimeout( function() {$('.collapse').collapse('toggle'); }, 400 );
+           // toggleOpenCloseImg();
+       }
+   }
+   function animateMenuBottom() {
+       document.getElementById("slideoutBottom").style.height = "100%";
+   }
+   function closeNav() {
+       $('.collapse').collapse('toggle');
+       setTimeout( function() {document.getElementById("slideOutMenu").style.width = "0"; }, 400 );
+       setTimeout( function() {document.getElementById("closeButton").style.height = "0px"; }, 400 );
+   }
+
+   //Change Background color onClick
+   function changeBGTheme(color) {
+       document.body.style.background = color;
+       document.getElementById('bootstrap-override').style.backgroundColor = color;
+       document.getElementById('iconsContainer').style.backgroundColor = color;
+       document.getElementById('paletteIcon1').style.backgroundColor = color;
+       document.getElementById('paletteIcon2').style.backgroundColor = color;
+       document.getElementById('paletteIcon3').style.backgroundColor = color;
+       document.getElementById('paletteIcon4').style.backgroundColor = color;
+   }
+
+   //Smooth scroll on all links
+   $(document).ready(function(){
+     $("a").on('click', function(event) {
+       if (this.hash !== "") {
+         event.preventDefault();
+         var hash = this.hash;
+         $('html, body').animate({
+           scrollTop: $(hash).offset().top
+         }, 800, function(){
+           window.location.hash = hash;
+         });
+       }
+     });
+   });
+   var s = 1;
+         </code>
+      </pre>
+  </div>
+<script src="js/bootstrap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</body>
+</html>

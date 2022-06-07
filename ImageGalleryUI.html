@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="./highlight/styles/agate.min.css">
+    <script src="./highlight/highlight.min.js"></script>
+    <style type="text/css">
+        img {
+          width: 100%;
+        }
+        body {
+          background-color: #dbb9b8;
+        }
+        pre > code {
+          margin-left: 3%;
+          margin-right: 3%;
+          font-size: 24pt;
+        }
+        .wrapper {
+          margin-left: 3%;
+          margin-right: 3%;
+        }
+        .left-column {
+          padding-right: 2%;
+          padding-top: 4%;
+        }
+        .right-column {
+          padding-left: 2%;
+          padding-top: 4%;
+        }
+        .left-column-realign {
+          padding-right: 0px;
+          padding-top: 3%;
+        }
+        .right-column-realign {
+          padding-left: 0px;
+          padding-top: 3%;
+        }
+        /*Using !important to override bootstrap's automatic margin of 15px on either side */
+        .row {
+          margin-right: 0px !important;
+          margin-left: 0px !important;
+        }
+        .container-fluid {
+          padding-right: 0px !important;
+          padding-left: 0px !important;
+        }
+        #dialogueBubble {
+          margin-top:3%;
+          margin-bottom: -5%;
+          max-width: 100%;
+          position: relative;
+        }
+        /*Code Display*/
+        .tablinks {
+            outline: 3px solid black!important;
+            border-top: 3px solid white!important;
+            border-left: 3px solid white!important;
+            border-bottom: 3px solid gray!important;
+            border-right: 3px solid gray !important;
+            margin: 3vw;
+            background-color: #F0F0F0;
+            width: 20vw;
+            border-radius: 0 !important;
+        }
+        .button {
+            margin-left: 3vw;
+            margin-right: 3vw;
+        }
+        .tabcontent {
+            font-size: 12pt;
+            display: none;
+            border-top: none;
+        }
+        .scrollmenu {
+            background-color: #333;
+        }
+        .scrollmenu a:hover {
+            background-color: #777;
+        }
+        #Javascript {
+          display: block;
+        }
+        @media (min-width:992px) {
+          #Javascript {
+            display: none;
+          }
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        //Delays images linking to their own sections to adjust for resize
+        function delay (URL) {
+            if ($(window).width() < 992) {
+                setTimeout( function() { window.location = URL }, 10 );
+            }
+        }
+
+        //Toggle between half and full width column sizes for posters (only on tablets and smaller)
+        function resizeGallery() {
+            if ($(window).width() < 992) {
+                var element = document.getElementById("image1Container");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("Image1");
+                element.classList.toggle("left-column-realign");
+
+                var element = document.getElementById("image2Container");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("Image2");
+                element.classList.toggle("right-column-realign");
+
+                var element = document.getElementById("image3Container");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("Image3");
+                element.classList.toggle("left-column-realign");
+
+                var element = document.getElementById("image4Container");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("Image4");
+                element.classList.toggle("right-column-realign");
+
+                var element = document.getElementById("image5Container");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("Image5");
+                element.classList.toggle("left-column-realign");
+
+                var element = document.getElementById("image6Container");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("Image6");
+                element.classList.toggle("right-column-realign");
+
+            }
+        }
+
+        //Removes info bubble when user taps it
+        $(function removeBubble(){
+            var $img       = $("#dialogueBubble")
+              , $container = $("#dialogueContainer");
+            $img.on("click", function removeBubble() {
+                $img.remove();
+                $container.removeClass().removeAttr("id");
+            });
+        });
+
+        //Code Display Buttons
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</head>
+<body>
+    <h2 class="text-center d-none d-lg-block">This UI is mobile-only. To view, Inspect Element and click the Device Toggle to switch to Mobile View (CTRL+Shift+M)<hr></h2>
+    <div class="container-fluid d-lg-none">
+        <div class="wrapper">
+         <div id="dialogueContainer"><img src="Images/DialogueBubble.png" id="dialogueBubble" class="float-right d-lg-none"></div>
+         <div style="clear:both;"></div><!--This div exists to clear the above float-->
+
+             <div class="row img" onclick="resizeGallery()">
+                <div id="image1Container" class="col-6 container-fluid" onclick="delay('#Image1')">
+                    <a href="javascript:delay('#Image1')">
+                        <img id="Image1" a href="#Image1" class="left-column" src="Images/Poster1.png">
+                    </a>
+                </div>
+                <div id="image2Container" class="col-6 container-fluid" onclick="delay('#Image2')">
+                    <a href="javascript:delay('#Image2')">
+                        <img id="Image2" class="right-column" src="Images/Poster2.png">
+                    </a>
+                </div>
+             </div>
+
+             <div class="row img" onclick="resizeGallery()">
+                <div id="image3Container" class="col-6 container-fluid" onclick="delay('#Image3')">
+                    <a href="javascript:delay('#Image3')">
+                        <img id="Image3" class="left-column" src="Images/Poster3.png">
+                    </a>
+                </div>
+                <div id="image4Container" class="col-6 container-fluid" onclick="delay('#Image4')">
+                    <a href="javascript:delay('#Image4')">
+                        <img id="Image4" class="right-column" src="Images/Poster4.png">
+                    </a>
+                </div>
+             </div>
+
+             <div class="row img" onclick="resizeGallery()">
+                <div id="image5Container" class="col-6 container-fluid" onclick="delay('#Image5')">
+                    <a href="javascript:delay('#Image5')">
+                        <img id="Image5" class="left-column" src="Images/Poster5.png">
+                    </a>
+                </div>
+                <div id="image6Container" class="col-6 container-fluid" onclick="delay('#Image6')">
+                    <a href="javascript:delay('#Image6')">
+                        <img id="Image6" class="right-column" src="Images/Poster6.png">
+                    </a>
+                </div>
+             </div>
+          </div>
+     </div>
+
+     <div class="text-center tab d-lg-none">
+         <button class="btn-lg tablinks" onclick="openTab(event, 'HTML')">HTML</button>
+         <button class="btn-lg tablinks" onclick="openTab(event, 'CSS')">CSS</button>
+         <button class="btn-lg tablinks" onclick="openTab(event, 'Javascript')">Javascript</button>
+     </div>
+
+
+
+
+
+     <div id="HTML" class="tabcontent language-html">
+     <pre>
+       <code>
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;link rel="stylesheet" href="css/bootstrap.min.css&gt;
+    &lt;link rel="stylesheet" href="./highlight/styles/agate.min.css"&gt;
+    &lt;script src="./highlight/highlight.min.js"&gt;&lt;/script&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css"&gt;
+&lt;/head>
+&lt;body>
+&lt;h2 class="text-center d-none d-lg-block">To view this UI, Inspect Element and hit the Device Toggle (CTRL+Shift+M)&lt;hr>&lt;/h2>
+&lt;div class="container-fluid d-lg-none">
+    &lt;div class="wrapper">
+    &lt;div id="dialogueContainer">&lt;img src="Images/DialogueBubble.png" id="dialogueBubble" class="float-right d-lg-none">&lt;/div>
+    &lt;div style="clear:both;">&lt;/div><!--This div exists to clear the above float-->
+
+        &lt;div class="row img" onclick="resizeGallery()">
+            &lt;div id="image1Container" class="col-6 container-fluid" onclick="delay('#Image1')">
+                &lt;a href="javascript:delay('#Image1')">
+                    &lt;img id="Image1" a href="#Image1" class="left-column" src="Poster1.png">
+                &lt;/a>
+            &lt;/div>
+            &lt;div id="image2Container" class="col-6 container-fluid" onclick="delay('#Image2')">
+                &lt;a href="javascript:delay('#Image2')">
+                    &lt;img id="Image2" class="right-column" src="Poster2.png">
+                &lt;/a>
+            &lt;/div>
+        &lt;/div>
+
+        &lt;div class="row img" onclick="resizeGallery()">
+            &lt;div id="image3Container" class="col-6 container-fluid" onclick="delay('#Image3')">
+                &lt;a href="javascript:delay('#Image3')">
+                    &lt;img id="Image3" class="left-column" src="Poster3.png">
+                &lt;/a>
+            &lt;/div>
+            &lt;div id="image4Container" class="col-6 container-fluid" onclick="delay('#Image4')">
+                &lt;a href="javascript:delay('#Image4')">
+                    &lt;img id="Image4" class="right-column" src="Poster4.png">
+                &lt;/a>
+            &lt;/div>
+        &lt;/div>
+
+        &lt;div class="row img" onclick="resizeGallery()">
+            &lt;div id="image5Container" class="col-6 container-fluid" onclick="delay('#Image5')">
+                &lt;a href="javascript:delay('#Image5')">
+                    &lt;img id="Image5" class="left-column" src="Images/Poster5.png">
+                &lt;/a>
+            &lt;/div>
+            &lt;div id="image6Container" class="col-6 container-fluid" onclick="delay('#Image6')">
+                &lt;a href="javascript:delay('#Image6')">
+                    &lt;img id="Image6" class="right-column" src="Poster6.png">
+                &lt;/a>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+&lt;/body>
+&lt;/html>
+       </code>
+     </pre>
+   </div>
+   <div id="CSS" class="tabcontent language-html">
+       <pre>
+         <code>
+&lt;style type="text/css">
+     img {
+         width: 100%;
+     }
+     body {
+         background-color: #dbb9b8;
+     }
+     .wrapper {
+         margin-left: 3%;
+         margin-right: 3%;
+     }
+     .left-column {
+         padding-right: 2%;
+         padding-top: 4%;
+     }
+     .right-column {
+         padding-left: 2%;
+         padding-top: 4%;
+     }
+     .left-column-realign {
+         padding-right: 0px;
+         padding-top: 3%;
+     }
+     .right-column-realign {
+         padding-left: 0px;
+         padding-top: 3%;
+     }
+     /*Using !important to override bootstrap's automatic margin of 15px on either side */
+     .row {
+         margin-right: 0px !important;
+         margin-left: 0px !important;
+     }
+     .container-fluid {
+         padding-right: 0px !important;
+         padding-left: 0px !important;
+     }
+     #dialogueBubble {
+         margin-bottom: -5%;
+         max-width: 100%;
+         position: relative;
+     }
+     @media (min-width:768px) {
+         #dialogueBubble {
+               margin-bottom: -3.5%;
+           }
+       }
+&lt;/style>
+            </code>
+         </pre>
+   </div>
+   <div id="Javascript" class="tabcontent language-html">
+     <pre>
+       <code>
+&lt;script type="javascript"&gt;
+     //Toggle between half and full width column sizes for posters (only on tablets and smaller)
+     function resizeGallery() {
+         if ($(window).width() < 992) {
+             var element = document.getElementById("image1Container");
+             element.classList.toggle("col-12");
+             var element = document.getElementById("Image1");
+             element.classList.toggle("left-column-realign");
+
+             var element = document.getElementById("image2Container");
+             element.classList.toggle("col-12");
+             var element = document.getElementById("Image2");
+             element.classList.toggle("right-column-realign");
+
+             var element = document.getElementById("image3Container");
+             element.classList.toggle("col-12");
+             var element = document.getElementById("Image3");
+             element.classList.toggle("left-column-realign");
+
+             var element = document.getElementById("image4Container");
+             element.classList.toggle("col-12");
+             var element = document.getElementById("Image4");
+             element.classList.toggle("right-column-realign");
+
+             var element = document.getElementById("image5Container");
+             element.classList.toggle("col-12");
+             var element = document.getElementById("Image5");
+             element.classList.toggle("left-column-realign");
+
+             var element = document.getElementById("image6Container");
+             element.classList.toggle("col-12");
+             var element = document.getElementById("Image6");
+             element.classList.toggle("right-column-realign");
+         }
+     }
+
+     //Delays images linking to their own sections to adjust for resize
+     function delay (URL) {
+         if ($(window).width() < 992) {
+             setTimeout( function() { window.location = URL }, 10 );
+         }
+     }
+
+     //Removes info bubble when user taps it
+     $(function removeBubble(){
+         var $img       = $("#dialogueBubble")
+           , $container = $("#dialogueContainer");
+         $img.on("click", function removeBubble() {
+             $img.remove();
+             $container.removeClass().removeAttr("id");
+         });
+     });
+&lt;/script>
+       </code>
+    </pre>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+</html>

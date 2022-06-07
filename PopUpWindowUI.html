@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./highlight/styles/agate.min.css">
+    <script src="./highlight/highlight.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+          //Toggle [open] and [minimize] images
+          function toggleOpenCloseSymbol() {
+              var img1 = "https://i.imgur.com/nMXAJOr.png", //https://i.imgur.com/Mdyr4HT.png //Images/SquareButton2.png
+                 img2 = "Images/XButton2.png"; //X button: https://i.imgur.com/G2taMV5.png"; //https://i.imgur.com/QCSctxI.png //Images/XButton2.png
+                 // button: https://i.imgur.com/rXSjXBc.png
+              var imgElement = document.getElementById('xButton');
+              imgElement.src = (imgElement.src === img1)? img2 : img1;
+          }
+
+          //Change Button Text onClick
+          function toggleOpenCloseText() {
+              var change = document.getElementById("toggle");
+              if (change.innerHTML == "Close")
+              {
+                  change.innerHTML = "Expand";
+              }
+              else {
+                  change.innerHTML = "Close";
+              }
+          }
+
+          //Code Display Buttons
+          function openTab(evt, tabName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(tabName).style.display = "block";
+              evt.currentTarget.className += " active";
+          }
+    </script>
+    <style>
+      #xButton {
+          padding: 2px;
+      }
+      #windowBody {
+          padding-bottom: 10%;
+          padding-top: 10%;
+      }
+      h2 {
+          padding-top: 5px;
+          padding-left: 5px;
+          padding-right: 5px;
+      }
+      .windowHeaderOuter {
+          height:40px;border-right:3px solid #828282;
+      }
+      .windowHeaderMid {
+          border: 3px solid #BEBEBE;
+          box-shadow: -3px 0px 0px 0px white, 3px 0px 0px 0px grey;
+          background-color: #00007A;
+      }
+      .headerContainer {
+          border-right: 3px solid #00007A; border-top: 4px; margin-bottom: 6px;
+      }
+      #HeaderMobile {
+          margin-top: 15px;
+      }
+      @font-face {
+          font-family: "pixelated";
+          src:url("./Fonts/px_sans_nouveaux.ttf");
+      }
+      .horizontalPadding15px {
+          padding-left: 15px;
+          padding-right: 15px;
+      }
+      .windowTop img{
+          text-align: right;
+          float: right;
+          height: 36px;
+      }
+      .windowTop {
+          width: 100%;
+          padding: 0px;
+          border-left: 3px solid white; /*#828282;*/
+          border-top: 3px solid white;
+          border-right: 3px solid black;
+          background-color: #00007A;
+          margin: 0;
+          cursor: pointer;
+      }
+      .windowBottom {
+          width: 100%;
+          padding: 0px;
+          border-left: 3px solid white;
+          border-right: 3px solid #828282;
+          background-color: #BEBEBE;
+          margin: 0;
+      }
+      .windowContainer {
+          border-left: 3px solid white;
+          border-right: 3px solid #828282;
+          border-bottom: 3px solid #828282;
+      }
+      .closeButton {
+          margin-top: 3px;
+          margin-bottom: 3px;
+      }
+      .windowBottomContainer {
+          border-left: 3px solid #828282; /*#828282;*/
+          border-top: 3px solid #828282;
+          border-right: 3px solid black;
+          border-bottom: 3px solid black;
+          background-color: #d3d3d3;
+      }
+      .windowButton {
+          border-bottom: 3px solid #828282;
+      }
+      .errorMessageContent {
+          padding: 0px;
+      }
+      #Description {
+          margin-top: 15px;
+          text-align: left;
+          padding-left: 15px;
+          padding-right: 30px;
+      }
+      #Header {
+          font-size: 250%;
+          text-align: left;
+          padding-left: 15px;
+          padding-right: 30px;
+      }
+      #windowsUIPage #HeaderMobile {
+          margin-top: 15px;
+      }
+      #primaryPhoto {
+          width:100%;
+          outline: 3px solid gray;
+          border: 3px solid black;
+          padding: 0px;
+          margin: 0px;
+      }
+      .portraitMarginsDesktop {
+          margin-top: 30px;
+          margin-left: 30px;
+          margin-right: 30px;
+      }
+      .portraitMarginsMobile {
+          margin-top: 25px;
+          margin-left: 25px;
+          margin-right: 25px;
+      }
+      /*Code Display*/
+      .tablinks {
+          outline: 3px solid black !important;
+          border-top: 3px solid white !important;
+          border-left: 3px solid white !important;
+          border-bottom: 3px solid gray !important;
+          border-right: 3px solid gray !important;
+          margin: 3vw;
+          background-color: #F0F0F0;
+          min-width: 20vw;
+          border-radius: 0 !important;
+      }
+      .button {
+          margin-left: 3vw;
+          margin-right: 3vw;
+          margin-top:10%;
+          margin-bottom: 10%;
+          font-size: 12pt;
+      }
+      .tabcontent {
+          font-size: 12pt;
+          display: none;
+          border-top: none;
+      }
+      .scrollmenu {
+          background-color: #333;
+      }
+      .scrollmenu a:hover {
+          background-color: #777;
+      }
+      pre > code {
+        margin-left: 3%;
+        margin-right: 3%;
+        font-size: 12pt;
+      }
+      @media screen and (min-width: 992px) {
+        pre > code {
+          margin-left: 14%;
+          margin-right: 14%;
+          font-size: 12pt;
+        }
+      }
+      #Javascript {
+        display: block;
+      }
+    </style>
+</head>
+<body id="windowsUIPage">
+  <section id="windowBody">
+    <div class="container-fluid">
+     <div id="aboutMeWindow" class="customContainer">
+       <div class="windowBottomContainer">
+
+           <div id="windowHeaderOuter" class="windowTop" onclick="toggleOpenCloseText(); toggleOpenCloseSymbol();" data-toggle="collapse" data-target="#collapseExample">
+             <div class="windowHeaderMid">
+               <div class="headerContainer">
+                 <h1 class="windowTitle closeButton">Simple Window UI<img src="https://i.imgur.com/nMXAJOr.png" id="xButton"></img></h1>
+               </div>
+             </div>
+           </div>
+
+           <div class="windowBottom row collapse" id="collapseExample">
+               <div id="Portrait" class="col-12 col-lg-4 text-center container-fluid">
+                   <div class="container errorMessageContent">
+                       <div class="d-md-none portraitMarginsMobile">
+                           <img id="primaryPhoto" src="Images/OrangeWater.png">
+                       </div>
+                       <div class="d-none d-md-block portraitMarginsDesktop">
+                           <img id="primaryPhoto" src="Images/OrangeWater.png">
+                       </div>
+                   </div>
+               </div>
+
+               <div class="col-12 col-lg-8 text-center container-fluid">
+                   <div class="container errorMessageContent">
+                       <div class="d-none d-md-block minorPaddingTop"></div>
+                       <div class="horizontalPadding15px"><h2 id="Header" class="d-none d-md-block">Nothing too fancy here!</h2></div>
+                       <h2 class="d-md-none" id="HeaderMobile">Nothing too fancy here!</h2>
+                       <div class="d-none d-md-block text-center container-fluid">
+                            <div class="horizontalPadding15px">
+                                <p id="Description">This window is styled after Windows 96 UI/UX. It opens and closes, and its styles change when it does. I personally think it looks best on mobile.</p>
+                             </div>
+                       </div>
+                       <div class="d-md-none text-center horizontalPadding15px">
+                             <p>This window is styled after Windows 96 UI/UX. It opens and closes, and its styles change when it does. I personally think it looks best on mobile.</p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+           <div class="windowBottom windowButton row">
+               <div class="col-12 text-center">
+                   <button onclick="toggleOpenCloseText(); toggleOpenCloseSymbol();" id="toggle" class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                     Expand
+                   </button>
+               </div>
+           </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center">
+        <button class="btn-lg tablinks" onclick="openTab(event, 'HTML')">HTML</button>
+        <button class="btn-lg tablinks" onclick="openTab(event, 'CSS')">CSS</button>
+        <button class="btn-lg tablinks" onclick="openTab(event, 'Javascript')">Javascript</button>
+    </div>
+
+    <!--Code Display-->
+    <div id="HTML" class="customcontainer tabcontent language-html">
+    <pre>
+      <code>
+  &lt;!doctype html>
+  &lt;html lang="en">
+  &lt;head>
+      &lt;meta charset="utf-8">
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      &lt;link rel="stylesheet" href="css/bootstrap.min.css">
+      &lt;link rel="stylesheet" href="css/style.css">
+      &lt;link rel="stylesheet" href="./highlight/styles/agate.min.css">
+      &lt;script src="./highlight/highlight.min.js">&lt;/script>
+      &lt;script src="https://code.jquery.com/jquery-latest.js">&lt;/script>
+      &lt;script src="js/bootstrap.js">&lt;/script>
+    &lt;/head>
+    &lt;body id="windowsUIPage">
+      &lt;section id="windowBody">
+        &lt;div class="container-fluid">
+         &lt;div id="aboutMeWindow" class="customContainer">
+           &lt;div class="windowBottomContainer">
+
+               &lt;div id="windowHeaderOuter" class="windowTop" onclick="toggleOpenCloseText(); toggleOpenCloseSymbol();" data-toggle="collapse" data-target="#collapseExample">
+                 &lt;div class="windowHeaderMid">
+                   &lt;div class="headerContainer">
+                     &lt;h1 class="windowTitle closeButton">Simple Window UI&lt;img src="Images/XButton.png" id="xButton">&lt;/img>&lt;/h1>
+                   &lt;/div>
+                 &lt;/div>
+               &lt;/div>
+
+               &lt;div class="windowBottom row collapse" id="collapseExample">
+                   &lt;div id="Portrait" class="col-12 col-lg-4 text-center container-fluid">
+                       &lt;div class="container errorMessageContent">
+                           &lt;div class="d-md-none portraitMarginsMobile">
+                               &lt;img id="profilePhoto" src="Images/OrangeWater.png">
+                           &lt;/div>
+                           &lt;div class="d-none d-md-block portraitMarginsDesktop">
+                               &lt;img id="profilePhoto" src="Images/OrangeWater.png">
+                           &lt;/div>
+                       &lt;/div>
+                   &lt;/div>
+
+                   &lt;div class="col-12 col-lg-8 text-center container-fluid">
+                       &lt;div class="container errorMessageContent">
+                           &lt;div class="d-none d-md-block minorPaddingTop">&lt;/div>
+                           &lt;div class="horizontalPadding15px">&lt;h2 id="Header" class="d-none d-md-block">Nothing too fancy here!&lt;/h2>&lt;/div>
+                           &lt;h2 class="d-md-none" id="HeaderMobile">Nothing too fancy here!&lt;/h2>
+                           &lt;div class="d-none d-md-block text-center container-fluid">
+                                &lt;div class="horizontalPadding15px">
+                                    &lt;p id="Description">This window is styled after Windows 96 UI/UX. It opens and closes, and its styles change when it does. I personally think it looks best on mobile.&lt;/p>
+                                 &lt;/div>
+                           &lt;/div>
+                           &lt;div class="d-md-none text-center horizontalPadding15px">
+                                 &lt;p>This window is styled after Windows 96 UI/UX. It opens and closes, and its styles change when it does. I personally think it looks best on mobile.&lt;/p>
+                           &lt;/div>
+                       &lt;/div>
+                   &lt;/div>
+               &lt;/div>
+
+               &lt;div class="windowBottom windowButton row">
+                   &lt;div class="col-12 text-center">
+                       &lt;button onclick="toggleOpenCloseText(); toggleOpenCloseSymbol();" id="toggle" class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                         Expand
+                       &lt;/button>
+                   &lt;/div>
+               &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/section>
+            </code>
+          </pre>
+        </div>
+        <div id="CSS" class="customcontainer tabcontent language-html">
+            <pre>
+              <code>
+  #Header {
+      font-size: 250%;
+      text-align: left;
+      padding-left: 15px;
+      padding-right: 30px;
+  }
+  #Description {
+      margin-top: 15px;
+      text-align: left;
+      padding-left: 15px;
+      padding-right: 30px;
+  }
+  #windowBody {
+      padding-bottom: 10%;
+      padding-top: 10%;
+  }
+  .closeButton {
+      padding: 2px;
+      margin-top: 3px;
+      margin-bottom: 3px;
+  }
+  .headerContainer {
+      border-right: 3px solid #00007A; border-top: 4px; margin-bottom: 6px;
+  }
+  #HeaderMobile {
+      margin-top: 15px;
+  }
+  .windowTop img{
+      text-align: right;
+      float: right;
+      height: 36px;
+  }
+  .windowTop {
+      width: 100%;
+      padding: 0px;
+      border-left: 3px solid white; /*#828282;*/
+      border-top: 3px solid white;
+      border-right: 3px solid black;
+      background-color: #00007A;
+      margin: 0;
+      cursor: pointer;
+  }
+  .windowBottom {
+      width: 100%;
+      padding: 0px;
+      border-left: 3px solid white;
+      border-right: 3px solid #828282;
+      background-color: #BEBEBE;
+      margin: 0;
+  }
+  .windowHeaderOuter {
+      height:40px;border-right:3px solid #828282;
+  }
+  .windowHeaderMid {
+      border: 3px solid #BEBEBE;
+      box-shadow: -3px 0px 0px 0px white, 3px 0px 0px 0px grey;
+      background-color: #00007A;
+  }
+  .horizontalPadding15px {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+  .windowContainer {
+      border-left: 3px solid white;
+      border-right: 3px solid #828282;
+      border-bottom: 3px solid #828282;
+  }
+  .windowBottomContainer {
+      border-left: 3px solid #828282; /*#828282;*/
+      border-top: 3px solid #828282;
+      border-right: 3px solid black;
+      border-bottom: 3px solid black;
+      background-color: #d3d3d3;
+  }
+  .windowButton {
+      border-bottom: 3px solid #828282;
+  }
+  .messageContent {
+      padding: 0px;
+  }
+  #windowsUIPage #HeaderMobile {
+      margin-top: 15px;
+  }
+  #primaryPhoto {
+      width:100%;
+      outline: 3px solid gray;
+      border: 3px solid black;
+      padding: 0px;
+      margin: 0px;
+  }
+  .portraitMarginsDesktop {
+      margin-top: 30px;
+      margin-left: 30px;
+      margin-right: 30px;
+  }
+  .portraitMarginsMobile {
+      margin-top: 25px;
+      margin-left: 25px;
+      margin-right: 25px;
+  }
+  @font-face {
+      font-family: "pixelated";
+      src:url("./Fonts/px_sans_nouveaux.ttf");
+  }
+  h2 {
+      padding-top: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+  }
+              </code>
+            </pre>
+          </div>
+          <div id="Javascript" class="tabcontent language-html">
+            <pre class="customcontainer ">
+              <code>
+  //Toggle [open] and [minimize] images
+  function toggleOpenCloseSymbol() {
+      var img1 = "Images/OButton.png",
+         img2 = "Images/XButton.png";
+      var imgElement = document.getElementById('xButton');
+      imgElement.src = (imgElement.src === img1)? img2 : img1;
+  }
+
+  //Change Button Text onClick
+  function toggleOpenCloseText() {
+      var change = document.getElementById("toggle");
+      if (change.innerHTML == "Close")
+      {
+          change.innerHTML = "Expand";
+      }
+      else {
+          change.innerHTML = "Close";
+      }
+  }
+              </code>
+           </pre>
+         </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

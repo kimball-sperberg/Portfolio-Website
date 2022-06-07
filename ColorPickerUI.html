@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="./highlight/styles/agate.min.css">
+    <script src="./highlight/highlight.min.js"></script>
+    <!--My Scripts-->
+    <script type="text/javascript">
+        //Palette Icon expands into Color Picker Menu when moused over
+        var $showSwatches = $('#outerSwatchContainer');
+        var $showIcon = $('#paletteThumbnail');
+
+        $(document).ready(function(){
+          	$("#outerSwatchContainer").hover(function(){
+            		$(this).toggleClass("show");
+          	});
+        });
+
+        $(document).ready(function(){
+          	$("#paletteThumbnail").hover(function(){
+            		$('#outerSwatchContainer').toggleClass("show");
+          	});
+        });
+
+      //Change BG color on click
+        function changeBGColor(color) {
+           document.body.style.background = color;
+           document.getElementsByClassName("canChangeColor");
+           document.getElementById('paletteThumbnail').style.backgroundColor = color;
+           document.getElementById('curtain').style.backgroundColor = color;
+        }
+
+        //Tabs
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+    <!--My Styles-->
+    <style type="text/css">
+        .canChangeColor {
+            background-color: #2A9D8F;
+        }
+        .swatch {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .innerSwatchContainer {
+            padding-left: 5px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+        }
+        #paletteThumbnail {
+            position: fixed;
+            bottom: 40px; left: 40px;
+            width: 138px;
+        }
+        #outerSwatchContainer {
+            position: fixed;
+            bottom: 40px; left: -180px;
+            width: 46px; height: 46px;
+            max-height: 46px;
+            background-color: #BDBEBD;
+            border: 2px solid black;
+            border-left: 0px;
+            -webkit-transition-duration: 0.5s;
+            -moz-transition-duration: 0.5s;
+            -o-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+        }
+        #outerSwatchContainer.show {
+            left: 86px;
+            width: 172px;
+        }
+        #paletteThumbnail {
+            width: 46px;
+        }
+        #curtain {
+            position: fixed;
+            width: 40px;
+            height: 56px;
+            left: 0px;
+            bottom: 36px;
+        }
+        .tabcontent {
+            font-size: 12pt;
+            display: none;
+            border-top: none;
+            margin-left: 20vw;
+            margin-right: 20vw;
+            margin-top: 4vw;
+            border-radius: 0px;
+        }
+        .tablinks {
+            outline: 3px solid black;
+            border-top: 3px solid white;
+            border-left: 3px solid white;
+            border-bottom: 3px solid gray;
+            border-right: 3px solid gray;
+            margin-left: 16px;
+            margin-right: 16px;
+            margin-top: 5vw;
+            background-color: #F0F0F0;
+            width: 10vw;
+        }
+        #Javascript {
+          display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body id="body" class='canChangeColor'>
+    <!--Color Picker Menu-->
+    <div id="outerSwatchContainer">
+        <!--Line breaks below are commented out so that spaces don't appear between the Swatch Icons-->
+        <div class="innerSwatchContainer"><!--
+        --><img src="Images/blankSwatch.png" class="swatch" style="background-color: #264653;" onclick="changeBGColor('#264653');"><!--
+        --><img src="Images/blankSwatch.png" class="swatch" style="background-color: #2A9D8F;" onclick="changeBGColor('#2A9D8F');"><!--
+        --><img src="Images/blankSwatch.png" class="swatch" style="background-color: #E9C46A;" onclick="changeBGColor('#E9C46A');"><!--
+        --><img src="Images/blankSwatch.png" class="swatch" style="background-color: #F4A261;" onclick="changeBGColor('#F4A261');"><!--
+        --><img src="Images/blankSwatch.png" class="swatch" style="background-color: #E76F51;" onclick="changeBGColor('#E76F51');"><!--
+     --></div><!--
+ --></div>
+
+    <div class="">
+        <img src="Images/themesIcon.png" id="paletteThumbnail" class='canChangeColor'>
+    </div>
+
+    <div id="curtain" class="canChangeColor"></div>
+
+    <div class="tab text-center">
+      <button class="tablinks" onclick="openTab(event, 'HTML')">HTML</button>
+      <button class="tablinks" onclick="openTab(event, 'CSS')">CSS</button>
+      <button class="tablinks" onclick="openTab(event, 'Javascript')">Javascript</button>
+    </div>
+
+    <!--Code Display-->
+    <div id="HTML" class="tabcontent language-html">
+<pre>
+  <code>
+  &lt;!doctype html>
+  &lt;html lang="en">
+  &lt;head>
+      &lt;script src="https://code.jquery.com/jquery-latest.js">&lt;/script>
+      &lt;link rel="stylesheet" href="css/bootstrap.min.css">
+  &lt;/head>
+
+  &lt;body id="body" class='canChangeColor'>
+      <!--Color Picker Menu-->
+      &lt;div id="outerSwatchContainer">
+          &lt;div class="innerSwatchContainer">
+              &lt;img src="Images/blankSwatch.png" class="swatch" style="background-color: #DBB9B8;" onclick="changeBGColor('#DBB9B8');">
+              &lt;img src="Images/blankSwatch.png" class="swatch" style="background-color: #CB6767;" onclick="changeBGColor('#CB6767');">
+              &lt;img src="Images/blankSwatch.png" class="swatch" style="background-color: #D3D3D3;" onclick="changeBGColor('#D3D3D3');">
+              &lt;img src="Images/blankSwatch.png" class="swatch" style="background-color: #008080;" onclick="changeBGColor('#008080');">
+              &lt;img src="Images/blankSwatch.png" class="swatch" style="background-color: #FFCAAA;" onclick="changeBGColor('#FFCAAA');">
+         &lt;/div>
+     &lt;/div>
+
+      &lt;div>
+          &lt;img src="Images/themesIcon.png" id="paletteThumbnail" class='canChangeColor'>
+      &lt;/div>
+
+      &lt;div id="curtain" class="canChangeColor">&lt;/div>
+  &lt;/body>
+  &lt;/html>
+        </code>
+      </pre>
+    </div>
+      <div id="CSS" class="tabcontent language-css">
+          <pre>
+            <code>
+  &lt;style type="text/css">
+      .canChangeColor {
+          background-color: #dbb9b8;
+      }
+      .swatch {
+          margin-top: 5px;
+          margin-bottom: 5px;
+      }
+      .innerSwatchContainer {
+          padding-left: 5px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: flex-start;
+      }
+      #paletteThumbnail {
+          position: fixed;
+          bottom: 40px;
+          left: 40px;
+          width: 46px;
+      }
+      #outerSwatchContainer {
+          position: fixed;
+          bottom: 40px; left: -180px;
+          width: 46px; height: 46px;
+          max-height: 46px;
+          background-color: #BDBEBD;
+          border: 2px solid black;
+          border-left: 0px;
+          -webkit-transition-duration: 0.5s;
+          -moz-transition-duration: 0.5s;
+          -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+      }
+        #outerSwatchContainer.show {
+          left: 86px;
+          width: 172px;
+      }
+      #curtain {
+          position: fixed;
+          width: 40px;
+          height: 56px;
+          left: 0px;
+          bottom: 36px;
+      }
+              &lt;/style>
+  </code>
+  </pre>
+  </div>
+  <div id="Javascript" class="tabcontent language-javascript">
+    <pre>
+      <code>
+  &lt;script type="text/javascript">
+  //Palette Icon expands into Color Picker Menu when moused over
+  var $showSwatches = $('#outerSwatchContainer');
+  var $showIcon = $('#paletteThumbnail');
+
+  $(document).ready(function(){
+      $("#outerSwatchContainer").hover(function(){
+          $(this).toggleClass("show");
+      });
+  });
+
+  $(document).ready(function(){
+      $("#paletteThumbnail").hover(function(){
+          $('#outerSwatchContainer').toggleClass("show");
+      });
+  });
+
+  //Change BG color on click
+  function changeBGColor(color) {
+     document.body.style.background = color;
+     document.getElementsByClassName("canChangeColor");
+     document.getElementById('paletteThumbnail').style.backgroundColor = color;
+     document.getElementById('curtain').style.backgroundColor = color;
+  }
+  &lt;/script>
+      </code>
+   </pre>
+ </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
