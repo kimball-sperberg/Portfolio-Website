@@ -126,7 +126,7 @@
       .errorMessageContent {
           padding: 0px;
       }
-      #Description {
+      #description {
           margin-top: 15px;
           text-align: left;
           padding-left: 15px;
@@ -211,7 +211,7 @@
      <div id="aboutMeWindow" class="customContainer">
        <div class="windowBottomContainer">
 
-           <div id="windowHeaderOuter" class="windowTop" onclick="toggleOpenCloseText(); toggleOpenCloseSymbol();" data-toggle="collapse" data-target="#collapseExample">
+           <div id="windowHeaderOuter" class="windowTop" onclick="toggleOpenCloseText(); toggleOpenCloseSymbol();" data-toggle="collapse" data-target="#collapseWindow">
              <div class="windowHeaderMid">
                <div class="headerContainer">
                  <h1 class="windowTitle closeButton">Simple Window UI<img src="https://i.imgur.com/nMXAJOr.png" id="xButton"></img></h1>
@@ -219,7 +219,7 @@
              </div>
            </div>
 
-           <div class="windowBottom row collapse" id="collapseExample">
+           <div class="windowBottom row collapse" id="collapseWindow">
                <div id="Portrait" class="col-12 col-lg-4 text-center container-fluid">
                    <div class="container errorMessageContent">
                        <div class="d-md-none portraitMarginsMobile">
@@ -238,7 +238,7 @@
                        <h2 class="d-md-none" id="HeaderMobile">Nothing too fancy here!</h2>
                        <div class="d-none d-md-block text-center container-fluid">
                             <div class="horizontalPadding15px">
-                                <p id="Description">This window's style pays homage to the classic Windows user interface. It opens and closes, and its styles adjust when it does. I've found this flexable design works especially well on the vertical canvas of a smartphone.</p>
+                                <p id="description">This window's style pays homage to the classic Windows user interface. It opens and closes, and its styles adjust when it does. I've found this flexable design works especially well on the vertical canvas of a smartphone.</p>
                              </div>
                        </div>
                        <div class="d-md-none text-center horizontalPadding15px">
@@ -250,7 +250,7 @@
 
            <div class="windowBottom windowButton row">
                <div class="col-12 text-center">
-                   <button onclick="toggleOpenCloseText(); toggleOpenCloseSymbol();" id="toggle" class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                   <button onclick="toggleOpenCloseText(); toggleOpenCloseSymbol();" id="toggle" class="btn" type="button" data-toggle="collapse" data-target="#collapseWindow" aria-expanded="false" aria-controls="collapseWindow">
                      Expand
                    </button>
                </div>
@@ -288,7 +288,7 @@
          &lt;div id="aboutMeWindow" class="customContainer">
            &lt;div class="windowBottomContainer">
 
-               &lt;div id="windowHeaderOuter" class="windowTop" onclick="toggleOpenCloseText(); toggleOpenCloseSymbol();" data-toggle="collapse" data-target="#collapseExample">
+               &lt;div id="windowHeaderOuter" class="windowTop" onclick="toggleOpenCloseText(); toggleOpenCloseSymbol();" data-toggle="collapse" data-target="#collapseWindow">
                  &lt;div class="windowHeaderMid">
                    &lt;div class="headerContainer">
                      &lt;h1 class="windowTitle closeButton">Simple Window UI&lt;img src="Images/XButton.png" id="xButton">&lt;/img>&lt;/h1>
@@ -296,7 +296,7 @@
                  &lt;/div>
                &lt;/div>
 
-               &lt;div class="windowBottom row collapse" id="collapseExample">
+               &lt;div class="windowBottom row collapse" id="collapseWindow">
                    &lt;div id="Portrait" class="col-12 col-lg-4 text-center container-fluid">
                        &lt;div class="container errorMessageContent">
                            &lt;div class="d-md-none portraitMarginsMobile">
@@ -315,7 +315,7 @@
                            &lt;h2 class="d-md-none" id="HeaderMobile">Nothing too fancy here!&lt;/h2>
                            &lt;div class="d-none d-md-block text-center container-fluid">
                                 &lt;div class="horizontalPadding15px">
-                                    &lt;p id="Description">This window is styled after Windows 96 UI/UX. It opens and closes, and its styles change when it does. I personally think it looks best on mobile.&lt;/p>
+                                    &lt;p id="description">This window is styled after Windows 96 UI/UX. It opens and closes, and its styles change when it does. I personally think it looks best on mobile.&lt;/p>
                                  &lt;/div>
                            &lt;/div>
                            &lt;div class="d-md-none text-center horizontalPadding15px">
@@ -327,7 +327,7 @@
 
                &lt;div class="windowBottom windowButton row">
                    &lt;div class="col-12 text-center">
-                       &lt;button onclick="toggleOpenCloseText(); toggleOpenCloseSymbol();" id="toggle" class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                       &lt;button onclick="toggleOpenCloseText(); toggleOpenCloseSymbol();" id="toggle" class="btn" type="button" data-toggle="collapse" data-target="#collapseWindow" aria-expanded="false" aria-controls="collapseWindow">
                          Expand
                        &lt;/button>
                    &lt;/div>
@@ -342,13 +342,13 @@
         <div id="CSS" class="customcontainer tabcontent language-html">
             <pre>
               <code>
-  #Header {
+  #header {
       font-size: 250%;
       text-align: left;
       padding-left: 15px;
       padding-right: 30px;
   }
-  #Description {
+  #description {
       margin-top: 15px;
       text-align: left;
       padding-left: 15px;
@@ -366,7 +366,7 @@
   .headerContainer {
       border-right: 3px solid #00007A; border-top: 4px; margin-bottom: 6px;
   }
-  #HeaderMobile {
+  #headerMobile {
       margin-top: 15px;
   }
   .windowTop img{
